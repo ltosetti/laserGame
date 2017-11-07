@@ -1,0 +1,93 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Laser Game</title> 
+    <link href="mainStyle.css" rel="stylesheet" /> 
+    <link href="simplescrollbar.css" rel="stylesheet" />
+    <script src="simplescrollbar.js"></script>
+</head>
+<body>    
+    <div class="o-wrapper">
+        <div class="c-topic c-topic__center centerWrapper wrapper">           
+            <div id="logoCenter" class="logo"></div>
+            <button id="btnCloseCenter" class="closePanel">
+                back to Game selection
+            </button>   
+            <video class="c-topic3__content-instrumentalist videoCenter videoTutorial"></video>
+            <div id="showContentC" class="showContent"></div>
+            <button id="playGameC" class="playGame"></button>            
+        </div>        
+        <div class="c-topic c-topic__instrumentalist wrapper"> 
+            <div id="logoLeft" class="logo"></div>            
+            <video class="c-topic__img c-topic__content-instrumentalist videoTutorial videoLeft"></video>
+            <button id="btnCloseLeft" class="closePanel">
+            back to Game selection
+            </button>  
+            <div id="showContentL" class="showContent"></div>
+            <button id="playGameL" class="playGame"></button>            
+        </div>              
+        <div class="c-topic c-topic2__instrumentalist wrapper">
+            <div id="logoRight" class="logo"></div>           
+            <video class="c-topic__img c-topic2__content-instrumentalist videoTutorial"></video>
+            <button id="btnCloseRight" class="closePanel">
+                 back to Game selection
+            </button> 
+            <div id="showContentR" class="showContent"></div>
+            <button id="playGameR" class="playGame"></button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="main.js"></script> 
+    <script>
+        function Contents(left,logoLeft,videoLeft,buttonLeft,detailLeft, center,right, wrapper, logo,video,button,detail){
+            
+            this.wrapper = document.querySelectorAll(wrapper);
+            this.logo = document.querySelectorAll(logo);
+            this.video = document.querySelectorAll(video);
+            this.button = document.querySelectorAll(button);
+            this.detail = document.querySelectorAll(detail);
+             
+            this.logoImg = ["img/loghi/dllogo.png", "img/loghi/salogo.png","img/loghi/eshlogo.png"]//center,left,right
+            this.poster = ["img/dl.jpg", "img/ace.jpg","img/esh.jpg"]//center,left,right
+            this.videoSrc = ["../videoCut/dl.mp4", "../videoCut/sa.mp4","../videoCut/esh.mp4" ]//center,left,right
+            this.detailArray = [
+                "<h1><img src='img/loghi/dllogo.png' /></h1><p><strong>Dragon's Lair</strong> (lett. 'tana del drago') &egrave; un videogioco arcade su laserdisc pubblicato da Cinematronics, basato su filmati a cartone animato realizzati da Don Bluth Animation. Venne pubblicato nel 1983, e pur non essendo il primo titolo su laserdisc, fu quello che port&ograve; al successo questa categoria di giochi.<br/>&egrave; <strong>uno degli unici tre videogiochi (insieme a Pong e Pac-Man) conservati presso lo Smithsonian Institution di Washington, D.C.</strong><br/>Il seguito arcade &egrave; <strong>Dragon's Lair II: Time Warp</strong>, ma anche <strong>Space Ace</strong> &egrave; un gioco con stile molto simile, degli stessi produttori.<br/><br/><br/><strong>Trama</strong><br/><br/>Il protagonista del videogioco &egrave; il cavaliere <strong>Dirk the Daring</strong> (Dirk l'Ardito) che ha il compito di salvare la bella principessa <strong>Daphne</strong> dal crudele drago Singe che si nasconde in un castello stregato.<br/>Dirk dovr&agrave; superare indenne tutte le insidie che si celano in ogni stanza del castello per cercare di giungere nella tana del drago e liberare Daphne, tenuta prigioniera in una sfera di cristallo. Per farlo dovr&agrave; uccidere il drago e strappargli dal collo la chiave che apre la sfera nella quale &egrave; rinchiusa Daphne.<br>Ma l'impresa non sar&agrave; facile e il nostro eroe prima di arrivare al cospetto del drago dovr&agrave; affrontare oltre a mille trabocchetti anche temibili varie creature magiche, come <strong>mostri di fango (mudman)</strong>, il <strong>re lucertola (Lizard King)</strong>, cavalieri neri, eccetera: tutte queste insidie sono state poste dal proprietario del castello (nell'introduzione del gioco si parla di un 'mago oscuro', che non si vede mai: apparir&agrave; nel seguito del gioco, Time Warp) per impedire a chiunque di liberare Daphne.<br/><br/><br/><strong>Modalit&agrave; di gioco</strong><br/><br/>Il gioco consiste nel premere i tasti freccia(arrows keys) o premere il bottone corrispondente alla spada('s' key), correttamente e nei tempi giusti.<br>Se il tempismo e la mossa sono corrette il video procede con il filmato mostrando al videogiocatore i progressi compiuti da Dirk, il protagonista.<br>In caso contrario il videogioco propone diversi filmati di morte in funzione dell'errata azione intrapresa.<br>Ci sono 40 scenari diversi e oltre 600 momenti in cui il giocatore deve effettuare rapidamente la mossa.<br/><br/><br/><strong>Curiosit&agrave; sul Laser-Game originale del 1983</strong><br/><br/>Lo sviluppo di Dragon's Lair richiese quattro anni e coinvolse quattro aziende: <strong>Starcom</strong> in collaborazione con <strong>Advanced Microcomputer Systems</strong> per l'ingegneria, <strong>Don Bluth Animation</strong> per la creazione dell'animazione tradizionale usata nei filmati, <strong>Cinematronics</strong> per la produzione e il marketing.<br />Lo sviluppo del solo software cost&ograve; <strong>500.000$</strong>, all'incirca il doppio di quanto costava per un videogioco ordinario dell'epoca.<br/> Per il giocatore una partita richiedeva due o tre monete a seconda delle impostazioni del gestore (es. in Italia 400-600 lire; le macchine del periodo accettavano monete da 200).<br>La versione Cinematronics destinata al mercato americano faceva utilizzo di due tipi di lettori laserdisc, i <strong>Pioneer PR-7820 e LD-V1000</strong>; la versione Atari destinata al mercato europeo faceva invece utilizzo del lettore laserdisc <strong>Philips 22VP932</strong> cos&igrave; come la versione <strong>Sidam prodotta in Italia con sub-licenza Atari</strong>.Alcune macchine vennero dotate di un secondo schermo, al solo scopo di consentire agli spettatori non giocanti di vedere meglio le scene della partita in corso."
+                ,                
+                "<h1><img src='img/loghi/saLogo.png' /></h1><p><strong>Space Ace</strong> &egrave; un videogioco arcade su laserdisc prodotto da <strong>Don Bluth, Cinematronics, e RDI Video Systems</strong>.<br>Venne pubblicato nel 1983, quattro mesi dopo il gioco <strong>Dragon's Lair</strong>, e come il suo predecessore offriva animazioni di qualit&agrave; cinematografica letti da un laserdisc.<br>Pur ottenendo un buon successo di pubblico, Space Ace non si avvicin&ograve; mai ai livelli di popolarit&agrave; del suo predecessore Dragon's Lair.<br>Nel 1991 venne lanciato sul mercato il sequel <strong>Space Ace II: Borf's Revenge, ma solo per Amiga e PC</strong>.<br/><br/><br/><strong>Trama</strong><br/><br/>Space Ace racconta le avventure del muscoloso eroe <strong>Ace</strong>.<br>All'inizio del videogioco, il malvagio <strong>comandante Borf</strong> attacca Ace con <strong>l'Infanto Ray</strong>, un'arma che lo fa regredire allo stadio adolescenziale e rapisce la sua fidanzata <strong>Kimberly</strong>.<br>Compito del giocatore &egrave; quello di guidare <strong>Dexter</strong>, la versione adolescente e mingherlina di Ace, attraverso una serie di ostacoli alla ricerca di Borf nel tentativo di salvare Kimberly e di impedire che Borf, con l'aiuto dell'Infanto Ray possa conquistare il mondo.<br/><br/><br/><strong>Modalit&agrave; di gioco</strong><br/><br/>Il tipo di gioco, come per Dragon's Lair, richiede al giocatore di premere i tasti freccia (arrows keys) o di premere fuoco ('s' key) in momenti chiave delle sequenze animate per determinare un'azione del protagonista.<br>Space Ace introduce alcune migliorie rispetto al precedente gioco, in particolare si pu&ograve; selezionare il livello di difficolt&agrave; e offre sviluppi multipli della trama.<br>All'inizio del gioco il giocatore pu&ograve; scegliere fra tre livelli di difficolt&agrave;: 'Cadet', 'Captain' o 'Ace' rispettivamente corrispondenti a un livello facile, medio e difficile.<br>Inoltre il gioco offre scelte multiple al giocatore, invece che un'unica traccia da seguire nello svolgimento della storia.<br>In vari punti del gioco, &egrave; possibile scegliere di premere il pulsante azione ('s' key) nel momento in cui compare la scritta <strong>'Energize!'</strong> e trasformare Dexter in Ace, con conseguente cambio della scena e modalit&agrave; di completamento della stessa.<br/><br/><br/><strong>Curiosit&agrave; sul Laser-Game originale del 1983</strong><br/><br/>Le animazioni di Space Ace vennero realizzate dallo stesso team che aveva precedentemente lavorato a Dragon's Lair, capitanati dall'<strong>ex animatore della Disney Don Bluth</strong>.<br>Per mantenere i costi di produzione bassi, lo studio, invece di servirsi di attori professionisti, utilizz&ograve; le voci dei membri dello staff per il doppiaggio del gioco.<br>Lo stesso Don Bluth offre la sua voce (alterata digitalmente) al Commander Borf.<br>La musica della colonna sonora del gioco, un pezzo rock molto veloce e avvincente &egrave; stata realizzata dal musicista italo-francese <strong>Metaphonic</strong>.<br>Il concept originale del gioco era basato sul personaggio dei fumetti <strong>Capitan Marvel</strong>.<br>Dexter &egrave; in grado di trasformarsi nel muscoloso supereroe Ace in differenti momenti della storia.<br></p></div>"
+                ,
+                "<h1><img src='img/loghi/eshLogo.png' /></h1><p><strong>Esh's Aurunmilla</strong> &egrave; un videogioco arcade dotato di tecnologia laserdisc creato nel 1984 da Funai. Consiste in un kit di trasformazione per il videogioco arcade Interstellar, della stessa <strong>Funai</strong>.<br/><br/><br/><strong>Trama</strong><br/><br/>Il rigoglioso <strong>pianeta Aurunmilla</strong> dell'universo di Orione &egrave; minacciato dal diabolico <strong>Esh</strong> imperatore dell'universo di Perseus che tiene In ostaggio la principessa <strong>Sindy</strong>.<br/><strong>Don Davis</strong> si unir&agrave; nella battaglia per la sua difesa ad evitare che lanci assieme alla malefica <strong>Orishala</strong>s l'attacco a sorpresa dalla Shadow Base per la conquista di Orione.<br/> Don Davis per riuscire nel suo scopo, penetrato all'interno del pianeta Aurunmilla, affronter&agrave; trabocchetti e magie lanciati dai suoi nemici lungo il suo cammino.<br/><br/><br/><strong>Personaggi</strong><br/><br/>- <strong>Don Davis</strong>: l'eroe del gioco<br/>- <strong>Sindy</strong>: la principessa catturata<br/>- <strong>Orishala</strong>: l'enigmatica bellezza malefica<br/>- <strong>Emperor Esh</strong>: il diabolico uomo diavolo.<br/><br/><br/><strong>Modalit&agrave; di gioco</strong><br/><br/>Dopo aver cliccato il bottone 'start the experience', potrai scegliere tre modalit&agrave; di gioco: easy, medium, hard, che corrispondono al livello di difficolt&agrave;, successivamente ti viene mostrata la mappa degli 'stages' con quelli attivi/completati e quelli non ancora sbloccati, clicca sul b ottone play dello stage attivo per iniziare la partita (inizio del filmato).<br/>Il gioco si basa sulla comune caratteristica del genere lasergame, ovvero sull'esecuzione della mossa giusta al momento giusto. In questo caso, un immagine dei cursori della tastiera (arrows keys) o del tasto fire ('s' key) a schermo suggerir&agrave; l'azione da eseguire.<br/>Se la pressione dei tasti movimento/azione sar&agrave; eseguita con il giusto tempismo il filmato proseguir&agrave;, altrimenti verr&agrave; visualizzata una scena di morte.<br/><br/><br/><strong>Curiosit&agrave; sul Laser-Game originale del 1984</strong><br/><br/>Il gioco, la cui animazione fu realizzata dalla Bruce B' Company, venne presentato nel 1984 a Las Vegas dalla ESP, la filiale americana della Funai, che vendette negli USA alla Bally-Midway circa 1.500 coin-op di Interstellar.<br/>In italia il gioco fu presente alla fiera campionaria di Milano (grande Fiera d'Aprile) nell'aprile 1985 al padiglione 33 dedicato al divertimento elettronico.<br/>Koshiro Hashimoto, facente parte dello staff del progetto Interstellar, ipotizza che Esh's Aurunmilla non fu un prodotto completamente autorizzato da Funai.<br/>Lo testimonierebbero i differenti loghi del marchio Funai nella schermata introduttiva dei due titoli.<br/>Esh's Aurunmilla &egrave; uno dei pi&ugrave; rari videogiochi arcade registrati su V.A.P.S., la Video arcade game preservation society, che raccoglie informazioni sui collezionisti mondiali di macchine da gioco arcade, e dettagli sulla loro collezione. <strong>Al 2017 sono registrate su V.A.P.S. 4 macchine arcade esistenti al mondo</strong> delle quali una soltanto comprendente anche il control panel dedicato, altre sono solo parti del kit."                
+            ]           
+        };
+        Contents.prototype.addData = function(){
+            for(var i = 0; this.wrapper.length > i; i++){
+                this.logo[i].style.background = "url("+this.logoImg[i]+")no-repeat center";
+                this.logo[i].style.backgroundSize = "contain";
+                this.video[i].poster = this.poster[i];
+                this.video[i].src = this.videoSrc[i];
+                this.button[0].innerHTML = "<span>Coming Soon</span>";
+                this.button[2].innerHTML = "<span>Start Eperience</span>";
+                this.button[1].innerHTML = "<span>Start Eperience</span>";
+                this.detail[i].innerHTML = this.detailArray[i];
+                this.detail[i].setAttribute('ss-container', true);
+            }
+        };
+        Contents.prototype.init = function(){
+            this.addData();
+        };
+        var content = new Contents(
+            ".c-topic__instrumentalist", 
+            "#logoLeft", 
+            ".videoLeft",
+            "#playGameL",
+            "#showContentL",
+            ".c-topic__center", 
+            ".c-topic2__instrumentalist",
+            ".wrapper",
+            ".logo",
+            ".videoTutorial",
+            ".playGame",
+            ".showContent"
+        )
+        content.init();
+    </script>
+</body>
+</html>

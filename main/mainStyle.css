@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+button,p {font-family: 'Roboto', sans-serif;}
+*, *:before, *:after {box-sizing: border-box;}
+html, body {
+    width:100%; height:100%; padding:0; margin:0;
+}
+body {overflow: hidden;}
+.o-wrapper {
+    padding-right: 0;
+    padding-left: 0; 
+    width:100%;
+    height:100%;
+    margin:auto;
+    position:absolute;
+    top:0; bottom:0; left:0; right:0;
+    overflow-x: hidden;    
+}
+#mainImg{
+    width:100%; 
+    height:100%; 
+    position:absolute; 
+    top:0; 
+    left:0;
+}
+.c-topic__instrumentalist, .c-topic2__instrumentalist {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;    
+    text-align: left;
+    color: white;
+    visibility: hidden;     
+}
+.centerWrapper {   
+    width:100%; 
+    height:100%;
+    position:absolute;
+}
+#logoCenter {
+    transform: skewX(0);
+    background:url(img/loghi/eshlogo.png)no-repeat center;
+    background-size:contain; 
+    width:30%; 
+    height:25%;
+    position:absolute; 
+    right:0; 
+    left:7%; 
+    margin:auto;
+    /*bottom:0;*/
+    top:0;
+    z-index:1;
+}
+#logoLeft {
+    transform: skewX(0);
+    background:url(img/loghi/salogo.png)no-repeat center;
+    background-size:contain; 
+    width:26%; 
+    height:25%;
+    position:absolute; 
+    right:4%; 
+    top:0;
+    z-index:1;
+}
+#logoRight {
+    transform: skewX(0);
+    background:url(img/loghi/dllogo.png)no-repeat center;
+    background-size:contain; 
+    width:26%; 
+    height:25%;
+    position:absolute; 
+    left:0; 
+    /*bottom:0;*/
+    top:0;
+    z-index:1;
+}
+.videoTutorial {width:100%; height:100%; position:absolute;top:0; left:0;object-fit: fill;}
+#playGameC, 
+#playGameL,
+#playGameR {
+    display:block; 
+    cursor: pointer; 
+    width:110px; 
+    height:230px; 
+    position:absolute; 
+    bottom:50px; 
+    right:0;
+    left:0; 
+    margin: auto; 
+    color:#fff;
+    background:url(img/p1Img.png)no-repeat center; 
+    background-size:contain;
+    border:none;
+    padding:0;
+    visibility:hidden;
+    opacity:0;
+    z-index: 12;
+}
+#playGameC span,
+#playGameL span,
+#playGameR span {
+    width:100%;
+    position:absolute;
+    bottom:0;
+    display:block;
+    margin:0 auto;
+    font-size:16px;
+    font-weight:400;
+    background:#e35d5d;
+    border-radius: 12px;
+    padding: 5px 0;
+    border:2px solid #fff;
+}
+#playGameC:hover span,
+#playGameL:hover span,
+#playGameR:hover span {
+    color:#e35d5d;
+    background:#fff;
+    border:2px solid #e35d5d;
+}
+#showContentC, 
+#showContentL,
+#showContentR {
+    width:35%; 
+    height:95%; 
+    min-width:450px; 
+    position:absolute; 
+    background:rgba(0, 0, 0, 0.6);
+    background:rgba(255,255,255, 0.4);
+    z-index:11; 
+    right:20px;
+    bottom:0px; 
+    top:0; 
+    margin:auto;
+    opacity: 0;
+    visibility: hidden;    
+}
+#showContentR {right:auto;left:15px;}
+#showContentC h1, 
+#showContentL h1,
+#showContentR h1 {
+    height:15%; width:100%;
+}
+#showContentC h1 img, 
+#showContentL h1 img,
+#showContentR h1 img {
+    max-height:100%; 
+    max-width:100%; 
+    display:block; 
+    margin:0 auto;
+}
+#showContentC p, 
+#showContentL p, 
+#showContentR p {
+    color:#fff;
+    color:#000;
+}
+.c-topic__instrumentalist {border-right:10px solid #fff;}
+.c-topic2__instrumentalist {border-left:10px solid #fff;}
+.c-topic__content-instrumentalist, .c-topic2__content-instrumentalist {
+    width: 100%;
+    height: 100%; 
+}
+.closePanel{
+    background: none;
+    border: none;
+    position: absolute;
+    top:0;
+    right:0; 
+    opacity:0;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 20;
+    width:250px;   
+    line-height: 50px;
+    background: #e35d5d;
+    border: 3px solid #fff;
+    color: #fff;
+    text-align: center;
+    position: absolute;   
+    border-radius: 10px;
+    display: block;
+    box-shadow: 10px 9px #fff;
+    font-size: 20px;
+}
+.closePanel#btnCloseCenter {
+    top:2.5%;
+    left:2%;    
+}
+.closePanel#btnCloseCenter:hover { 
+    color:#000;
+    background: #fff;
+    box-shadow: 10px 9px #e35d5d;   
+}
+.closePanel#btnCloseLeft {
+    top:2.5%;
+    left:2%;
+}
+.closePanel#btnCloseLeft:hover { 
+    color:#000;
+    background: #fff;
+    box-shadow: 10px 9px #e35d5d;   
+}
+.closePanel#btnCloseRight {
+    top:2.5%;
+    right:2%;   
+}
+.closePanel#btnCloseRight:hover {          
+    color:#000;
+    background: #fff;
+    box-shadow: 10px 9px #e35d5d;
+}
+/*
+#shaaCountDown {
+    width:41%;
+    height:17.4%;
+    text-align: center;
+    position:absolute;
+    bottom:36.5%;
+    top:56.6%;
+    left:0;
+    right:0;
+    margin: auto;          
+    z-index: 9;
+}
+#shaaCountDown .shaaCdItem {
+    position:absolute;
+    top:0;
+    width:25%;
+    height: 100%;
+    color:#fff;
+    font-family: arial,sans-serif;
+    opacity:0.8    
+}
+#shaaCountDown #cdDays {left:0; border-right:1px solid #fff;}
+#shaaCountDown #cdHours {left:25%;border-right:1px solid #fff;}
+#shaaCountDown #cdMinutes {left:50%;border-right:1px solid #fff;}
+#shaaCountDown #cdSeconds {left:75%;}
+*/
+* {outline:none;}
