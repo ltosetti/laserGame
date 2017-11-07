@@ -171,7 +171,7 @@ GameData.prototype.render = function(){
         this.btnLevels[l] = document.createElement("button");
         this.btnLevels[l].id = "level_"+(l+1);
         this.btnLevels[l].classList.add("levelBtn");
-        this.btnLevels[l].setAttribute("style","width:"+100/3+"%; height:100%;position:absolute; top:0%; bottom:0;margin:auto; left:"+l*(100/3)+"%;background:none; color:#fff; border:none; cursor:pointer");
+        this.btnLevels[l].setAttribute("style","width:"+100/3+"%; height:100%;position:absolute; top:0%; bottom:0;margin:auto; left:"+l*(100/3)+"%;background:none; color:#f3df43; border:none; cursor:pointer");
         //this.btnLevels[l].style.fontSize = "10vmin";
         this.btnLevels[l].innerHTML = this.levels[l].label;
         this.btnLevelWprapEl.appendChild(this.btnLevels[l]);
@@ -299,7 +299,7 @@ GameData.prototype.selectStage = function(el, options){
         this.stageSuccesMove = 0;
         this.videoEl.currentTime = options.checkPoints[0].newStage;
         this.videoEl.play(); 
-        this.videoEl.playbackRate = 0.8;
+        //this.videoEl.playbackRate = 0.8;
         this.stageSlideUpPanel();
         /*this.tlStageOpen.to(_this.stageChoiceEl,0.5,{top:"-100%"})
         .to(_this.scoreWrap,0.5,{autoAlpha:1})
@@ -444,7 +444,7 @@ GameData.prototype.settingCheckPoint = function(){
                     document.getElementById("tutorial").innerHTML = "Move "+current.correctMove;
                     */
                     document.getElementById("showMoving").style.display = "block";
-                    document.getElementById("showMoving").src = "../img/"+this.checkPoint[i].correctMove+".png";
+                    document.getElementById("showMoving").src = "img/"+this.checkPoint[i].correctMove+".png";
                     this.checkPoint[i].active = true;
                     areaTime = true;
                 } else {
@@ -823,7 +823,7 @@ GameData.prototype.refresh = function(){
 GameData.prototype.preload = function(){
     //this.videoEl.currentTime = 185;
     this.videoEl.setAttribute("preload", "auto");
-    this.videoEl.playbackRate = 0.8;
+    //this.videoEl.playbackRate = 0.8;
     /*
     var req = new XMLHttpRequest();
     req.open('GET', 'EshsAurunmilla.webm', true);
