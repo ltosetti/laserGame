@@ -57,6 +57,62 @@ var data = {
                 "failEndTime":97.8
             }
         },
+          {   // platform mobile 
+            "title": "platform mobile",
+            "active":false,
+            "startTime":81,
+            "endTime":81.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":102.6, 
+                "failEndTime":104.1
+            },
+            "wrongMove2":{
+                 "failStartTime":102.6, 
+                "failEndTime":104.1
+            }
+        },
+        
+        {   // platform mobile    
+            "jumpToDelay":5,
+            "jumpTo":112.1,
+            "title": "platform mobile",
+            "active":false,
+            "startTime":91.2,
+            "endTime":92.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":102.6, 
+                "failEndTime":104.1
+            },
+            "wrongMove2":{
+                 "failStartTime":102.6, 
+                "failEndTime":104.1
+            }
+            //,"endStage":96
+        }, 
+        {   // spaceship labirynt
+           
+            "title": "labirynt move",
+            "active":false,
+            "startTime":125.5,
+            "endTime":126.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":153, 
+                "failEndTime":154.3
+            },
+            "wrongMove2":{
+                "failStartTime":153, 
+                "failEndTime":154.3
+            },
+        },
     
     ],
 };
@@ -303,6 +359,17 @@ gamePlay.prototype.playThrough = function(){
                     if (success){
                         console.log("******************** success *******************");                           
                     } else {
+                        this.videoEl.currentTime =  this.gd.moveArrayfailed1Start[i];
+                        var index = i;
+                        setTimeout(function(){
+                            this.videoEl.currentTime = this.gd.moveArrayCheckStart[index];
+                            this.videoEl.pause();
+                            setTimeout(function(){
+                                this.videoEl.play();   
+                            }.bind(this),1500);
+                        }.bind(this), (this.gd.moveArrayfailed1End[index] - this.gd.moveArrayfailed1Start[index])*1000);    
+                                   
+                        
                         console.log("**************** error ******************");
                     }                    
                 } else {
