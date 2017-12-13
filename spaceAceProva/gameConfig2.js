@@ -1,3 +1,25 @@
+var gameCfg = {
+    "levels": [
+        {
+            "label":"cadet", 
+            "description":"It can't get easier than this! You have 7 lives!! Good luck ;)", 
+            "lives":7, 
+            "score":150
+        },
+        {
+            "label":"captain",
+            "description":"Ok, This might be a little more tricky. You have 5 lives! Save Sindi!",
+            "lives":5,
+            "score":200
+        },    
+        {
+            "label":"ace", 
+            "description":"Are you a hero? Complete the saga with 3 lives", 
+            "lives":3,
+            "score":300
+        }       
+    ],
+}
 var data = {    
     "checkPointScore":0,
     "checkPoints":[                
@@ -57,7 +79,7 @@ var data = {
                 "failEndTime":97.8
             }
         },
-          {   // platform mobile 
+        {   // platform mobile 
             "title": "platform mobile",
             "active":false,
             "startTime":81,
@@ -112,8 +134,7 @@ var data = {
                 "failStartTime":153, 
                 "failEndTime":154.3
             },
-        },
-    
+        },    
     ],
 };
 
@@ -165,19 +186,22 @@ gameData.prototype.assignMove = function(){
         this.stagePressed[i] = this.checkpoints[i].pressed;
     }
 };
+
 function gamePlay(options){
     this.gd = new gameData(options);
     this.videoEl = document.getElementById("scene");
     this.audioError = document.getElementById("audioError");
-    this.audioSuccess = document.getElementById("audioSuccess"); 
+    this.audioSuccess = document.getElementById("audioSuccess");
     this.audioSuccess.volume = .1; 
     this.audioError.volume = .1; 
-    this.current, this.prev, this.next;
+    this.current, this.prev, this.next, this.count = 0;
+    this.level = gameCfg.levels;
     this.start();
     this.playThrough();
 };
 gamePlay.prototype.playThrough = function(){
-    var pressed = false, success = false, error = false, moved = false, current, prev, next; 
+    var pressed = false, success = false, error = false, moved = false;
+   
     this.videoEl.addEventListener('timeupdate', function(){
         for (var i = 0; this.gd.checkpoints.length > i; i++) {
             /* enable space to play a move */
@@ -359,7 +383,8 @@ gamePlay.prototype.playThrough = function(){
                 if (pressed){                    
                     if (success){
                         this.gd.stageComplete[i] = true;
-                        console.log("******************** success *******************");                           
+                        this.count++;
+                        console.log("******************** success *******************" , this.count);                           
                     } else {
                         var index = i;
                         var failStart = this.gd.moveArrayfailed1Start[i];
@@ -413,6 +438,10 @@ gamePlay.prototype.playThrough = function(){
 gamePlay.prototype.start = function(){
     this.videoEl.currentTime = this.gd.startG;
     this.videoEl.play();  
+};
+gamePlay.prototype.score = function(){};
+gameplay.prototype.selectLevel = function(){
+      
 };
 var a = new gamePlay(data);
 
