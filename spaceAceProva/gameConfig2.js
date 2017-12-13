@@ -172,6 +172,7 @@ function gamePlay(options){
     this.audioSuccess = document.getElementById("audioSuccess"); 
     this.audioSuccess.volume = .1; 
     this.audioError.volume = .1; 
+    this.current, this.prev, this.next;
     this.start();
     this.playThrough();
 };
@@ -179,14 +180,14 @@ gamePlay.prototype.playThrough = function(){
     var pressed = false, success = false, error = false, moved = false, current, prev, next; 
     this.videoEl.addEventListener('timeupdate', function(){
         for (var i = 0; this.gd.checkpoints.length > i; i++) {
-            
-            if (this.videoEl.currentTime > this.gd.moveArrayCheckStart[i] && this.videoEl.currentTime < this.gd.moveArrayCheckEnd[i] && !this.gd.stageActive[i]){
+            /* enable space to play a move */
+            if (!success && this.videoEl.currentTime > this.gd.moveArrayCheckStart[i] && this.videoEl.currentTime < this.gd.moveArrayCheckEnd[i] && !this.gd.stageActive[i] && !this.gd.stageComplete[i]){
                 document.getElementById("showMoving").style.display = "block";
                 document.getElementById("showMoving").src = "img/"+this.gd.keyDirection[i]+".png";
                 console.log("---------------------------------------");
                 this.gd.stageActive[i] = true;                
                 if (i > 0){
-                    prev = [
+                    this.prev = [
                         this.gd.keyDirection[i-1], 
                         this.gd.moveArrayCheckStart[i-1], 
                         this.gd.moveArrayCheckEnd[i-1],
@@ -201,9 +202,9 @@ gamePlay.prototype.playThrough = function(){
                         this.gd.stagePressed[i-1]
                     ];
                 } else {
-                    prev = false;
+                    this.prev = false;
                 }                
-                current = [
+                this.current = [
                         this.gd.keyDirection[i], 
                         this.gd.moveArrayCheckStart[i], 
                         this.gd.moveArrayCheckEnd[i],
@@ -218,7 +219,7 @@ gamePlay.prototype.playThrough = function(){
                         this.gd.stagePressed[i]
                 ];                
                 if (i != (this.gd.checkpoints.length-1)){
-                    next = [
+                    this.next = [
                         this.gd.keyDirection[i+1], 
                         this.gd.moveArrayCheckStart[i+1],
                         this.gd.moveArrayCheckEnd[i+1],
@@ -233,17 +234,17 @@ gamePlay.prototype.playThrough = function(){
                         this.gd.stagePressed[i+1]
                     ];
                 } else {
-                    next = false
+                    this.next = false
                 }                               
-                console.log("Prev: " ,prev);
-                console.log("Current: ", current);
-                console.log("Next: " ,next);
+                console.log("Prev: " ,this.prev);
+                console.log("Current: ", this.current);
+                console.log("Next: " ,this.next);
                 console.log(i, this.gd.checkpoints.length-1);
                 console.log("---------------------------------------");
                 //break;   
                 var index = i;
                 document.onkeydown = function(e){
-                    if (this.gd.stageActive[index] &&  !this.gd.stagePressed[index]){
+                    if (this.gd.stageActive[index] &&  !this.gd.stagePressed[index]){                    
                     switch (e.keyCode) {
                         case 37:                        
                             key = "left";    
@@ -349,36 +350,61 @@ gamePlay.prototype.playThrough = function(){
                             break;
                         }   
                     }                    
-                }.bind(this);
-                
+                }.bind(this);                
             }
+            /* check the move or not move */
             if (this.videoEl.currentTime > this.gd.moveArrayCheckEnd[i] && this.gd.stageActive[i]){
                 this.gd.stageActive[i] = false;
                 console.log(success, error, pressed);
                 if (pressed){                    
                     if (success){
+                        this.gd.stageComplete[i] = true;
                         console.log("******************** success *******************");                           
                     } else {
-                        this.videoEl.currentTime =  this.gd.moveArrayfailed1Start[i];
                         var index = i;
+                        var failStart = this.gd.moveArrayfailed1Start[i];
+                        var failEnd = this.gd.moveArrayfailed1End[i]
+                        this.videoEl.currentTime =  failStart;
+                        /*
                         setTimeout(function(){
-                            this.videoEl.currentTime = this.gd.moveArrayCheckStart[index];
+                            this.videoEl.currentTime = this.prev == false?this.gd.startG:this.prev[2];
                             this.videoEl.pause();
                             setTimeout(function(){
                                 this.videoEl.play();   
                             }.bind(this),1500);
-                        }.bind(this), (this.gd.moveArrayfailed1End[index] - this.gd.moveArrayfailed1Start[index])*1000);    
-                                   
-                        
+                        }.bind(this), (failEnd - failStart)*1000);                        
+                        */
                         console.log("**************** error ******************");
+                        this.gd.stagePressed[index] = false;
                     }                    
                 } else {
+                    var failStart = this.gd.moveArrayfailed2Start[i];
+                    var failEnd = this.gd.moveArrayfailed2End[i];
+                    this.videoEl.currentTime =  failStart;         
                     document.getElementById("showMoving").style.display = "none";
-                    console.log("******************* error *****************");  
+                    console.log("******************* error *****************");
+                }
+                if (success && this.gd.stageJump[i] != undefined){
+                    this.videoEl.currentTime = this.gd.stageJump[i];    
                 }
                 success = false;
                 pressed = false;
-                error = false;
+                error = false;                
+            }
+            /* if the move is wrong goto prev currentime and remade a move */
+            if (!success && (this.videoEl.currentTime > this.gd.moveArrayfailed1End[i] || this.videoEl.currentTime > this.gd.moveArrayfailed1End[i]) && !this.gd.stageComplete[i]){
+                this.videoEl.pause();
+                if (this.prev == false){
+                    this.videoEl.currentTime = this.gd.startG;
+                } else if (this.gd.stageJump[i-1] != undefined){
+                    this.videoEl.currentTime = this.prev[7];
+                } else {
+                    this.videoEl.currentTime = this.prev[2];
+                }
+                //this.videoEl.currentTime = this.prev == false?this.gd.startG:this.prev[2];
+                setTimeout(function(){
+                    this.videoEl.play();   
+                }.bind(this),1500);
                 
             }
         }
