@@ -193,7 +193,7 @@ function gamePlay(options){
     this.level = gameCfg.levels;
     this.lives;
     this.score;
-    this.start();
+    //this.start();
     this.playThrough();
 };
 gamePlay.prototype.playThrough = function(){
@@ -457,4 +457,90 @@ gamePlay.prototype.selectLevel = function(){
         this.lives = this.level.score[2];
     }
 };
-var a = new gamePlay(data);
+
+function gameView(){
+    _this = this;
+    this.parent = document.getElementById("mainArea");
+    this.videoEl = document.getElementById("scene");  
+    this.level = gameCfg.levels;
+    this.lives;
+    this.score;
+    this.btnLevels = [];  
+    this.btnLevelDesc = [];
+};
+gameView.prototype.render = function(){
+    /* 
+    =============================
+    level Choice landing
+    =============================
+    */
+    this.levelChoiceEl = document.createElement("div");
+    this.levelChoiceEl.id = "levelWrapper";       
+    this.parent.appendChild(this.levelChoiceEl);
+    
+    this.btnLevelWprapEl = document.createElement("div");
+    this.btnLevelWprapEl.id = "levelBtnWrapper";    
+    this.levelChoiceEl.appendChild(this.btnLevelWprapEl);
+    
+    var title = document.createElement("h1");
+    title.id = "levelTitle";
+    title.classList.add("levelTitle");   
+    title.innerHTML = "Select Level";
+    this.levelChoiceEl.appendChild(title);   
+    /* 
+    =============================
+    button level selection render 
+    =============================
+    */
+    for (var l = 0; this.level.length > l; l++){
+        this.btnLevels[l] = document.createElement("button");
+        this.btnLevels[l].id = "level_"+(l+1);
+        this.btnLevels[l].classList.add("levelBtn");
+        this.btnLevels[l].setAttribute("style","width:"+100/3+"%; height:100%;position:absolute; top:0%; bottom:0;margin:auto; left:"+l*(100/3)+"%;background:none; color:#f3df43; border:none; cursor:pointer");
+        //this.btnLevels[l].style.fontSize = "10vmin";
+        this.btnLevels[l].innerHTML = this.level[l].label;
+        this.btnLevelWprapEl.appendChild(this.btnLevels[l]);        
+        this.hoverEffect(this.btnLevels[l]);        
+        this.btnLevelDesc[l] = document.createElement("span");
+        this.btnLevelDesc[l].classList.add("levelDesc");
+        this.btnLevelDesc[l].innerHTML = "<br>"+this.level[l].description;
+        this.btnLevelDesc[l].setAttribute("style","width:60%; height:100%;display:block;text-align:center; margin:0 auto;");
+        this.btnLevels[l].appendChild(this.btnLevelDesc[l]);        
+    }
+    this.btnLevels[0].style.width = "30%";
+    this.btnLevels[1].style.width = "40%";
+    this.btnLevels[2].style.width = "30%";
+    this.btnLevels[0].style.left = "0%";
+    this.btnLevels[1].style.left = "30%";
+    this.btnLevels[2].style.left = "70%";
+    
+    this.btnLevels[0].style.textAlign = "center";
+    this.btnLevels[1].style.borderRight = "4px solid #fff";
+    this.btnLevels[1].style.borderLeft = "4px solid #fff";    
+    this.btnLevels[2].style.textAlign = "center";
+    this.textFormatting();
+};
+gameView.prototype.textFormatting = function(){
+    fitText(document.querySelectorAll('.levelBtn'), 0.38);  
+    fitText(document.querySelectorAll('#level_2.levelBtn'), 0.48); 
+    fitText(document.querySelectorAll('#levelTitle'), 2.3); 
+    fitText(document.querySelectorAll('.levelDesc'), 1.7); 
+    fitText(document.querySelectorAll('#level_2.levelBtn .levelDesc'), 2.1); 
+};
+gameView.prototype.hoverEffect = function(button){    
+    button.onmouseenter = function(){      
+        TweenMax.to(button, 1, {className: "+=blueGlow"})         
+    }    
+    button.onmouseout = function(){       
+        TweenMax.to(button, 1, {className: "-=blueGlow"})
+    }
+};
+
+function Init(data){
+    this.gamePlay = new gamePlay(data);    
+    this.view = new gameView();
+    this.view.render();
+    this.gamePlay .start();    
+};
+
+var init = new Init(data);    
