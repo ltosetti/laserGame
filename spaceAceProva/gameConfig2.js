@@ -8,7 +8,7 @@ var gameCfg = {
         },
         {
             "label":"captain",
-            "description":"Ok, This might be a little more tricky. You have 5 lives! Save Sindi!",
+            "description":"Ok, This might be a little more tricky. You have 5 lives! Save Daphne!",
             "lives":5,
             "score":200
         },    
@@ -191,8 +191,8 @@ function gamePlay(options){
     this.audioError.volume = .1; 
     this.current, this.prev, this.next, this.count = 0;
     this.level = gameCfg.levels;
-    this.lives = this.level.lives;
-    this.score = this.level.score;
+    this.lives;
+    this.score;
     this.start();
     this.playThrough();
 };
@@ -437,11 +437,24 @@ gamePlay.prototype.start = function(){
     this.videoEl.play();  
 };
 gamePlay.prototype.score = function(){};
-gamePlay.prototype.selectLevel = function(){
+gamePlay.prototype.selectLevel = function(){      
     //choose level
     //if level 1 assign 7 lives and right score method 
     //if level 2 assign 5 lives and right score method
     //if level 3 assign 3 lives and right score method
+    for (var i = 0; this.level.length > i; i++){
+        this.score = this.level.score[i];
+        this.lives = this.level.score[i];               
+    }
+    if (btn1){
+        this.score = this.level.score[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+        this.lives = this.level.score[0];
+    } else if (btn2){
+        this.score = this.level.score[1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+        this.lives = this.level.score[1];
+    } else {
+        this.score = this.level.score[2].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+        this.lives = this.level.score[2];
+    }
 };
 var a = new gamePlay(data);
-
