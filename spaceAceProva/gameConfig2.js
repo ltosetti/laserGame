@@ -32,13 +32,11 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"right",                     
-            "wrongMove1":{
-                //"kind": "left",
+            "wrongMove1":{               
                 "failStartTime":96.5, 
                 "failEndTime":97.8
             },
-            "wrongMove2":{
-                //"kind": "none",
+            "wrongMove2":{               
                 "failStartTime":96.5, 
                 "failEndTime":97.8
             },                    
@@ -95,8 +93,7 @@ var data = {
                  "failStartTime":102.6, 
                 "failEndTime":104.1
             }
-        },
-        
+        },        
         {   // platform mobile    
             "jumpToDelay":5,
             "jumpTo":112.1,
@@ -114,11 +111,9 @@ var data = {
             "wrongMove2":{
                  "failStartTime":102.6, 
                 "failEndTime":104.1
-            }
-            //,"endStage":96
+            }            
         }, 
-        {   // spaceship labirynt
-           
+        {   // spaceship labirynt           
             "title": "labirynt move",
             "active":false,
             "startTime":125.5,
@@ -196,6 +191,8 @@ function gamePlay(options){
     this.audioError.volume = .1; 
     this.current, this.prev, this.next, this.count = 0;
     this.level = gameCfg.levels;
+    this.lives = this.level.lives;
+    this.score = this.level.score;
     this.start();
     this.playThrough();
 };
@@ -441,7 +438,10 @@ gamePlay.prototype.start = function(){
 };
 gamePlay.prototype.score = function(){};
 gamePlay.prototype.selectLevel = function(){
-      
+    //choose level
+    //if level 1 assign 7 lives and right score method 
+    //if level 2 assign 5 lives and right score method
+    //if level 3 assign 3 lives and right score method
 };
 var a = new gamePlay(data);
 
