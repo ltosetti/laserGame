@@ -440,7 +440,7 @@ gamePlay.prototype.start = function(){
     this.videoEl.play();  
 };
 gamePlay.prototype.score = function(){};
-gameplay.prototype.selectLevel = function(){
+gamePlay.prototype.selectLevel = function(){
       
 };
 var a = new gamePlay(data);
