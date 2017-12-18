@@ -436,25 +436,17 @@ gamePlay.prototype.start = function(){
     this.videoEl.currentTime = this.gd.startG;
     this.videoEl.play();  
 };
-gamePlay.prototype.score = function(){};
-gamePlay.prototype.selectLevel = function(){      
-    //choose level
-    //if level 1 assign 7 lives and right score method 
-    //if level 2 assign 5 lives and right score method
-    //if level 3 assign 3 lives and right score method
-    for (var i = 0; this.level.length > i; i++){
-        this.score = this.level.score[i];
-        this.lives = this.level.score[i];               
-    }
-    if (btn1){
-        this.score = this.level.score[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
-        this.lives = this.level.score[0];
-    } else if (btn2){
-        this.score = this.level.score[1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
-        this.lives = this.level.score[1];
-    } else {
-        this.score = this.level.score[2].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
-        this.lives = this.level.score[2];
+//gamePlay.prototype.score = function(){};
+gamePlay.prototype.selectLevel = function(index){         
+    if (index==0) {
+        this.score = this.level[0].score;//toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.lives = this.level[0].lives;
+    } else if (index==1) {
+        this.score = this.level[1].score;//.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.lives = this.level[1].lives;
+    } else if (index==2) {
+        this.score = this.level[2].score;//.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.lives = this.level[2].lives;
     }
 };
 
@@ -519,6 +511,30 @@ gameView.prototype.render = function(){
     this.btnLevels[1].style.borderLeft = "4px solid #fff";    
     this.btnLevels[2].style.textAlign = "center";
     this.textFormatting();
+    
+    /* 
+    =================
+    lives el render 
+    =================
+    */
+    
+    this.livesWrap = document.createElement("div");
+    this.livesWrap.id = "gdLivesWrap";    
+    this.parent.appendChild(this.livesWrap);
+    
+    this.livesLabel = document.createElement("div");
+    this.livesLabel.id = "gdLivesLabel";    
+    this.livesLabel.innerHTML = "Lives: ";
+    this.livesWrap.appendChild(this.livesLabel);
+    
+    this.livesImg = document.createElement("div");
+    this.livesImg.id = "gdLivesImg";    
+    this.livesImg.innerHTML = "<img src='img/liveImg.png' /><span> X </span>"
+    this.livesWrap.appendChild(this.livesImg);
+    
+    this.livesEl = document.createElement("div");
+    this.livesEl.id = "gdLives";     
+    this.livesWrap.appendChild(this.livesEl);
 };
 gameView.prototype.textFormatting = function(){
     fitText(document.querySelectorAll('.levelBtn'), 0.38);  
@@ -537,10 +553,20 @@ gameView.prototype.hoverEffect = function(button){
 };
 
 function Init(data){
+    var _this = this;
     this.gamePlay = new gamePlay(data);    
     this.view = new gameView();
-    this.view.render();
-    this.gamePlay .start();    
+    this.view.render();    
+    for (var i = 0; this.view.btnLevels.length > i; i++){   
+        (function(index){
+            this.view.btnLevels[i].onclick = function(){                  
+                this.gamePlay.selectLevel(index);
+                console.log(this.gamePlay.lives, this.gamePlay.score);
+                this.view.levelChoiceEl.style.display = "none";
+                this.gamePlay.start();
+            }.bind(this)            
+        }.bind(this))(i);
+    }     
 };
 
 var init = new Init(data);    
