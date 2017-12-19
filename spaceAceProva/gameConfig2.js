@@ -183,6 +183,7 @@ gameData.prototype.assignMove = function(){
 };
 
 function gamePlay(options){
+    _that = this;
     this.gd = new gameData(options);
     this.videoEl = document.getElementById("scene");
     this.audioError = document.getElementById("audioError");
@@ -193,6 +194,7 @@ function gamePlay(options){
     this.level = gameCfg.levels;
     this.lives;
     this.score;
+    this.currentScore;
     //this.start();
     this.playThrough();
 };
@@ -378,15 +380,23 @@ gamePlay.prototype.playThrough = function(){
                 this.gd.stageActive[i] = false;
                 console.log(success, error, pressed);
                 if (pressed){                    
-                    if (success){
+                    if (success){                        
                         this.gd.stageComplete[i] = true;
                         this.count++;
-                        console.log("******************** success *******************" , this.count);                           
+                        console.log("******************** success *******************" , this.count);
+                        this.scoreUpdater();
                     } else {
                         var index = i;
                         var failStart = this.gd.moveArrayfailed1Start[i];
                         var failEnd = this.gd.moveArrayfailed1End[i]
                         this.videoEl.currentTime =  failStart;
+                        if (this.lives > 0) {
+                            this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1; 
+                            document.getElementById("gdLives").innerHTML = this.lives;
+                        } else {
+                            this.videoEl.pause();
+                            console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
+                        }
                         /*
                         setTimeout(function(){
                             this.videoEl.currentTime = this.prev == false?this.gd.startG:this.prev[2];
@@ -404,6 +414,13 @@ gamePlay.prototype.playThrough = function(){
                     var failEnd = this.gd.moveArrayfailed2End[i];
                     this.videoEl.currentTime =  failStart;         
                     document.getElementById("showMoving").style.display = "none";
+                    if (this.lives > 0) {
+                        this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1; 
+                        document.getElementById("gdLives").innerHTML = this.lives;
+                    } else {
+                        this.videoEl.pause();
+                        console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
+                    }
                     console.log("******************* error *****************");
                 }
                 if (success && this.gd.stageJump[i] != undefined){
@@ -436,18 +453,28 @@ gamePlay.prototype.start = function(){
     this.videoEl.currentTime = this.gd.startG;
     this.videoEl.play();  
 };
-//gamePlay.prototype.score = function(){};
 gamePlay.prototype.selectLevel = function(index){         
     if (index==0) {
-        this.score = this.level[0].score;//toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.score = this.level[0].score;   
         this.lives = this.level[0].lives;
     } else if (index==1) {
-        this.score = this.level[1].score;//.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.score = this.level[1].score;
         this.lives = this.level[1].lives;
     } else if (index==2) {
-        this.score = this.level[2].score;//.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.score = this.level[2].score;
         this.lives = this.level[2].lives;
     }
+};
+gamePlay.prototype.scoreUpdater = function(){
+    _that.currentScore = {score:parseInt(document.getElementById("gdScore").innerHTML)};
+    _that.addScore();          
+};
+gamePlay.prototype.addScore = function(){
+    TweenLite.to(_that.currentScore, 0.5, {score:"+="+_that.score+"", onUpdate:_that.updateHandler});    
+};
+gamePlay.prototype.updateHandler = function(){    
+    document.getElementById("gdScore").innerHTML = parseInt(_that.currentScore.score);
+    this.score = _that.currentScore.score;
 };
 
 function gameView(){
@@ -535,6 +562,26 @@ gameView.prototype.render = function(){
     this.livesEl = document.createElement("div");
     this.livesEl.id = "gdLives";     
     this.livesWrap.appendChild(this.livesEl);
+    
+    /* 
+    =================
+    score el render 
+    =================
+    */
+    
+    this.scoreWrap = document.createElement("div");
+    this.scoreWrap.id = "gdScoreWrap"; 
+    this.parent.appendChild(this.scoreWrap);
+    
+    this.scoreLabel = document.createElement("div");
+    this.scoreLabel.id = "gdScoreLabel";
+    this.scoreLabel.innerHTML = "Scores: ";
+    this.scoreWrap.appendChild(this.scoreLabel);
+    
+    this.scoreEl = document.createElement("div");
+    this.scoreEl.id = "gdScore";    
+    this.scoreEl.innerHTML = 0;
+    this.scoreWrap.appendChild(this.scoreEl);    
 };
 gameView.prototype.textFormatting = function(){
     fitText(document.querySelectorAll('.levelBtn'), 0.38);  
@@ -564,6 +611,12 @@ function Init(data){
                 console.log(this.gamePlay.lives, this.gamePlay.score);
                 this.view.levelChoiceEl.style.display = "none";
                 this.gamePlay.start();
+                this.view.livesWrap.style.opacity = 1;
+                this.view.livesWrap.style.visibility = "visible";
+                this.view.livesEl.innerHTML = this.gamePlay.lives;
+                this.view.scoreWrap.style.visibility = "visible";
+                this.view.scoreWrap.style.opacity = 1;
+                this.view.scoreEl.innerHTML = 0;
             }.bind(this)            
         }.bind(this))(i);
     }     
