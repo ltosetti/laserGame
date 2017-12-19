@@ -379,24 +379,27 @@ gamePlay.prototype.playThrough = function(){
             if (this.videoEl.currentTime > this.gd.moveArrayCheckEnd[i] && this.gd.stageActive[i]){
                 this.gd.stageActive[i] = false;
                 console.log(success, error, pressed);
-                if (pressed){                    
+                //if you pressed a key
+                if (pressed){ 
+                    //if you pressed a right key
                     if (success){                        
                         this.gd.stageComplete[i] = true;
                         this.count++;
                         console.log("******************** success *******************" , this.count);
                         this.scoreUpdater();
                     } else {
+                        //if you pressed a wrong key
                         var index = i;
                         var failStart = this.gd.moveArrayfailed1Start[i];
                         var failEnd = this.gd.moveArrayfailed1End[i]
                         this.videoEl.currentTime =  failStart;
-                        if (this.lives > 0) {
+                        /*if (this.lives > 0) {
                             this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1; 
                             document.getElementById("gdLives").innerHTML = this.lives;
                         } else {
-                            this.videoEl.pause();
+                            //this.videoEl.pause();
                             console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
-                        }
+                        }*/
                         /*
                         setTimeout(function(){
                             this.videoEl.currentTime = this.prev == false?this.gd.startG:this.prev[2];
@@ -410,28 +413,38 @@ gamePlay.prototype.playThrough = function(){
                         this.gd.stagePressed[index] = false;
                     }                    
                 } else {
+                    //if you dont pressed a key
                     var failStart = this.gd.moveArrayfailed2Start[i];
                     var failEnd = this.gd.moveArrayfailed2End[i];
                     this.videoEl.currentTime =  failStart;         
                     document.getElementById("showMoving").style.display = "none";
-                    if (this.lives > 0) {
+                    /*if (this.lives > 0) {
                         this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1; 
                         document.getElementById("gdLives").innerHTML = this.lives;
                     } else {
-                        this.videoEl.pause();
+                        //this.videoEl.pause();
                         console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
-                    }
+                    }*/
                     console.log("******************* error *****************");
                 }
+                // if there jump in that scene
                 if (success && this.gd.stageJump[i] != undefined){
-                    this.videoEl.currentTime = this.gd.stageJump[i];    
+                    this.videoEl.currentTime = this.gd.stageJump[i];   
                 }
+                
                 success = false;
                 pressed = false;
                 error = false;                
             }
-            /* if the move is wrong goto prev currentime and remade a move */
-            if (!success && (this.videoEl.currentTime > this.gd.moveArrayfailed1End[i] || this.videoEl.currentTime > this.gd.moveArrayfailed1End[i]) && !this.gd.stageComplete[i]){
+            /* if the move is wrong goto prev currentime to try again */
+            if (!success && (this.videoEl.currentTime > this.gd.moveArrayfailed1End[i] || this.videoEl.currentTime > this.gd.moveArrayfailed2End[i]) && !this.gd.stageComplete[i]){
+                if (this.lives > 0) {
+                    this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1; 
+                    document.getElementById("gdLives").innerHTML = this.lives;
+                } else {
+                    //this.videoEl.pause();
+                    console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
+                }
                 this.videoEl.pause();
                 if (this.prev == false){
                     this.videoEl.currentTime = this.gd.startG;
