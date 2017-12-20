@@ -436,10 +436,7 @@ gamePlay.prototype.playThrough = function(){
                 }
                 // if there jump in that scene
                 //if (success && this.current[7] != undefined){
-                if (success && this.gd.stageJump[i] != undefined){
-                    var check = [this.videoEl.currentTime, this.gd.finishStage[i]];
-                    var count = this.videoEl.currentTime//0;
-                    var target = this.gd.finishStage[i]// - this.videoEl.currentTime; 
+                if (success && this.gd.stageJump[i] != undefined){                   
                     
                     var gotoNextStep = setInterval(function(){ 
                         if (parseInt(this.videoEl.currentTime) >= this.current[12]){
@@ -448,25 +445,7 @@ gamePlay.prototype.playThrough = function(){
                             console.log("arrivato");                            
                         }
                         console.log(this.videoEl.currentTime); 
-                    }.bind(this), 250);
-                    /*for (var l = 0; this.videoEl.currentTime < this.gd.finishStage[i]; l++){
-                        console.log("dentro il loop", this.videoEl.currentTime);
-                        l = document.getElementById("scene").currentTime;
-                        if (this.videoEl.currentTime > this.gd.finishStage[i]){
-                            console.log("fuori dal loop");
-                            break;
-                        }
-                    }*/
-                    
-                    /*do {
-                        //this.videoEl.currentTime = this.gd.stageJump[i];
-                        count = this.videoEl.currentTime
-                        console.log(count, target);
-                    } 
-                    while(count < target);*/
-                    //for (i = this.videoEl.currentTime; target > i;){
-                        //console.log("loop");
-                    //}
+                    }.bind(this), 250);                   
                 }
                
                 success = false;
@@ -478,23 +457,24 @@ gamePlay.prototype.playThrough = function(){
             if (!success && (this.videoEl.currentTime > this.gd.moveArrayfailed1End[i] || this.videoEl.currentTime > this.gd.moveArrayfailed2End[i]) && !this.gd.stageComplete[i]){
                 if (this.lives > 0) {
                     this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1; 
-                    document.getElementById("gdLives").innerHTML = this.lives;
+                    document.getElementById("gdLives").innerHTML = this.lives;                
+                    this.videoEl.pause();
+                    if (this.prev == false){
+                        this.videoEl.currentTime = this.gd.startG;
+                    } else if (this.gd.stageJump[i-1] != undefined){
+                        this.videoEl.currentTime = this.prev[7];
+                    } else {
+                        this.videoEl.currentTime = this.prev[2];
+                    }
+                    //this.videoEl.currentTime = this.prev == false?this.gd.startG:this.prev[2];
+                    setTimeout(function(){
+                        this.videoEl.play();   
+                    }.bind(this),1500);
                 } else {
                     this.videoEl.pause();
                     console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
+                    break;
                 }
-                this.videoEl.pause();
-                if (this.prev == false){
-                    this.videoEl.currentTime = this.gd.startG;
-                } else if (this.gd.stageJump[i-1] != undefined){
-                    this.videoEl.currentTime = this.prev[7];
-                } else {
-                    this.videoEl.currentTime = this.prev[2];
-                }
-                //this.videoEl.currentTime = this.prev == false?this.gd.startG:this.prev[2];
-                setTimeout(function(){
-                    this.videoEl.play();   
-                }.bind(this),1500);
                 
             }
         }
