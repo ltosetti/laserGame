@@ -75,7 +75,8 @@ var data = {
             "wrongMove2":{
                 "failStartTime":96.5, 
                 "failEndTime":97.8
-            }
+            },
+            "finishStage":65
         },
         {   // platform mobile 
             "title": "platform mobile",
@@ -111,7 +112,8 @@ var data = {
             "wrongMove2":{
                  "failStartTime":102.6, 
                 "failEndTime":104.1
-            }            
+            },
+             "finishStage":95
         }, 
         {   // spaceship labirynt           
             "title": "labirynt move",
@@ -148,6 +150,7 @@ function gameData(options){
     this.stageActive = [];
     this.stageComplete = [];
     this.stagePressed = [];
+    this.finishStage = [];
     this.assignMove();
     console.log(
         this.keyDirection,
@@ -179,6 +182,7 @@ gameData.prototype.assignMove = function(){
         this.stageActive[i] = this.checkpoints[i].active;
         this.stageComplete[i] = this.checkpoints[i].complete;
         this.stagePressed[i] = this.checkpoints[i].pressed;
+        this.finishStage[i] = this.checkpoints[i].finishStage;
     }
 };
 
@@ -199,10 +203,10 @@ function gamePlay(options){
     this.playThrough();
 };
 gamePlay.prototype.playThrough = function(){
-    var pressed = false, success = false, error = false, moved = false;
+    var pressed = false, success = false, error = false, moved = false, jumpActive = false;
    
     this.videoEl.addEventListener('timeupdate', function(){
-        for (var i = 0; this.gd.checkpoints.length > i; i++) {
+        for (var i = 0; this.gd.checkpoints.length > i; i++) {           
             /* enable space to play a move */
             if (!success && this.videoEl.currentTime > this.gd.moveArrayCheckStart[i] && this.videoEl.currentTime < this.gd.moveArrayCheckEnd[i] && !this.gd.stageActive[i] && !this.gd.stageComplete[i]){
                 document.getElementById("showMoving").style.display = "block";
@@ -211,18 +215,19 @@ gamePlay.prototype.playThrough = function(){
                 this.gd.stageActive[i] = true;                
                 if (i > 0){
                     this.prev = [
-                        this.gd.keyDirection[i-1], 
-                        this.gd.moveArrayCheckStart[i-1], 
-                        this.gd.moveArrayCheckEnd[i-1],
-                        this.gd.moveArrayfailed1Start[i-1], 
-                        this.gd.moveArrayfailed1End[i-1],
-                        this.gd.moveArrayfailed2Start[i-1], 
-                        this.gd.moveArrayfailed2End[i-1],
-                        this.gd.stageJump[i-1],
-                        this.gd.stageJumpDlay[i-1],
-                        this.gd.stageActive[i-1],
-                        this.gd.stageComplete[i-1],
-                        this.gd.stagePressed[i-1]
+                        this.gd.keyDirection[i-1], //0
+                        this.gd.moveArrayCheckStart[i-1], //1
+                        this.gd.moveArrayCheckEnd[i-1], //2
+                        this.gd.moveArrayfailed1Start[i-1], //3 
+                        this.gd.moveArrayfailed1End[i-1], //4
+                        this.gd.moveArrayfailed2Start[i-1], //5
+                        this.gd.moveArrayfailed2End[i-1], //6
+                        this.gd.stageJump[i-1], //7
+                        this.gd.stageJumpDlay[i-1], //8
+                        this.gd.stageActive[i-1], //9
+                        this.gd.stageComplete[i-1], //10
+                        this.gd.stagePressed[i-1], //11
+                        this.gd.finishStage[i-1] //12
                     ];
                 } else {
                     this.prev = false;
@@ -239,7 +244,8 @@ gamePlay.prototype.playThrough = function(){
                         this.gd.stageJumpDlay[i],
                         this.gd.stageActive[i],
                         this.gd.stageComplete[i],
-                        this.gd.stagePressed[i]
+                        this.gd.stagePressed[i],
+                        this.gd.finishStage[i]
                 ];                
                 if (i != (this.gd.checkpoints.length-1)){
                     this.next = [
@@ -254,7 +260,8 @@ gamePlay.prototype.playThrough = function(){
                         this.gd.stageJumpDlay[i+1],
                         this.gd.stageActive[i+1],
                         this.gd.stageComplete[i+1],
-                        this.gd.stagePressed[i+1]
+                        this.gd.stagePressed[i+1],
+                        this.gd.finishStage[i+1]
                     ];
                 } else {
                     this.next = false
@@ -428,21 +435,52 @@ gamePlay.prototype.playThrough = function(){
                     console.log("******************* error *****************");
                 }
                 // if there jump in that scene
+                //if (success && this.current[7] != undefined){
                 if (success && this.gd.stageJump[i] != undefined){
-                    this.videoEl.currentTime = this.gd.stageJump[i];   
+                    var check = [this.videoEl.currentTime, this.gd.finishStage[i]];
+                    var count = this.videoEl.currentTime//0;
+                    var target = this.gd.finishStage[i]// - this.videoEl.currentTime; 
+                    
+                    var gotoNextStep = setInterval(function(){ 
+                        if (parseInt(this.videoEl.currentTime) >= this.current[12]){
+                            clearInterval(gotoNextStep);
+                            this.videoEl.currentTime = this.current[7];
+                            console.log("arrivato");                            
+                        }
+                        console.log(this.videoEl.currentTime); 
+                    }.bind(this), 250);
+                    /*for (var l = 0; this.videoEl.currentTime < this.gd.finishStage[i]; l++){
+                        console.log("dentro il loop", this.videoEl.currentTime);
+                        l = document.getElementById("scene").currentTime;
+                        if (this.videoEl.currentTime > this.gd.finishStage[i]){
+                            console.log("fuori dal loop");
+                            break;
+                        }
+                    }*/
+                    
+                    /*do {
+                        //this.videoEl.currentTime = this.gd.stageJump[i];
+                        count = this.videoEl.currentTime
+                        console.log(count, target);
+                    } 
+                    while(count < target);*/
+                    //for (i = this.videoEl.currentTime; target > i;){
+                        //console.log("loop");
+                    //}
                 }
-                
+               
                 success = false;
                 pressed = false;
                 error = false;                
-            }
-            /* if the move is wrong goto prev currentime to try again */
+            }          
+            
+            /* if the move is wrong goto prev currentime to try again and check if the game is finished TO CHECK*/
             if (!success && (this.videoEl.currentTime > this.gd.moveArrayfailed1End[i] || this.videoEl.currentTime > this.gd.moveArrayfailed2End[i]) && !this.gd.stageComplete[i]){
                 if (this.lives > 0) {
                     this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1; 
                     document.getElementById("gdLives").innerHTML = this.lives;
                 } else {
-                    //this.videoEl.pause();
+                    this.videoEl.pause();
                     console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
                 }
                 this.videoEl.pause();
