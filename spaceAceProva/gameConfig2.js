@@ -456,8 +456,20 @@ gamePlay.prototype.playThrough = function(){
             /* if the move is wrong goto prev currentime to try again and check if the game is finished TO CHECK*/
             if (!success && (this.videoEl.currentTime > this.gd.moveArrayfailed1End[i] || this.videoEl.currentTime > this.gd.moveArrayfailed2End[i]) && !this.gd.stageComplete[i]){
                 if (this.lives > 0) {
-                    this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1; 
-                    document.getElementById("gdLives").innerHTML = this.lives;                
+                    this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1;                                   
+                    document.getElementById("gdLives").innerHTML = this.lives;              
+                    TweenMax.to("#gdLives",0.3,{
+                        scale:2,
+                        opacity:0.4,
+                        //color:"#ff0000",
+                        onComplete: function(){
+                            TweenMax.to("#gdLives",0.3,{
+                                scale:1, 
+                                //color:"#fff",
+                                opacity:1
+                            });
+                        }.bind(this)
+                    });                    
                     this.videoEl.pause();
                     if (this.prev == false){
                         this.videoEl.currentTime = this.gd.startG;
@@ -466,16 +478,19 @@ gamePlay.prototype.playThrough = function(){
                     } else {
                         this.videoEl.currentTime = this.prev[2];
                     }
+                    TweenMax.to("#getReady",0.5,{autoAlpha:1});          
+                    //document.getElementById("getReady").style.visibility = "visible";
                     //this.videoEl.currentTime = this.prev == false?this.gd.startG:this.prev[2];
                     setTimeout(function(){
+                        TweenMax.to("#getReady",0.5,{autoAlpha:0});      
+                        //document.getElementById("getReady").style.visibility = "hidden";
                         this.videoEl.play();   
-                    }.bind(this),1500);
+                    }.bind(this),2500);
                 } else {
                     this.videoEl.pause();
                     console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
                     break;
-                }
-                
+                }                
             }
         }
     }.bind(this));
@@ -568,7 +583,7 @@ gameView.prototype.render = function(){
     this.btnLevels[1].style.borderRight = "4px solid #fff";
     this.btnLevels[1].style.borderLeft = "4px solid #fff";    
     this.btnLevels[2].style.textAlign = "center";
-    this.textFormatting();
+    
     
     /* 
     =================
@@ -613,6 +628,18 @@ gameView.prototype.render = function(){
     this.scoreEl.id = "gdScore";    
     this.scoreEl.innerHTML = 0;
     this.scoreWrap.appendChild(this.scoreEl);    
+    
+    /*
+    =================
+    get ready el
+    =================
+    */
+    this.gReadyEl = document.createElement("div");
+    this.gReadyEl.id = "getReady";
+    this.gReadyEl.setAttribute("style","width:25%; height:20%; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; visibility:hidden; color:#fff;text-align:center;");
+    this.gReadyEl.innerHTML = "GET READY";    
+    this.parent.appendChild(this.gReadyEl);
+    this.textFormatting();
 };
 gameView.prototype.textFormatting = function(){
     fitText(document.querySelectorAll('.levelBtn'), 0.38);  
@@ -620,6 +647,13 @@ gameView.prototype.textFormatting = function(){
     fitText(document.querySelectorAll('#levelTitle'), 2.3); 
     fitText(document.querySelectorAll('.levelDesc'), 1.7); 
     fitText(document.querySelectorAll('#level_2.levelBtn .levelDesc'), 2.1); 
+    
+    fitText(document.querySelectorAll('#gdLivesLabel'), 0.3); 
+    fitText(document.querySelectorAll('#gdScoreLabel'), 0.3);    
+    fitText(document.querySelectorAll('#gdScore'), 0.4);
+    
+    fitText(document.querySelectorAll('#getReady'), 0.5);
+    
 };
 gameView.prototype.hoverEffect = function(button){    
     button.onmouseenter = function(){      
