@@ -199,7 +199,6 @@ function gamePlay(options){
     this.lives;
     this.score;
     this.currentScore;
-    this.gameOver = false;
     //this.start();
     this.playThrough();
 };
@@ -487,16 +486,12 @@ gamePlay.prototype.playThrough = function(){
                         //document.getElementById("getReady").style.visibility = "hidden";
                         this.videoEl.play();   
                     }.bind(this),2500);
-                } else {                    
-                    //this.lives = parseInt(document.getElementById("gdLives").innerHTML)-1;                    
-                    //document.getElementById("gdLives").innerHTML = this.lives;                    
+                } else {
                     this.videoEl.pause();
                     console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
-                    this.gameOver = true;
                     break;
-                }                         
+                }                
             }
-            if (this.gameOver){break;}
         }
     }.bind(this));
 };
@@ -521,7 +516,7 @@ gamePlay.prototype.scoreUpdater = function(){
     _that.addScore();          
 };
 gamePlay.prototype.addScore = function(){
-    TweenMax.to(_that.currentScore, 0.5, {score:"+="+_that.score+"", onUpdate:_that.updateHandler});    
+    TweenLite.to(_that.currentScore, 0.5, {score:"+="+_that.score+"", onUpdate:_that.updateHandler});    
 };
 gamePlay.prototype.updateHandler = function(){    
     document.getElementById("gdScore").innerHTML = parseInt(_that.currentScore.score);
