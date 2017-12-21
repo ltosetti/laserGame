@@ -674,17 +674,20 @@ function Init(data){
             this.view.btnLevels[i].onclick = function(){                  
                 this.gamePlay.selectLevel(index);
                 console.log(this.gamePlay.lives, this.gamePlay.score);
-                this.view.levelChoiceEl.style.display = "none";
+                //this.view.levelChoiceEl.style.display = "none";
+                TweenMax.to(this.view.levelChoiceEl,0.5,{autoAlpha:0})
                 this.gamePlay.start();
-                this.view.livesWrap.style.opacity = 1;
-                this.view.livesWrap.style.visibility = "visible";
+                //this.view.livesWrap.style.opacity = 1;
+                //this.view.livesWrap.style.visibility = "visible";
+                TweenMax.to(this.view.livesWrap,0.5,{autoAlpha:1});
                 this.view.livesEl.innerHTML = this.gamePlay.lives;
-                this.view.scoreWrap.style.visibility = "visible";
-                this.view.scoreWrap.style.opacity = 1;
+                //this.view.scoreWrap.style.visibility = "visible";
+                //this.view.scoreWrap.style.opacity = 1;
+                TweenMax.to(this.view.scoreWrap,0.5,{autoAlpha:1});
                 this.view.scoreEl.innerHTML = 0;
             }.bind(this)            
         }.bind(this))(i);
     }     
 };
 
-var init = new Init(data);    
+var init = new Init(data);
