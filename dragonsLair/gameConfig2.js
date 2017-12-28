@@ -1353,7 +1353,7 @@ var data = {
             "endTime":629.5,
             "complete": false,
             "pressed": false,
-            "correctMove":"right",
+            "correctMove":"up",
              "wrongMove1":{
                 "failStartTime":638.5, 
                 "failEndTime":640.5
@@ -1404,6 +1404,7 @@ function gameData(options){
     this.stagePressed = [];
     this.finishStage = [];
     this.assignMove();
+    /*
     console.log(
         this.keyDirection,
         this.moveArrayCheckStart, 
@@ -1418,9 +1419,10 @@ function gameData(options){
         this.stageComplete,
         this.stagePressed
     );
+    */
 };
 gameData.prototype.assignMove = function(){
-    console.log(this.checkpoints);  
+    //console.log(this.checkpoints);  
     for (var i=0; this.checkpoints.length > i; i++){
         this.keyDirection[i] = this.checkpoints[i].correctMove;
         this.moveArrayCheckStart[i] = this.checkpoints[i].startTime;
@@ -1532,7 +1534,7 @@ gamePlay.prototype.playThrough = function(){
                 console.log(i, this.gd.checkpoints.length-1);
                 console.log(this.prev[9],this.current[9], this.next[9])
                 console.log("---------------------------------------");
-                //break;   
+                
                 //var index = i;
                 
                 document.onkeydown = function(e){
@@ -1649,7 +1651,7 @@ gamePlay.prototype.playThrough = function(){
             if (this.videoEl.currentTime > this.gd.moveArrayCheckEnd[i] && this.gd.stageActive[i]){                
                 this.gd.stageActive[i] = false;
                 //this.current[9]=false;
-                console.log(success, error, pressed);
+                //console.log(success, error, pressed);
                 //if you pressed a key
                 if (pressed){ 
                     //if you pressed a right key
@@ -1688,9 +1690,9 @@ gamePlay.prototype.playThrough = function(){
                         if (parseInt(this.videoEl.currentTime) >= this.current[12]){
                             clearInterval(gotoNextStep);
                             this.videoEl.currentTime = this.current[7];
-                            console.log("arrivato");                            
+                            //console.log("arrivato");                            
                         }
-                        console.log(this.videoEl.currentTime); 
+                        //console.log(this.videoEl.currentTime); 
                     }.bind(this), 250);                   
                 }
                
@@ -1702,7 +1704,7 @@ gamePlay.prototype.playThrough = function(){
             /* if the move is wrong goto prev currentime to try again and check if the game is finished TO CHECK*/
             //if (!success && pressed && this.videoEl.currentTime > this.gd.moveArrayfailed1End[i] && !this.gd.stageComplete[i]){
             if (!success && error && pressed && this.videoEl.currentTime > failEnd && !this.gd.stageComplete[i]){
-                console.log(this.gd.moveArrayfailed1Start[i],this.gd.moveArrayfailed1End[i],failEnd);
+                //console.log(this.gd.moveArrayfailed1Start[i],this.gd.moveArrayfailed1End[i],failEnd);
             
                 document.getElementById("showMoving").style.display = "none";
                 pressed = false;
@@ -1752,7 +1754,7 @@ gamePlay.prototype.playThrough = function(){
                 //if the second wrong video is loaded
             } //else if (!success && !pressed && this.videoEl.currentTime > this.gd.moveArrayfailed2End[i] && !this.gd.stageComplete[i]){
             else if (!success && error && !pressed && this.videoEl.currentTime > failEnd && !this.gd.stageComplete[i]){
-                console.log(i,this.gd.moveArrayfailed2Start[i],this.gd.moveArrayfailed2End[i],failEnd);            
+                //console.log(i,this.gd.moveArrayfailed2Start[i],this.gd.moveArrayfailed2End[i],failEnd);            
                  document.getElementById("showMoving").style.display = "none";
                  if (this.lives > 0) {
                     this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1;                                   
