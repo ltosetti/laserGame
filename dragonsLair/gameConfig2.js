@@ -23,7 +23,7 @@ var gameCfg = {
 var data = {    
     "checkPointScore":0,
     "checkPoints":[ 
-        /*
+       
         {  
             "id":1,
             "newStage": 59.7,
@@ -810,8 +810,8 @@ var data = {
             "finishStage":372
         },
         
-        {  "id":13,             
-            //"newStage":381.5,
+        {  
+            "id":13,                         
             "jumpTo":397.5,
             "active":false,
             "startTime":382.75,
@@ -830,9 +830,9 @@ var data = {
             "finishStage":386
         },
         
-        {  "id":14,             
+        {
+            "id":14,
             "newStage":397.5,
-            //"jumpTo":397.5,
             "active":false,
             "startTime":400,
             "endTime":401,
@@ -840,15 +840,16 @@ var data = {
             "pressed": false,
             "correctMove":"right",
               "wrongMove1":{
-               "failStartTime":409.75, 
+               "failStartTime":409.75,
                 "failEndTime":411.5
             },
             "wrongMove2":{
-                "failStartTime":409.75, 
+                "failStartTime":409.75,
                 "failEndTime":417.25
             }   
         },
-        {  "id":14,                        
+        {  
+            "id":14,
             "active":false,
             "startTime":402,
             "endTime":403,
@@ -864,7 +865,8 @@ var data = {
                 "failEndTime":417.25
             }   
         },
-        {  "id":14,          
+        {  
+            "id":14,
             "active":false,
             "startTime":404,
             "endTime":405,
@@ -880,7 +882,8 @@ var data = {
                 "failEndTime":417.25
             }   
         },
-        {  "id":14, 
+        {  
+            "id":14,
             "jumpTo":418,
             "active":false,
             "startTime":406,
@@ -899,7 +902,8 @@ var data = {
             "finishStage":409
         },
         
-        {  "id":15, 
+        {  
+            "id":15, 
             "newStage":418,
             "active":false,
             "startTime":420.75,
@@ -916,7 +920,8 @@ var data = {
                 "failEndTime":437.25
             }            
         },
-        {   "id":15,             
+        {   
+            "id":15,             
             "active":false,
             "startTime":422.75,
             "endTime":423.75,
@@ -932,7 +937,8 @@ var data = {
                 "failEndTime":437.25
             }
         },
-        {   "id":15,             
+        {   
+            "id":15,             
             "active":false,
             "startTime":424.5,
             "endTime":425.5,
@@ -948,7 +954,8 @@ var data = {
                  "failEndTime":437.25
             }
         },
-        {   "id":15,             
+        {   
+            "id":15,             
             "active":false,
             "startTime":426.5,
             "endTime":427.5,
@@ -964,7 +971,8 @@ var data = {
                  "failEndTime":437.25
             }
         },
-        {   "id":15,             
+        {   
+            "id":15,             
             "active":false,
             "startTime":428.5,
             "endTime":429.5,
@@ -980,7 +988,8 @@ var data = {
                 "failEndTime":437.25
             }
         },
-        {   "id":15,   
+        {   
+            "id":15,   
             "jumpTo":448,
             "active":false,
             "startTime":430.5,
@@ -998,8 +1007,9 @@ var data = {
             },   
             "finishStage":435
         },
-       
-        {   "id":16,   
+        
+        {   
+            "id":16,   
             "newStage":448,
             "active":false,
             "startTime":450.75,
@@ -1282,7 +1292,7 @@ var data = {
             },
             "finishStage":520
         },
-        */
+        
         {  "id":19,         
             "newStage":596.25,
             "active":false,           
@@ -1300,7 +1310,7 @@ var data = {
                 "failEndTime":611
             }
         },
-         {  "id":19,            
+        {  "id":19,            
             "active":false,           
             "startTime":601.25,
             "endTime":602.25,
@@ -1333,7 +1343,47 @@ var data = {
                 "failEndTime":609
             },
             "finishStage":607
-        }        
+        },
+        
+        {  "id":20, 
+            "jumpTo":641,
+            "newStage":619.5,
+            "active":false,           
+            "startTime":628.75,
+            "endTime":629.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+             "wrongMove1":{
+                "failStartTime":638.5, 
+                "failEndTime":640.5
+            },
+            "wrongMove2":{
+                "failStartTime":635, 
+                "failEndTime":638
+            },
+            "finishStage":629.75
+        },
+        
+        {  "id":21, 
+            "newStage":641,
+            "jumpTo":720,
+            "active":false,           
+            "startTime":642.75,
+            "endTime":643.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+             "wrongMove1":{
+                "failStartTime":638.5, 
+                "failEndTime":640.5
+            },
+            "wrongMove2":{
+                "failStartTime":638.5, 
+                "failEndTime":640.5
+            },
+            "finishStage":645
+        } 
     ]
 };
 
@@ -1407,8 +1457,9 @@ function gamePlay(options){
 };
 gamePlay.prototype.playThrough = function(){
     var pressed = false, success = false, error = false, moved = false, jumpActive = false, current,prev,next, failStart, failEnd;
-   
+    var len = this.gd.checkpoints.length;
     this.videoEl.addEventListener('timeupdate', function(){
+        
         for (var i = 0; this.gd.checkpoints.length > i; i++) {           
                 
             /* enable space to play a move */
@@ -1416,23 +1467,23 @@ gamePlay.prototype.playThrough = function(){
                 document.getElementById("showMoving").style.display = "block";
                 document.getElementById("showMoving").src = "img/"+this.gd.keyDirection[i]+".png";
                 console.log("---------------------------------------");
-                //var index = i;
-                this.gd.stageActive[i] = true;                
+                var index = i;
+                this.gd.stageActive[index] = true;                
                 if (i > 0){
                     this.prev = [
-                        this.gd.keyDirection[i-1], //0
-                        this.gd.moveArrayCheckStart[i-1], //1
-                        this.gd.moveArrayCheckEnd[i-1], //2
-                        this.gd.moveArrayfailed1Start[i-1], //3 
-                        this.gd.moveArrayfailed1End[i-1], //4
-                        this.gd.moveArrayfailed2Start[i-1], //5
-                        this.gd.moveArrayfailed2End[i-1], //6
-                        this.gd.stageJump[i-1], //7
-                        this.gd.stageJumpDlay[i-1], //8
-                        this.gd.stageActive[i-1], //9
-                        this.gd.stageComplete[i-1], //10
-                        this.gd.stagePressed[i-1], //11
-                        this.gd.finishStage[i-1] //12
+                        this.gd.keyDirection[(i+len-1)%len], //0
+                        this.gd.moveArrayCheckStart[(i+len-1)%len], //1
+                        this.gd.moveArrayCheckEnd[(i+len-1)%len], //2
+                        this.gd.moveArrayfailed1Start[(i+len-1)%len], //3 
+                        this.gd.moveArrayfailed1End[(i+len-1)%len], //4
+                        this.gd.moveArrayfailed2Start[(i+len-1)%len], //5
+                        this.gd.moveArrayfailed2End[(i+len-1)%len], //6
+                        this.gd.stageJump[(i+len-1)%len], //7
+                        this.gd.stageJumpDlay[(i+len-1)%len], //8
+                        this.gd.stageActive[(i+len-1)%len], //9
+                        this.gd.stageComplete[(i+len-1)%len], //10
+                        this.gd.stagePressed[(i+len-1)%len], //11
+                        this.gd.finishStage[(i+len-1)%len] //12
                     ];
                 } else {
                     this.prev = false;
@@ -1454,23 +1505,24 @@ gamePlay.prototype.playThrough = function(){
                 ];                
                 if (i != (this.gd.checkpoints.length-1)){
                     this.next = [
-                        this.gd.keyDirection[i+1], 
-                        this.gd.moveArrayCheckStart[i+1],
-                        this.gd.moveArrayCheckEnd[i+1],
-                        this.gd.moveArrayfailed1Start[i+1], 
-                        this.gd.moveArrayfailed1End[i+1],
-                        this.gd.moveArrayfailed2Start[i+1], 
-                        this.gd.moveArrayfailed2End[i+1],
-                        this.gd.stageJump[i+1],
-                        this.gd.stageJumpDlay[i+1],
-                        this.gd.stageActive[i+1],
-                        this.gd.stageComplete[i+1],
-                        this.gd.stagePressed[i+1],
-                        this.gd.finishStage[i+1]
+                        this.gd.keyDirection[(i+1)%len], 
+                        this.gd.moveArrayCheckStart[(i+1)%len],
+                        this.gd.moveArrayCheckEnd[(i+1)%len],
+                        this.gd.moveArrayfailed1Start[(i+1)%len], 
+                        this.gd.moveArrayfailed1End[(i+1)%len],
+                        this.gd.moveArrayfailed2Start[(i+1)%len], 
+                        this.gd.moveArrayfailed2End[(i+1)%len],
+                        this.gd.stageJump[(i+1)%len],
+                        this.gd.stageJumpDlay[(i+1)%len],
+                        this.gd.stageActive[(i+1)%len],
+                        this.gd.stageComplete[(i+1)%len],
+                        this.gd.stagePressed[(i+1)%len],
+                        this.gd.finishStage[(i+1)%len]
                     ];
                 } else {
                     this.next = false
                 } 
+                //this.current[9]=true;
                 current = this.current;
                 prev = this.prev;
                 next = this.next;
@@ -1478,11 +1530,13 @@ gamePlay.prototype.playThrough = function(){
                 console.log("Current: ", this.current);
                 console.log("Next: " ,this.next);
                 console.log(i, this.gd.checkpoints.length-1);
+                console.log(this.prev[9],this.current[9], this.next[9])
                 console.log("---------------------------------------");
                 //break;   
-                var index = i;
+                //var index = i;
                 
                 document.onkeydown = function(e){
+                    //if (this.gd.stageActive[i] &&  !this.gd.stagePressed[i]){     
                     if (this.gd.stageActive[index] &&  !this.gd.stagePressed[index]){                    
                     switch (e.keyCode) {
                         case 37:                        
@@ -1594,6 +1648,7 @@ gamePlay.prototype.playThrough = function(){
             /* check the move or not move */
             if (this.videoEl.currentTime > this.gd.moveArrayCheckEnd[i] && this.gd.stageActive[i]){                
                 this.gd.stageActive[i] = false;
+                //this.current[9]=false;
                 console.log(success, error, pressed);
                 //if you pressed a key
                 if (pressed){ 
@@ -1606,13 +1661,13 @@ gamePlay.prototype.playThrough = function(){
                         error=false;
                     } else {
                         //if you pressed a wrong key
-                        var index = i;
+                        var indice = i;
                         failStart = this.gd.moveArrayfailed1Start[i];
                         failEnd = this.gd.moveArrayfailed1End[i]
                         this.videoEl.currentTime =  failStart;
                         document.getElementById("showMoving").style.display = "none";                       
                         console.log("**************** error ******************");
-                        this.gd.stagePressed[index] = false;
+                        this.gd.stagePressed[indice] = false;
                         error=true;
                     }                    
                 } else {
@@ -1667,12 +1722,13 @@ gamePlay.prototype.playThrough = function(){
                         }.bind(this)
                     });                    
                     this.videoEl.pause();
-                    if (prev == false){
+                    if (this.prev == false){
                         this.videoEl.currentTime = this.gd.startG;
                     } else if (this.gd.stageJump[i-1] != undefined){
-                        this.videoEl.currentTime = this.gd.stageJump[i-1];
+                        this.videoEl.currentTime = this.prev[7];
+                        //this.videoEl.currentTime = this.gd.stageJump[i-1];
                     } else {
-                        this.videoEl.currentTime = prev[2];
+                        this.videoEl.currentTime = this.prev[2];
                     }
                     TweenMax.to("#getReady",0.5,{autoAlpha:1});          
                     //document.getElementById("getReady").style.visibility = "visible";
@@ -1714,10 +1770,12 @@ gamePlay.prototype.playThrough = function(){
                         }.bind(this)
                     });                    
                     this.videoEl.pause();
-                    if (prev == false){
+                    if (this.prev == false){
+                    //if (prev == false){
                         this.videoEl.currentTime = this.gd.startG;
                     } else if (this.gd.stageJump[i-1] != undefined){
-                        this.videoEl.currentTime = this.gd.stageJump[i-1];
+                        this.videoEl.currentTime = this.prev[7];
+                        //this.videoEl.currentTime = this.gd.stageJump[i-1];
                     } else {
                         this.videoEl.currentTime = this.prev[2];
                     }
