@@ -35,11 +35,11 @@ var data = {
             "correctMove":"fire",                     
             "wrongMove1":{
                 "failStartTime":85.46, 
-                "failEndTime":86.25
+                "failEndTime":86.5
             },
             "wrongMove2":{
                 "failStartTime":85.46, 
-                "failEndTime":86.25
+                "failEndTime":86.5
             }                    
         },
         
@@ -54,7 +54,7 @@ var data = {
             "correctMove":"right",
             "wrongMove1":{
                 "failStartTime":86.85, 
-                "failEndTime":88
+                "failEndTime":88.7
             },
             "wrongMove2":{
                 "failStartTime":88.9, 
