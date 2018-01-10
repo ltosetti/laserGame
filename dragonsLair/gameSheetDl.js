@@ -22,7 +22,8 @@ var gameCfg = {
 }
 var data = {    
     "checkPointScore":0,
-    "checkPoints":[       
+    "checkPoints":[   
+        /*
         {  
             "id":1,
             "newStage": 59.7,
@@ -65,6 +66,7 @@ var data = {
         
         {    
             "id":3,
+            "newStage": 98.35,
             "title": "platform mobile",
             "active":false,
             "startTime":101.35,
@@ -74,11 +76,11 @@ var data = {
             "correctMove":"fire",
             "wrongMove1":{
                 "failStartTime":113.83, 
-                "failEndTime":116.5
+                "failEndTime":116
             },
             "wrongMove2":{
                 "failStartTime":116.7, 
-                "failEndTime":118.5
+                "failEndTime":118.25
             }            
         },
         {  
@@ -92,47 +94,29 @@ var data = {
             "correctMove":"up",
             "wrongMove1":{
                 "failStartTime":116.7, 
-                "failEndTime":118.5
+                "failEndTime":118.25
             },
             "wrongMove2":{
                 "failStartTime":116.7, 
-                "failEndTime":118.5
+                "failEndTime":118.25
             }
-        },
-        {       
-            "id":3,
-            "title": "base landing",
-            "active":false,
-            "startTime":105.5,
-            "endTime":106.5,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-            "wrongMove1":{
-                  "failStartTime":116.7, 
-                "failEndTime":118.5
-            },
-            "wrongMove2":{
-                  "failStartTime":116.7, 
-                "failEndTime":118.5
-            }
-        },
+        },        
         {      
             "id":3,
             "title": "base landing",
             "active":false,
-            "startTime":107.5,
-            "endTime":108.5,
+            "startTime":106.5,
+            "endTime":107.5,
             "complete": false,
             "pressed": false,
             "correctMove":"down",
              "wrongMove1":{
                   "failStartTime":116.7, 
-                "failEndTime":118.5
+                "failEndTime":118.25
             },
             "wrongMove2":{
                   "failStartTime":116.7, 
-                "failEndTime":118.5
+                "failEndTime":118.25
             }
         },
         {    
@@ -155,7 +139,7 @@ var data = {
         },
         {   
             "id":3,
-            "jumpTo": 129.25,
+            "jumpTo": 129,
             "title": "base landing",
             "active":false,
             "startTime":112.25,
@@ -165,23 +149,22 @@ var data = {
             "correctMove":"up",
             "wrongMove1":{
                 "failStartTime":121.75, 
-                "failEndTime":128.5
+                "failEndTime":128.25
             },
             "wrongMove2":{
                 "failStartTime":121.75, 
-                "failEndTime":128.5
+                "failEndTime":128.25
             },
-            "finishStage":113.5
-        },
-        
+            "finishStage":113
+        },        
         
         {   
             "id":4,
-            "newStage": 129.25,
+            "newStage": 129,
             "title": "base landing",
             "active":false,
-            "startTime":131,
-            "endTime":132,
+            "startTime":130.75,
+            "endTime":131.75,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
@@ -198,8 +181,8 @@ var data = {
             "id":4,
             "title": "base landing",
             "active":false,
-            "startTime":133.25,
-            "endTime":134.25,
+            "startTime":132.75,
+            "endTime":133.75,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
@@ -235,8 +218,8 @@ var data = {
             "jumpTo": 148.75,
             "title": "base landing",
             "active":false,
-            "startTime":138,
-            "endTime":139,
+            "startTime":137.5,
+            "endTime":138.5,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
@@ -300,11 +283,11 @@ var data = {
             "correctMove":"right",
             "wrongMove1":{
                "failStartTime":164, 
-                "failEndTime":172.5
+                "failEndTime":172
             },
             "wrongMove2":{
                 "failStartTime":164, 
-                "failEndTime":172.5
+                "failEndTime":172
             }
         },
         {    
@@ -319,12 +302,13 @@ var data = {
             "correctMove":"right",
             "wrongMove1":{"failStartTime":161,"failEndTime":163},
             "wrongMove2":{"failStartTime":161,"failEndTime":163},           
-            "finishStage":161
+            "finishStage":160
         },
+        
         
         {    
             "id":6,
-            "newStage": 172.75,
+            "newStage": 173,
             "title": "base landing",
             "active":false,
             "startTime":173.75,
@@ -344,18 +328,18 @@ var data = {
         {           
             "id":6,
             "active":false,
-            "startTime":175.75,
-            "endTime":176.75,
+            "startTime":175.5,
+            "endTime":176.5,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-               "failStartTime":193.5, 
-                "failEndTime":194
+               "failStartTime":194.5, 
+                "failEndTime":195.5
             },
             "wrongMove2":{
-                "failStartTime":194.5, 
-                "failEndTime":195.5
+                "failStartTime":193.5, 
+                "failEndTime":194                
             }
         },  
         {           
@@ -419,11 +403,11 @@ var data = {
             "correctMove":"up",
              "wrongMove1":{
                "failStartTime":201.75, 
-                "failEndTime":203
+                "failEndTime":202.75
             },
             "wrongMove2":{
                "failStartTime":201.75, 
-                "failEndTime":203
+                "failEndTime":202.75
             }
         },  
         {   //spider  
@@ -436,11 +420,11 @@ var data = {
             "correctMove":"fire",
             "wrongMove1":{
                "failStartTime":203.5, 
-                "failEndTime":205
+                "failEndTime":204.75
             },
             "wrongMove2":{
                "failStartTime":203.5, 
-                "failEndTime":205
+                "failEndTime":204.75
             }
         },
         {    
@@ -463,6 +447,7 @@ var data = {
             "finishStage":193
         },
        
+      
         {    
             "id":7,
             "newStage":213.75,
@@ -512,11 +497,11 @@ var data = {
             },
             "wrongMove2":{
                "failStartTime":229.25, 
-                "failEndTime":236.75
+                "failEndTime":236.25
             }
         },        
         {   "id":7,
-            "jumpTo":237,       
+            "jumpTo":237.5,       
             "active":false,
             "startTime":223.25,
             "endTime":224.25,
@@ -531,11 +516,12 @@ var data = {
                "failStartTime":227.5, 
                 "failEndTime":229
             },
-            "finishStage":226
+            "finishStage":225.25
         },
+         
         
         {   "id":8,
-            "newStage":237,       
+            "newStage":237.5,       
             "active":false,
             "startTime":239,
             "endTime":240,
@@ -568,7 +554,7 @@ var data = {
             }
         },
         {   "id":8,
-            "jumpTo":265,       
+            "jumpTo":264.75,       
             "active":false,
             "startTime":243,
             "endTime":244,
@@ -577,17 +563,18 @@ var data = {
             "correctMove":"fire",
             "wrongMove1":{
                "failStartTime":248, 
-                "failEndTime":251.5
+                "failEndTime":251.25
             },
             "wrongMove2":{
                "failStartTime":251.75, 
                 "failEndTime":253.75
             },
-            "finishStage":247.5
+            "finishStage":247
         },
         
+         
         {   "id":9,
-            "newStage":265,       
+            "newStage":264.75,       
             "active":false,
             "startTime":266.75,
             "endTime":267.75,
@@ -629,14 +616,15 @@ var data = {
             "correctMove":"left",
             "wrongMove1":{
                "failStartTime":281, 
-                "failEndTime":284.5
+                "failEndTime":284.25
             },
             "wrongMove2":{
                 "failStartTime":281, 
-                "failEndTime":290.25
+                "failEndTime":290
             },
             "finishStage":277
         },
+        */
         
         {   "id":10,        
             "newStage":290.75,
@@ -721,7 +709,7 @@ var data = {
             },
             "finishStage":312
         },
-        
+        /*
         {  "id":11, 
             "newStage":329,
             "active":false,
@@ -1884,6 +1872,6 @@ var data = {
             },
             "finishStage":998
         },
-        
+        */
     ]
 };

@@ -76,7 +76,7 @@ gamePlay.prototype.playThrough = function(){
         
         for (var i = 0; this.gd.checkpoints.length > i; i++) { 
             (function(index){                
-                if (!success && !pressed && this.videoEl.currentTime > this.gd.moveArrayCheckStart[index] && this.videoEl.currentTime < this.gd.moveArrayCheckEnd[index] && !this.gd.stageActive[index] && !this.gd.stageComplete[index]){
+                if (!success && this.videoEl.currentTime > this.gd.moveArrayCheckStart[index] && this.videoEl.currentTime < this.gd.moveArrayCheckEnd[index] && !this.gd.stageActive[index] && !this.gd.stageComplete[index]){
                     document.getElementById("showMoving").style.display = "block";
                     document.getElementById("showMoving").src = "img/"+this.gd.keyDirection[i]+".png";
                     this.current = [
@@ -233,7 +233,6 @@ gamePlay.prototype.playThrough = function(){
                             console.log("******************** success *******************" , this.count);
                             this.scoreUpdater();
                             error=false;
-                            pressed = false;
                         } else {
                             //if you pressed a wrong key
                             failEnd = this.current[4]
@@ -295,13 +294,12 @@ gamePlay.prototype.playThrough = function(){
                             //document.getElementById("getReady").style.visibility = "hidden";
                             this.videoEl.play();   
                         }.bind(this),2500);
-                        error = false;                        
+                        error = false;                          
                     } else {                                      
                         this.videoEl.pause();
                         console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
                         this.gameOver = true;
-                        error = false;  
-                        pressed = false;
+                        error = false;                          
                     } 
                 } else if (!success && error && !pressed && this.videoEl.currentTime > failEnd && !this.gd.stageComplete[i]){
                      document.getElementById("showMoving").style.display = "none";
