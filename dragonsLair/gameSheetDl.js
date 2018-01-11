@@ -623,8 +623,7 @@ var data = {
                 "failEndTime":290
             },
             "finishStage":277
-        },
-        */
+        },       
         
         {   "id":10,        
             "newStage":290.75,
@@ -684,11 +683,11 @@ var data = {
             "correctMove":"fire",
             "wrongMove1":{
                "failStartTime":319, 
-                "failEndTime":319.75
+                "failEndTime":319.5
             },
             "wrongMove2":{
                  "failStartTime":319, 
-                "failEndTime":319.75
+                "failEndTime":319.5
             }            
         },
         {  "id":10, 
@@ -701,15 +700,15 @@ var data = {
             "correctMove":"fire",
             "wrongMove1":{
                "failStartTime":320.25, 
-                "failEndTime":322.75
+                "failEndTime":322.5
             },
             "wrongMove2":{
                 "failStartTime":320.25, 
-                "failEndTime":328.5
+                "failEndTime":328.25
             },
             "finishStage":312
         },
-        /*
+        
         {  "id":11, 
             "newStage":329,
             "active":false,
@@ -720,11 +719,11 @@ var data = {
             "correctMove":"up",
             "wrongMove1":{
                "failStartTime":350.25, 
-                "failEndTime":352
+                "failEndTime":351.75
             },
             "wrongMove2":{
                 "failStartTime":350.25, 
-                "failEndTime":352
+                "failEndTime":351.75
             }           
         },
         {  "id":11,            
@@ -756,7 +755,7 @@ var data = {
             },
             "wrongMove2":{
                 "failStartTime":356.25, 
-                "failEndTime":363
+                "failEndTime":362.75
             }          
         },
         {  "id":11, 
@@ -778,8 +777,9 @@ var data = {
             "finishStage":349
         },
         
+        
         {  "id":12,                         
-            "jumpTo":381.5,
+            "jumpTo":381.5,           
             "active":false,
             "startTime":369.5,
             "endTime":370.5,
@@ -797,9 +797,11 @@ var data = {
             "finishStage":372
         },
         
+        
         {  
             "id":13,                         
             "jumpTo":397.5,
+            "newStage":381.5,
             "active":false,
             "startTime":382.75,
             "endTime":383.75,
@@ -816,6 +818,7 @@ var data = {
             },   
             "finishStage":386
         },
+        
         
         {
             "id":14,
@@ -888,6 +891,7 @@ var data = {
             },   
             "finishStage":409
         },
+        
         
         {  
             "id":15, 
@@ -995,6 +999,7 @@ var data = {
             "finishStage":435
         },
         
+        
         {   
             "id":16,   
             "newStage":448,
@@ -1093,8 +1098,9 @@ var data = {
                 "failStartTime":472, 
                 "failEndTime":478.5
             },   
-            "finishStage":469.5
+            "finishStage":469
         }, 
+       
          
         {  "id":17, 
            "newStage":479.25,
@@ -1195,6 +1201,7 @@ var data = {
             },
             "finishStage":495
         },
+         
         
         {  "id":18,            
             "active":false,
@@ -1242,7 +1249,7 @@ var data = {
             },
             "wrongMove2":{
                 "failStartTime":523, 
-                "failEndTime":530.25
+                "failEndTime":530
             }
         },
         {  "id":18,            
@@ -1279,6 +1286,7 @@ var data = {
             },
             "finishStage":520
         },
+       
         
         {  "id":19,         
             "newStage":596.25,
@@ -1323,14 +1331,15 @@ var data = {
             "correctMove":"fire",
              "wrongMove1":{
                 "failStartTime":608, 
-                "failEndTime":609
+                "failEndTime":608.75
             },
             "wrongMove2":{
                 "failStartTime":608, 
-                "failEndTime":609
+                "failEndTime":608.75
             },
             "finishStage":607
         },
+        
         
         {  "id":20, 
             "jumpTo":641,
@@ -1347,7 +1356,7 @@ var data = {
             },
             "wrongMove2":{
                 "failStartTime":635, 
-                "failEndTime":638
+                "failEndTime":637.75
             },
             "finishStage":629.75
         },
@@ -1371,8 +1380,8 @@ var data = {
             },
             "finishStage":645
         },
-        
-        
+         
+       
         {  
             "id":22, 
             "newStage":720,            
@@ -1382,13 +1391,13 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"left",
-             "wrongMove1":{
-                "failStartTime":752.25, 
-                "failEndTime":753
+            "wrongMove1":{                
+                "failStartTime":753.25, 
+                "failEndTime":756
             },
             "wrongMove2":{
-                "failStartTime":753.25, 
-                "failEndTime":756.25
+                "failStartTime":752.25, 
+                "failEndTime":752.75
             }
         },
         { 
@@ -1399,13 +1408,13 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"right",
-             "wrongMove1":{
-                "failStartTime":752.25, 
-                "failEndTime":753
+             "wrongMove1":{                
+                "failStartTime":753.25, 
+                "failEndTime":756
             },
             "wrongMove2":{
-                "failStartTime":753.25, 
-                "failEndTime":756.25
+                "failStartTime":752.25, 
+                "failEndTime":752.75
             }
         },
         { 
@@ -1416,13 +1425,13 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"right",
-             "wrongMove1":{
-                "failStartTime":752.25, 
-                "failEndTime":753
+            "wrongMove1":{                
+                "failStartTime":753.25, 
+                "failEndTime":756
             },
             "wrongMove2":{
-                "failStartTime":753.25, 
-                "failEndTime":756.25
+                "failStartTime":752.25, 
+                "failEndTime":752.75
             }
         },
         { 
@@ -1433,13 +1442,13 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"right",
-             "wrongMove1":{
-                "failStartTime":752.25, 
-                "failEndTime":753
+             "wrongMove1":{                
+                "failStartTime":753.25, 
+                "failEndTime":756
             },
             "wrongMove2":{
-                "failStartTime":753.25, 
-                "failEndTime":756.25
+                "failStartTime":752.25, 
+                "failEndTime":752.75
             }
         },
         { 
@@ -1450,13 +1459,13 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"right",
-             "wrongMove1":{
-                "failStartTime":752.25, 
-                "failEndTime":753
+             "wrongMove1":{                
+                "failStartTime":753.25, 
+                "failEndTime":756
             },
             "wrongMove2":{
-                "failStartTime":753.25, 
-                "failEndTime":756.25
+                "failStartTime":752.25, 
+                "failEndTime":752.75
             }
         },
         { 
@@ -1467,13 +1476,13 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"right",
-            "wrongMove1":{
-                "failStartTime":752.25, 
-                "failEndTime":753
+            "wrongMove1":{                
+                "failStartTime":753.25, 
+                "failEndTime":756
             },
             "wrongMove2":{
-                "failStartTime":753.25, 
-                "failEndTime":756.25
+                "failStartTime":752.25, 
+                "failEndTime":752.75
             }
         },
         { 
@@ -1484,13 +1493,13 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
-             "wrongMove1":{
-                "failStartTime":752.25, 
-                "failEndTime":753
+             "wrongMove1":{                
+                "failStartTime":753.25, 
+                "failEndTime":756
             },
             "wrongMove2":{
-                "failStartTime":753.25, 
-                "failEndTime":756.25
+                "failStartTime":752.25, 
+                "failEndTime":752.75
             }
         },
         { 
@@ -1501,35 +1510,36 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"down",
-             "wrongMove1":{
-                "failStartTime":752.25, 
-                "failEndTime":753
+             "wrongMove1":{                
+                "failStartTime":753.25, 
+                "failEndTime":756
             },
             "wrongMove2":{
-                "failStartTime":753.25, 
-                "failEndTime":756.25
+                "failStartTime":752.25, 
+                "failEndTime":752.75
             }
         },       
         { 
             "id":22,  
-            "jumpTo":762.25,
+            "jumpTo":762.5,
             "active":false,           
             "startTime":746,
             "endTime":747,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":752.25, 
-                "failEndTime":753
+            "wrongMove1":{                
+                "failStartTime":753.25, 
+                "failEndTime":756
             },
             "wrongMove2":{
-                "failStartTime":753.25, 
-                "failEndTime":762
+                "failStartTime":752.25, 
+                "failEndTime":752.75
             },
-            "finishStage":752
+            "finishStage":751.75
         },
         
+         
         { 
             "id":23,  
             "jumpTo":842,
@@ -1550,9 +1560,10 @@ var data = {
             },
             "finishStage":766
         },
+        
        
         { 
-            "id":22,  
+            "id":24,  
             "newStage":842,           
             "active":false,           
             "startTime":845,
@@ -1570,11 +1581,11 @@ var data = {
             }
         },
          { 
-            "id":23,  
+            "id":24,  
             "jumpTo":862.5,           
             "active":false,           
-            "startTime":848,
-            "endTime":849,
+            "startTime":847.75,
+            "endTime":848.75,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
@@ -1584,13 +1595,14 @@ var data = {
             },
             "wrongMove2":{
                 "failStartTime":854.5, 
-                "failEndTime":777.75
+                "failEndTime":861.75
             },
-            "finishStage":850
+            "finishStage":849.75
         },
+        
          
         { 
-            "id":24,  
+            "id":25,  
             "newStage":862.5,           
             "active":false,           
             "startTime":863.5,
@@ -1600,7 +1612,7 @@ var data = {
             "correctMove":"right",
             "wrongMove1":{
                 "failStartTime":873, 
-                "failEndTime":875.5
+                "failEndTime":875.25
             },
             "wrongMove2":{
                 "failStartTime":876, 
@@ -1608,7 +1620,7 @@ var data = {
             }           
         },        
         { 
-            "id":24,                   
+            "id":25,                   
             "active":false,           
             "startTime":865.5,
             "endTime":866.5,
@@ -1625,7 +1637,7 @@ var data = {
             }
         },
         { 
-            "id":24,       
+            "id":25,       
             "jumpTo":949,
             "active":false,           
             "startTime":869,
@@ -1643,9 +1655,10 @@ var data = {
             },
             "finishStage":872
         },
-       
+        */
+       /*
         { 
-            "id":25,       
+            "id":26,       
             "newStage":949,
             "active":false,           
             "startTime":956.25,
@@ -1663,7 +1676,7 @@ var data = {
             }
         },
         { 
-            "id":25,                   
+            "id":26,                   
             "active":false,           
             "startTime":958.25,
             "endTime":959.25,
@@ -1680,7 +1693,7 @@ var data = {
             }
         },
         { 
-            "id":25,                   
+            "id":26,                   
             "active":false,           
             "startTime":960.25,
             "endTime":961.25,
@@ -1697,7 +1710,7 @@ var data = {
             }
         },
         { 
-            "id":25,                   
+            "id":26,                   
             "active":false,           
             "startTime":962.25,
             "endTime":963.25,
@@ -1714,7 +1727,7 @@ var data = {
             }
         },
         { 
-            "id":25, 
+            "id":26, 
             //rapids
             "active":false,           
             "startTime":967.5,
@@ -1732,7 +1745,7 @@ var data = {
             }
         },
         { 
-            "id":25, 
+            "id":26, 
             //rapids
             "active":false,           
             "startTime":970,
@@ -1750,7 +1763,7 @@ var data = {
             }
         },
         { 
-            "id":25, 
+            "id":26, 
             //rapids
             "active":false,           
             "startTime":972.25,
@@ -1768,7 +1781,7 @@ var data = {
             }
         },
         { 
-            "id":25, 
+            "id":26, 
             //rapids
             "active":false,           
             "startTime":975,
@@ -1786,7 +1799,7 @@ var data = {
             }
         },
         { 
-            "id":25,            
+            "id":26,            
             "active":false,           
             "startTime":980.75,
             "endTime":981.75,
@@ -1803,7 +1816,7 @@ var data = {
             }
         },
         { 
-            "id":25,            
+            "id":26,            
             "active":false,           
             "startTime":983.75,
             "endTime":984.75,
@@ -1820,7 +1833,7 @@ var data = {
             }
         },
         { 
-            "id":25,            
+            "id":26,            
             "active":false,           
             "startTime":986.25,
             "endTime":987.25,
@@ -1837,7 +1850,7 @@ var data = {
             }
         },
         { 
-            "id":25,            
+            "id":26,            
             "active":false,           
             "startTime":989,
             "endTime":990,
@@ -1854,7 +1867,7 @@ var data = {
             }
         },
         { 
-            "id":25,      
+            "id":26,      
             "jumpTo":1017,
             "active":false,           
             "startTime":994,
@@ -1872,6 +1885,220 @@ var data = {
             },
             "finishStage":998
         },
+        
+        { 
+            "id":27,      
+            "newStage":1016.75,
+            "active":false,           
+            "startTime":1021.75,
+            "endTime":1022.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":1055.25, 
+                "failEndTime":1057.25
+            },
+            "wrongMove2":{
+                "failStartTime":1055.25, 
+                "failEndTime":1057.25
+            }            
+        },
+        { 
+            "id":27,            
+            "active":false,           
+            //"startTime":1026.75,
+            //"endTime":1027.75,
+            "startTime":1027,
+            "endTime":1028,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":1050.75, 
+                "failEndTime":1054.75
+            },
+            "wrongMove2":{
+                "failStartTime":1058, 
+                "failEndTime":1058.75
+            }
+            
+        },
+        { 
+            "id":27,            
+            "active":false,           
+            "startTime":1030.25,
+            "endTime":1031.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":1058, 
+                "failEndTime":1058.75
+            },
+            "wrongMove2":{
+                "failStartTime":1058, 
+                "failEndTime":1058.75
+            }
+        },
+        { 
+            "id":27,            
+            "active":false,           
+            "startTime":1030.25,
+            "endTime":1031.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+           "wrongMove1":{
+                "failStartTime":1046.75, 
+                "failEndTime":1047.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1047.75, 
+                "failEndTime":1048.5
+            }
+        },
+        { 
+            "id":27,            
+            "active":false,           
+            "startTime":1032.25,
+            "endTime":1033.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":1050.75, 
+                "failEndTime":1054.75
+            },
+            "wrongMove2":{
+                "failStartTime":1050.75, 
+                "failEndTime":1054.75
+            }
+        },
+        { 
+            "id":27,   //bridge         
+            "active":false,           
+            "startTime":1034.5,
+            "endTime":1035.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":1048.75, 
+                "failEndTime":1050.5
+            },
+            "wrongMove2":{
+                "failStartTime":1048.75, 
+                "failEndTime":1050.5
+            }
+        },
+        { 
+            "id":27,
+            "active":false,           
+            "startTime":1037.5,
+            "endTime":1038.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":1050.75, 
+                "failEndTime":1054.75
+            },
+            "wrongMove2":{
+                "failStartTime":1050.75, 
+                "failEndTime":1054.75
+            }
+        },
+        { 
+            "id":27,
+            "jumpTo": 1065,
+            "active":false,           
+            "startTime":1042,
+            "endTime":1043,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":1050.75, 
+                "failEndTime":1054.75
+            },
+            "wrongMove2":{
+                 "failStartTime":1058, 
+                "failEndTime":1058.75
+            },
+            "finishStage":1046
+        },
         */
+        { 
+            "id":28,
+            "newStage": 1065,
+            "active":false,           
+            "startTime":1067,
+            "endTime":1068,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":1078.25, 
+                "failEndTime":1079.25
+            },
+            "wrongMove2":{
+                 "failStartTime":1079.75, 
+                "failEndTime":1082.25
+            }
+        },
+        { 
+            "id":28,            
+            "active":false,           
+            "startTime":1071.25,
+            "endTime":1072.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+             "wrongMove1":{
+                "failStartTime":1078.25, 
+                "failEndTime":1079.25
+            },
+            "wrongMove2":{
+                 "failStartTime":1079.75, 
+                "failEndTime":1082.25
+            }
+        },
+        { 
+            "id":28,            
+            "active":false,           
+            "startTime":1074.5,
+            "endTime":1075.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+             "wrongMove1":{
+                "failStartTime":1078.25, 
+                "failEndTime":1079.25
+            },
+            "wrongMove2":{
+                 "failStartTime":1079.75, 
+                "failEndTime":1082.25
+            }
+        },
+        { 
+            "id":28,
+            "jumpTo":1088.5,
+            "active":false,           
+            "startTime":1076.25,
+            "endTime":1077.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":1078.25, 
+                "failEndTime":1079.25
+            },
+            "wrongMove2":{
+                 "failStartTime":1079.75, 
+                "failEndTime":1088
+            },
+            "finishStage":1078
+        },
     ]
 };
