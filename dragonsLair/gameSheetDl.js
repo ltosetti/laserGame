@@ -22,8 +22,7 @@ var gameCfg = {
 }
 var data = {    
     "checkPointScore":0,
-    "checkPoints":[   
-        /*
+    "checkPoints":[       
         {  
             "id":1,
             "newStage": 59.7,
@@ -2245,7 +2244,7 @@ var data = {
             },
             "finishStage":1127.5
         },
-         */
+         
         { 
             "id":31,
             "newStage":1207.25,
