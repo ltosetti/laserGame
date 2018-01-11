@@ -2028,7 +2028,7 @@ var data = {
             },
             "finishStage":1046
         },
-        */
+        
         { 
             "id":28,
             "newStage": 1065,
@@ -2099,6 +2099,359 @@ var data = {
                 "failEndTime":1088
             },
             "finishStage":1078
+        },
+       
+        { 
+            "id":29,
+            "newStage":1088.5,
+            "active":false,           
+            "startTime":1093.25,
+            "endTime":1094.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+            "wrongMove1":{
+                "failStartTime":1110, 
+                "failEndTime":1110.75
+            },
+            "wrongMove2":{
+                "failStartTime":1108.5, 
+                "failEndTime":1109.5
+            }
+        },
+         { 
+            "id":29,            
+            "active":false,           
+            "startTime":1095.25,
+            "endTime":1096.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+             "wrongMove1":{
+                "failStartTime":1110, 
+                "failEndTime":1110.75
+            },
+            "wrongMove2":{
+                "failStartTime":1108.5, 
+                "failEndTime":1109.5
+            }
+        },
+         { 
+            "id":29,            
+            "active":false,           
+            "startTime":1097.25,
+            "endTime":1098.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+             "wrongMove1":{
+                "failStartTime":1110, 
+                "failEndTime":1110.75
+            },
+            "wrongMove2":{
+                "failStartTime":1108.5, 
+                "failEndTime":1109.5
+            }
+        },
+        { 
+            "id":29,            
+            "active":false,           
+            "startTime":1099.25,
+            "endTime":1100.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+             "wrongMove1":{
+                "failStartTime":1110, 
+                "failEndTime":1110.75
+            },
+            "wrongMove2":{
+                "failStartTime":1108.5, 
+                "failEndTime":1109.5
+            }
+        },
+         { 
+            "id":29,            
+            "active":false,           
+            "startTime":1101.25,
+            "endTime":1102.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+             "wrongMove1":{
+                "failStartTime":1110, 
+                "failEndTime":1110.75
+            },
+            "wrongMove2":{
+                "failStartTime":1108.5, 
+                "failEndTime":1109.5
+            }
+        },
+        { 
+            "id":29,            
+            "active":false, 
+            "jumpTo": 1117,
+            "startTime":1103.25,
+            "endTime":1104.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+             "wrongMove1":{
+                "failStartTime":1110, 
+                "failEndTime":1116.5
+            },
+            "wrongMove2":{
+                "failStartTime":1108.5, 
+                "failEndTime":1109.5
+            },
+            "finishStage":1108
+        },
+        
+         { 
+            "id":30,            
+            "active":false, 
+            "newStage": 1117,
+            "startTime":1120,
+            "endTime":1121,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+             "wrongMove1":{
+                "failStartTime":1128.25, 
+                "failEndTime":1129.25
+            },
+            "wrongMove2":{
+                "failStartTime":1128.25, 
+                "failEndTime":1129.25
+            },
+            "finishStage":1108
+        },
+        { 
+            "id":30,
+            "jumpTo":1207.25,
+            "active":false,             
+            "startTime":1126,
+            "endTime":1127,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+             "wrongMove1":{
+                "failStartTime":1129.75, 
+                "failEndTime":1130.75
+            },
+            "wrongMove2":{
+                "failStartTime":1131.25, 
+                "failEndTime":1137.75
+            },
+            "finishStage":1127.5
+        },
+         */
+        { 
+            "id":31,
+            "newStage":1207.25,
+            "active":false,             
+            "startTime":1210.5,
+            "endTime":1211.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":1301, 
+                "failEndTime":1302.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1301, 
+                "failEndTime":1302.5
+            }
+        },
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1230.25,
+            "endTime":1231.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":1301, 
+                "failEndTime":1302.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1301, 
+                "failEndTime":1302.5
+            }
+        },
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1253.75,
+            "endTime":1254.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+             "wrongMove1":{
+                "failStartTime":1303, 
+                "failEndTime":1305
+            },
+            "wrongMove2":{
+                "failStartTime":1303, 
+                "failEndTime":1305
+            }
+        },
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1256.75,
+            "endTime":1257.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+              "wrongMove1":{
+                "failStartTime":1301, 
+                "failEndTime":1302.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1301, 
+                "failEndTime":1302.5
+            }
+        },        
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1260.75,
+            "endTime":1261.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+             "wrongMove1":{
+                "failStartTime":1303, 
+                "failEndTime":1305
+            },
+            "wrongMove2":{
+                "failStartTime":1309.5, 
+                "failEndTime":1311.5
+            }
+        },
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1266.75,
+            "endTime":1267.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",             
+            "wrongMove1":{
+                "failStartTime":1301, 
+                "failEndTime":1302.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1301, 
+                "failEndTime":1302.5
+            }
+        },
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1270,
+            "endTime":1271,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":1305.5, 
+                "failEndTime":1307
+            },
+            "wrongMove2":{
+                 "failStartTime":1305.5, 
+                "failEndTime":1307
+            }
+        },
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1271.75,
+            "endTime":1272.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+             "wrongMove1":{
+                "failStartTime":1301, 
+                "failEndTime":1302.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1301, 
+                "failEndTime":1302.5
+            }
+        },
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1275,
+            "endTime":1276,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+             "wrongMove1":{
+                "failStartTime":1307.5, 
+                "failEndTime":1309
+            },
+            "wrongMove2":{
+                "failStartTime":1307.5, 
+                "failEndTime":1309
+            }
+        },
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1279,
+            "endTime":1280,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+             "wrongMove1":{
+                "failStartTime":1301, 
+                "failEndTime":1302.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1312, 
+                "failEndTime":1313.5
+            }
+        },
+        { 
+            "id":31,            
+            "active":false,             
+            "startTime":1281,
+            "endTime":1282,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",            
+             "wrongMove1":{
+                "failStartTime":1301, 
+                "failEndTime":1302.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1312, 
+                "failEndTime":1313.5
+            }
+        },
+        { 
+            "id":31,            
+            "active":false, 
+            "theEnd":1317.75,
+            "startTime":1283.5,
+            "endTime":1284.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+             "wrongMove1":{
+                "failStartTime":1312, 
+                "failEndTime":1313.5
+            },
+            "wrongMove2":{
+                "failStartTime":1312, 
+                "failEndTime":1313.5
+            },
+            "finishStage": 1300.5
         },
     ]
 };
