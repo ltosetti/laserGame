@@ -233,7 +233,7 @@ var data = {
             "finishStage":139
         },
         
-        
+        //liane
         {    
             "id":5,
             "newStage": 148.75,
@@ -304,7 +304,7 @@ var data = {
             "finishStage":160
         },
         
-        
+        //uscita schiaccia corpo
         {    
             "id":6,
             "newStage": 173,
@@ -327,8 +327,8 @@ var data = {
         {           
             "id":6,
             "active":false,
-            "startTime":175.5,
-            "endTime":176.5,
+            "startTime":175.75,
+            "endTime":176.75,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
@@ -519,7 +519,8 @@ var data = {
         },
          
         
-        {   "id":8,
+        {   
+            "id":8,
             "newStage":237.5,       
             "active":false,
             "startTime":239,

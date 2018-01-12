@@ -118,7 +118,8 @@ gamePlay.prototype.playThrough = function(){
                     
                     //check the key pressed
                     document.onkeydown = function(e){                            
-                        if (this.current != undefined && this.current[9] && !this.current[11]){                        
+                        if (this.current != undefined && this.current[9] && !this.current[11]){
+                            pressed = true;
                             switch (e.keyCode) {
                                 case 37:                        
                                     key = "left";
@@ -137,7 +138,7 @@ gamePlay.prototype.playThrough = function(){
                                     }
                                     document.getElementById("showMoving").style.display = "none";
                                     this.current[11] = true;
-                                    pressed = true;
+                                    //pressed = true;
                                     break;
                                 case 39:                        
                                     key = "right";
@@ -156,7 +157,7 @@ gamePlay.prototype.playThrough = function(){
                                     }                          
                                     document.getElementById("showMoving").style.display = "none";   
                                     this.current[11] = true;
-                                    pressed = true;
+                                    //pressed = true;
                                     break;                                    
                                 case 38:                        
                                     key = "up";
@@ -175,7 +176,7 @@ gamePlay.prototype.playThrough = function(){
                                     }                    
                                     document.getElementById("showMoving").style.display = "none";
                                     this.current[11] = true;
-                                    pressed = true;
+                                    //pressed = true;
                                     break;
 
                                 case 40:                        
@@ -195,7 +196,7 @@ gamePlay.prototype.playThrough = function(){
                                     }                         
                                     document.getElementById("showMoving").style.display = "none";
                                     this.current[11] = true;
-                                    pressed = true;
+                                    //pressed = true;
                                     break;
 
                                 case 83:                        
@@ -215,7 +216,7 @@ gamePlay.prototype.playThrough = function(){
                                     }                        
                                     document.getElementById("showMoving").style.display = "none";
                                     this.current[11] = true;
-                                    pressed = true;                            
+                                    //pressed = true;                            
                                     break;
                             }   
                         }                    
@@ -234,7 +235,7 @@ gamePlay.prototype.playThrough = function(){
                             this.scoreUpdater();
                             error=false;
                             pressed = false;
-                        } else {
+                        } else if (!success && error) {
                             //if you pressed a wrong key
                             failEnd = this.current[4]
                             this.videoEl.currentTime =  this.current[3];
