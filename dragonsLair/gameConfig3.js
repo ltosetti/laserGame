@@ -263,7 +263,8 @@ gamePlay.prototype.playThrough = function(){
                     }               
                 success = false;
                 }
-                if (!success && error && pressed && this.videoEl.currentTime > failEnd && !this.current[10]){
+                //if (!success && error && pressed && this.videoEl.currentTime > failEnd && !this.current[10]){
+                if (!success && error && pressed && this.videoEl.currentTime > this.current[4] && !this.current[10]){
                     document.getElementById("showMoving").style.display = "none";
                     pressed = false;
                     this.current[11] = false;
@@ -304,7 +305,9 @@ gamePlay.prototype.playThrough = function(){
                         error = false;  
                         pressed = false;
                     } 
-                } else if (!success && error && !pressed && this.videoEl.currentTime > failEnd && !this.gd.stageComplete[i]){
+                } 
+                //else if (!success && error && !pressed && this.videoEl.currentTime > failEnd && !this.gd.stageComplete[i]){
+                else if (!success && error && !pressed && this.videoEl.currentTime > this.current[6] && !this.gd.stageComplete[i]){
                      document.getElementById("showMoving").style.display = "none";
                      if (this.lives > 0) {
                         this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1;                                   
@@ -346,366 +349,13 @@ gamePlay.prototype.playThrough = function(){
                         //break;
                     }                
 
-                }
-                          
+                }                          
                 //function index end
             }.bind(this))(i);
            //for end 
         }
         //timeupdate end
-    }.bind(this));
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                /*
-                
-                if (!success && this.videoEl.currentTime > this.gd.moveArrayCheckStart[index] && this.videoEl.currentTime < this.gd.moveArrayCheckEnd[index] && !this.gd.stageActive[index] && !this.gd.stageComplete[index]){
-                    document.getElementById("showMoving").style.display = "block";
-                    document.getElementById("showMoving").src = "img/"+this.gd.keyDirection[i]+".png";
-                    if (index > 0){
-                        this.prev = [
-                            this.gd.keyDirection[(index+len-1)%len], //0
-                            this.gd.moveArrayCheckStart[(index+len-1)%len], //1
-                            this.gd.moveArrayCheckEnd[(index+len-1)%len], //2
-                            this.gd.moveArrayfailed1Start[(index+len-1)%len], //3 
-                            this.gd.moveArrayfailed1End[(index+len-1)%len], //4
-                            this.gd.moveArrayfailed2Start[(index+len-1)%len], //5
-                            this.gd.moveArrayfailed2End[(index+len-1)%len], //6
-                            this.gd.stageJump[(index+len-1)%len], //7
-                            this.gd.stageJumpDlay[(index+len-1)%len], //8
-                            this.gd.stageActive[(index+len-1)%len], //9
-                            this.gd.stageComplete[(index+len-1)%len], //10
-                            this.gd.stagePressed[(index+len-1)%len], //11
-                            this.gd.finishStage[(index+len-1)%len] //12
-                        ];
-                    } else {
-                        this.prev = false;
-                    }          
-                    this.current = [
-                            this.gd.keyDirection[index], 
-                            this.gd.moveArrayCheckStart[index], 
-                            this.gd.moveArrayCheckEnd[index],
-                            this.gd.moveArrayfailed1Start[index], 
-                            this.gd.moveArrayfailed1End[index],
-                            this.gd.moveArrayfailed2Start[index], 
-                            this.gd.moveArrayfailed2End[index],
-                            this.gd.stageJump[index],
-                            this.gd.stageJumpDlay[index],
-                            this.gd.stageActive[index],
-                            this.gd.stageComplete[index],
-                            this.gd.stagePressed[index],
-                            this.gd.finishStage[index]
-                    ]; 
-                    if (i != (this.gd.checkpoints.length-1)){
-                        this.next = [
-                            this.gd.keyDirection[(index+1)%len], 
-                            this.gd.moveArrayCheckStart[(index+1)%len],
-                            this.gd.moveArrayCheckEnd[(index+1)%len],
-                            this.gd.moveArrayfailed1Start[(index+1)%len], 
-                            this.gd.moveArrayfailed1End[(index+1)%len],
-                            this.gd.moveArrayfailed2Start[(index+1)%len], 
-                            this.gd.moveArrayfailed2End[(index+1)%len],
-                            this.gd.stageJump[(index+1)%len],
-                            this.gd.stageJumpDlay[(index+1)%len],
-                            this.gd.stageActive[(index+1)%len],
-                            this.gd.stageComplete[(index+1)%len],
-                            this.gd.stagePressed[(index+1)%len],
-                            this.gd.finishStage[(index+1)%len]
-                        ];
-                    } else {
-                        this.next = false
-                    } 
-                    console.log("Prev: " ,this.prev);
-                    console.log("Current: ", this.current);
-                    console.log("Next: " ,this.next);
-                    console.log(i, this.gd.checkpoints.length-1);
-                    console.log(this.prev[9],this.current[9], this.next[9])
-                    console.log("---------------------------------------");
-                }
-                if (this.current!=undefined){
-                    this.current[9]=true;
-                }else{
-                    this.current == undefined;
-                }
-                //this.current[9]=true;
-                document.onkeydown = function(e){
-                    //if (this.gd.stageActive[i] &&  !this.gd.stagePressed[i]){     
-                    if (this.current[9] && !this.current[11]){                    
-                    switch (e.keyCode) {
-                        case 37:                        
-                            key = "left";    
-                            moved = true;
-                            this.current[11] = true;
-                            if (!this.current[10]){
-                                if (key == this.current[0]) {                                         
-                                    success = true; 
-                                    console.log("%%%%%%%%%%%% right %%%%%%%%%%%%%%%");
-                                    //console.log("continue", this.checkPoint[index].correctMove); 
-                                    this.audioSuccess.play();
-                                } else {
-                                    //console.log("load error");
-                                    error = true;       
-                                    console.log("%%%%%%%%%%%%% wrong %%%%%%%%%%%%%%%%");
-                                    this.audioError.play();
-                                } 
-                            }                            
-                            document.getElementById("showMoving").style.display = "none";                            
-                            pressed = true;
-                            break;
-                        case 39:                        
-                            key = "right";    
-                            moved = true;
-                             this.current[11] = true;
-                            if (!this.current[10]){
-                                if (key == this.current[0]) {                                         
-                                    success = true; 
-                                    console.log("%%%%%%%%%%%%%% right %%%%%%%%%%%%%");
-                                    //console.log("continue", this.checkPoint[index].correctMove); 
-                                    this.audioSuccess.play();
-                                } else {
-                                    //console.log("load error");
-                                    error = true;       
-                                    console.log("%%%%%%%%%%%%% wrong %%%%%%%%%%%%%%%%");
-                                    this.audioError.play();
-                                } 
-                            }                            
-                            document.getElementById("showMoving").style.display = "none";                            
-                            pressed = true;
-                            break;                                    
-                        case 38:                        
-                            key = "up";    
-                            moved = true;
-                             this.current[11] = true;
-                            if (!this.current[10]){
-                                if (key == this.current[0]) {                                          
-                                    success = true; 
-                                    console.log("right");
-                                    //console.log("continue", this.checkPoint[index].correctMove); 
-                                    this.audioSuccess.play();
-                                } else {
-                                    //console.log("load error");
-                                    error = true;       
-                                    console.log("wrong");
-                                    this.audioError.play();
-                                } 
-                            }                            
-                            document.getElementById("showMoving").style.display = "none";                            
-                            pressed = true;
-                            break;
-
-                        case 40:                        
-                            key = "down";    
-                            moved = true;
-                             this.current[11] = true;
-                            if (!this.current[10]){
-                                if (key == this.current[0]) {                                        
-                                    success = true; 
-                                    console.log("right");
-                                    //console.log("continue", this.checkPoint[index].correctMove); 
-                                    this.audioSuccess.play();
-                                } else {
-                                    //console.log("load error");
-                                    error = true;       
-                                    console.log("wrong");
-                                    this.audioError.play();
-                                }  
-                            }                           
-                            document.getElementById("showMoving").style.display = "none";                            
-                            pressed = true;
-                            break;
-
-                        case 83:                        
-                            key = "fire";    
-                            moved = true;
-                            this.current[11] = true;
-                            if (!this.current[10]){
-                                if (key == this.current[0]) {                                          
-                                    success = true; 
-                                    console.log("right");
-                                    //console.log("continue", this.checkPoint[index].correctMove); 
-                                    this.audioSuccess.play();
-                                } else {
-                                    //console.log("load error");
-                                    error = true;       
-                                    console.log("wrong");
-                                    this.audioError.play();
-                                } 
-                            }                           
-                            document.getElementById("showMoving").style.display = "none";
-                            pressed = true;                            
-                            break;
-                        }   
-                    }                    
-                }.bind(this);
-                if (this.videoEl.currentTime > this.current[2] && this.current[9]){                
-                this.current[9] = false;               
-                //if you pressed a key
-                    if (pressed){ 
-                        //if you pressed a right key
-                        if (success){                        
-                            this.current[10] = true;
-                            this.count++;
-                            console.log("******************** success *******************" , this.count);
-                            this.scoreUpdater();
-                            error=false;
-                        } else {
-                            //if you pressed a wrong key
-                            error=true;
-                            var indice = i;
-                            failStart = this.current[3];
-                            failEnd = this.current[4];
-                            this.videoEl.currentTime =  failStart;
-                            document.getElementById("showMoving").style.display = "none";                       
-                            console.log("**************** error ******************");
-                            this.current[11] = false;
-                            
-                        } 
-                    } else {
-                        error = true
-                         console.log(error);
-                        failStart = this.current[5];
-                        failEnd = this.current[6];
-                        this.videoEl.currentTime =  failStart;
-                        document.getElementById("showMoving").style.display = "none";                                       
-                        console.log("******************* error *****************");
-                    }
-                    
-                   
-                    // if there jump in that scene
-                    //if (success && this.current[7] != undefined){
-                    if (success && this.current[7] != undefined){                   
-
-                        var gotoNextStep = setInterval(function(){ 
-                            if (parseInt(this.videoEl.currentTime) >= this.current[12]){
-                                clearInterval(gotoNextStep);
-                                this.videoEl.currentTime = this.current[7];
-                                //console.log("arrivato");                            
-                            }
-                            //console.log(this.videoEl.currentTime); 
-                        }.bind(this), 250);                   
-                    }
-
-                    success = false;
-                    this.current[9] = false;
-                    //pressed = false;
-                    //error = false;                
-                }
-                if (!success && error && pressed && this.videoEl.currentTime > failEnd && !this.current[10]){
-                    //console.log(this.gd.moveArrayfailed1Start[i],this.gd.moveArrayfailed1End[i],failEnd);
-
-                    document.getElementById("showMoving").style.display = "none";
-                    pressed = false;
-                    if (this.lives > 0) {
-                        this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1;                                   
-                        document.getElementById("gdLives").innerHTML = this.lives;              
-                        TweenMax.to("#gdLives",0.3,{
-                            scale:2,
-                            opacity:0.4,
-                            //color:"#ff0000",
-                            onComplete: function(){
-                                TweenMax.to("#gdLives",0.3,{
-                                    scale:1, 
-                                    //color:"#fff",
-                                    opacity:1
-                                });
-                            }.bind(this)
-                        });                    
-                        this.videoEl.pause();
-                        if (this.prev == false){
-                            this.videoEl.currentTime = this.gd.startG;
-                        } else if (this.gd.stageJump[i-1] != undefined){
-                            this.videoEl.currentTime = this.prev[7];
-                            //this.videoEl.currentTime = this.gd.stageJump[i-1];
-                        } else {
-                            this.videoEl.currentTime = this.prev[2];
-                        }
-                        TweenMax.to("#getReady",0.5,{autoAlpha:1});          
-                        //document.getElementById("getReady").style.visibility = "visible";
-                        //this.videoEl.currentTime = this.prev == false?this.gd.startG:this.prev[2];
-                        setTimeout(function(){
-                            TweenMax.to("#getReady",0.5,{autoAlpha:0});      
-                            //document.getElementById("getReady").style.visibility = "hidden";
-                            this.videoEl.play();   
-                        }.bind(this),2500);
-                        error = false;  
-                        //break;
-                    } else {                    
-                        //this.lives = parseInt(document.getElementById("gdLives").innerHTML)-1;                    
-                        //document.getElementById("gdLives").innerHTML = this.lives;                    
-                        this.videoEl.pause();
-                        console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
-                        this.gameOver = true;
-                        error = false;  
-                        //break;
-                    } 
-                    //if the second wrong video is loaded
-                } 
-                else if (!success && error && !pressed && this.videoEl.currentTime > failEnd && !this.current[10]){
-                    //console.log(i,this.gd.moveArrayfailed2Start[i],this.gd.moveArrayfailed2End[i],failEnd);            
-                     document.getElementById("showMoving").style.display = "none";
-                     if (this.lives > 0) {
-                        this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1;                                   
-                        document.getElementById("gdLives").innerHTML = this.lives;              
-                        TweenMax.to("#gdLives",0.3,{
-                            scale:2,
-                            opacity:0.4,
-                            //color:"#ff0000",
-                            onComplete: function(){
-                                TweenMax.to("#gdLives",0.3,{
-                                    scale:1, 
-                                    //color:"#fff",
-                                    opacity:1
-                                });
-                            }.bind(this)
-                        });                    
-                        this.videoEl.pause();
-                        if (this.prev == false){
-                        //if (prev == false){
-                            this.videoEl.currentTime = this.gd.startG;
-                        } else if (this.gd.stageJump[i-1] != undefined){
-                            this.videoEl.currentTime = this.prev[7];
-                            //this.videoEl.currentTime = this.gd.stageJump[i-1];
-                        } else {
-                            this.videoEl.currentTime = this.prev[2];
-                        }
-                        TweenMax.to("#getReady",0.5,{autoAlpha:1});          
-                        //document.getElementById("getReady").style.visibility = "visible";
-                        //this.videoEl.currentTime = this.prev == false?this.gd.startG:this.prev[2];
-                        setTimeout(function(){
-                            TweenMax.to("#getReady",0.5,{autoAlpha:0});      
-                            //document.getElementById("getReady").style.visibility = "hidden";
-                            this.videoEl.play();   
-                        }.bind(this),2500);
-                         error = false;  
-                        //break;
-                    } else {                    
-                        //this.lives = parseInt(document.getElementById("gdLives").innerHTML)-1;                    
-                        //document.getElementById("gdLives").innerHTML = this.lives;                    
-                        this.videoEl.pause();
-                        console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
-                        this.gameOver = true;
-                        error = false;  
-                        //break;
-                    }                
-
-                }
-                
-            }.bind(this))(i);           
-            //if (this.gameOver){break;}
-        }
-        
-    }.bind(this));
-    */
+    }.bind(this));                
 };
 gamePlay.prototype.start = function(){
     this.videoEl.currentTime = this.gd.startG;
@@ -903,3 +553,29 @@ function Init(data){
 };
 
 var init = new Init(data);
+
+var vid = document.querySelector('#scene');
+//video.load();
+/*vid.onloadstart = function() {
+  log('loadstart at ' + this.currentTime);
+};
+
+vid.onloadedmetadata = function() {
+  log('loadedmetadata at ' + this.currentTime);
+  vid.currentTime = 55;
+  vid.setAttribute('preload', "auto");
+  vid.play();    
+  //vid.pause();
+};
+
+vid.onloadeddata = function() {
+  log('loadeddata at ' + this.currentTime);   
+    //video.load();
+};
+
+function log(datas) {
+  document.querySelector('#log').innerHTML += '<p>' + datas + '</p>';
+}*/
+vid.bind('loadeddata', function(e) {
+  console.log(e.target.duration);
+});
