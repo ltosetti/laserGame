@@ -75,7 +75,6 @@ gamePlay.prototype.playThrough = function(){
         //console.log(Math.round(this.videoEl.currentTime*100)/100)
         
         for (var i = 0; this.gd.checkpoints.length > i; i++) { 
-            if (this.gameOver)break;
             (function(index){                
                 if (!success && !pressed && this.videoEl.currentTime > this.gd.moveArrayCheckStart[index] && this.videoEl.currentTime < this.gd.moveArrayCheckEnd[index] && !this.gd.stageActive[index] && !this.gd.stageComplete[index]){
                     document.getElementById("showMoving").style.display = "block";
@@ -299,8 +298,12 @@ gamePlay.prototype.playThrough = function(){
                             this.videoEl.play();   
                         }.bind(this),2500);
                         error = false;                        
-                    } else { 
-                        this.game_over(error, pressed);                       
+                    } else {                                      
+                        this.videoEl.pause();
+                        console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
+                        this.gameOver = true;
+                        error = false;  
+                        pressed = false;
                     } 
                 } 
                 //else if (!success && error && !pressed && this.videoEl.currentTime > failEnd && !this.gd.stageComplete[i]){
@@ -337,7 +340,13 @@ gamePlay.prototype.playThrough = function(){
                         }.bind(this),2500);
                         error = false;                          
                     } else {                    
-                        this.game_over(error, pressed);                       
+                        //this.lives = parseInt(document.getElementById("gdLives").innerHTML)-1;                    
+                        //document.getElementById("gdLives").innerHTML = this.lives;                    
+                        this.videoEl.pause();
+                        console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
+                        this.gameOver = true;
+                        error = false;  
+                        //break;
                     }                
 
                 }                          
@@ -351,17 +360,6 @@ gamePlay.prototype.playThrough = function(){
 gamePlay.prototype.start = function(){
     this.videoEl.currentTime = this.gd.startG;
     this.videoEl.play();  
-};
-gamePlay.prototype.game_over = function(error, pressed){
-    console.log("%%%%%%%%%%%%%%%%%%% Game over %%%%%%%%%%%%%%%%%%%%");
-    this.videoEl.pause();    
-    this.gameOver = true;
-    error = false;
-    pressed = false;
-    TweenMax.to("#gameReplayBtn, #gameOver",0.5,{autoAlpha:1});
-    //console.log(this.score);
-    var percentage = parseFloat((this.count/this.gd.checkpoints.length)*100).toFixed(1);
-    console.log(percentage+"%");
 };
 gamePlay.prototype.selectLevel = function(index){         
     if (index==0) {
@@ -503,26 +501,6 @@ gameView.prototype.render = function(){
     this.gReadyEl.setAttribute("style","width:25%; height:20%; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; visibility:hidden; color:#fff;text-align:center;");
     this.gReadyEl.innerHTML = "GET READY";    
     this.parent.appendChild(this.gReadyEl);
-     /*
-    =================
-    GAME OVER
-    =================
-    */
-    this.gOver = document.createElement("div");
-    this.gOver.id = "gameOver";
-    this.gOver.setAttribute("style","width:35%; height:20%; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; visibility:hidden; color:#fff;text-align:center;");
-    this.gOver.innerHTML = "GAME OVER";    
-    this.parent.appendChild(this.gOver);
-    /*
-    =================
-    Replay game button
-    =================
-    */
-    this.gReplay = document.createElement("div");
-    this.gReplay.id = "gameReplayBtn";
-    this.gReplay.setAttribute("style","width:230px; height:50px; line-height:50px; position:absolute; bottom:20%;left:0; right:0; margin:auto; visibility:hidden; color:#fff;text-align:center; border-radius:10px; background:#808ed2; border: 1px solid #fff; cursor:pointer;");
-    this.gReplay.innerHTML = "Try Again";    
-    this.parent.appendChild(this.gReplay);
     this.textFormatting();
 };
 gameView.prototype.textFormatting = function(){
@@ -537,8 +515,6 @@ gameView.prototype.textFormatting = function(){
     fitText(document.querySelectorAll('#gdScore'), 0.4);
     
     fitText(document.querySelectorAll('#getReady'), 0.5);
-    fitText(document.querySelectorAll('#gameOver'), 0.7);
-    fitText(document.querySelectorAll('#gameReplayBtn'), 0.8);
     
 };
 gameView.prototype.hoverEffect = function(button){    
@@ -554,10 +530,7 @@ function Init(data){
     var _this = this;
     this.gamePlay = new gamePlay(data);    
     this.view = new gameView();
-    this.view.render();  
-    this.view.gReplay.onclick = function(){
-        location.reload();    
-    };
+    this.view.render();    
     for (var i = 0; this.view.btnLevels.length > i; i++){   
         (function(index){
             this.view.btnLevels[i].onclick = function(){                  
@@ -581,7 +554,7 @@ function Init(data){
 
 var init = new Init(data);
 
-//var vid = document.querySelector('#scene');
+var vid = document.querySelector('#scene');
 //video.load();
 /*vid.onloadstart = function() {
   log('loadstart at ' + this.currentTime);
@@ -603,8 +576,6 @@ vid.onloadeddata = function() {
 function log(datas) {
   document.querySelector('#log').innerHTML += '<p>' + datas + '</p>';
 }*/
-/*
 vid.bind('loadeddata', function(e) {
   console.log(e.target.duration);
 });
-*/
