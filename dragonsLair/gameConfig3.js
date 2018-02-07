@@ -331,8 +331,7 @@ gamePlay.prototype.playThrough = function(){
                         }
                         TweenMax.to("#getReady",0.5,{autoAlpha:1});                                  
                         setTimeout(function(){
-                            TweenMax.to("#getReady",0.5,{autoAlpha:0});      
-                            //document.getElementById("getReady").style.visibility = "hidden";
+                            TweenMax.to("#getReady",0.5,{autoAlpha:0});                            
                             this.videoEl.play();   
                         }.bind(this),2500);
                         error = false;                          
@@ -358,10 +357,13 @@ gamePlay.prototype.game_over = function(error, pressed){
     this.gameOver = true;
     error = false;
     pressed = false;
-    TweenMax.to("#gameReplayBtn, #gameOver",0.5,{autoAlpha:1});
-    //console.log(this.score);
+    
+    TweenMax.to("#ModalGameOver",0.5,{autoAlpha:1});
+    
     var percentage = parseFloat((this.count/this.gd.checkpoints.length)*100).toFixed(1);
-    console.log(percentage+"%");
+    console.log(this.currentScore.score, percentage+"%");
+    document.getElementById("recapScore").innerHTML = this.currentScore.score;
+    document.getElementById("recapTrough").innerHTML = percentage+"%";
 };
 gamePlay.prototype.selectLevel = function(index){         
     if (index==0) {
@@ -434,7 +436,7 @@ gameView.prototype.render = function(){
         this.btnLevelDesc[l].classList.add("levelDesc");
         this.btnLevelDesc[l].innerHTML = "<br>"+this.level[l].description;
         this.btnLevelDesc[l].setAttribute("style","width:60%; height:100%;display:block;text-align:center; margin:0 auto;");
-        this.btnLevels[l].appendChild(this.btnLevelDesc[l]);        
+        this.btnLevels[l].appendChild(this.btnLevelDesc[l]);
     }
     this.btnLevels[0].style.width = "30%";
     this.btnLevels[1].style.width = "40%";
@@ -503,26 +505,55 @@ gameView.prototype.render = function(){
     this.gReadyEl.setAttribute("style","width:25%; height:20%; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; visibility:hidden; color:#fff;text-align:center;");
     this.gReadyEl.innerHTML = "GET READY";    
     this.parent.appendChild(this.gReadyEl);
-     /*
+    /*
+    =================
+    modal game over
+    =================
+    */
+    this.ModalGameOver = document.createElement("div");
+    this.ModalGameOver.id = "ModalGameOver";
+    //this.ModalGameOver.setAttribute("style","max-width:600px; max-height:500px; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; text-align:center;border-radius:20px 20px 0 0; visibility:hidden; opacity:0;");
+    this.ModalGameOver.innerHTML = 
+        "<div id='ModalGameOverHead'>"+
+            "<div id='gameOver'>GAME OVER</div>"+
+        "</div>"+
+        "<div id='ModalGameOverBody'>"+
+            "<div id='labelRecapScore'>Total score:</div>"+
+            "<div id='recapScore'>10000</div>"+
+            "<hr style='width:75%;'>"+
+            "<div id='labelRecapTrough'>Game complete</div>"+
+            "<div id='recapTrough'>1.5%</div>"+
+            "<hr style='width:75%;'>"+
+            "<div id='gameReplayBtn'>Try Again</div>"+
+        "</div>";
+    this.parent.appendChild(this.ModalGameOver);
+    
+    /*
     =================
     GAME OVER
     =================
     */
+    
+    /*
     this.gOver = document.createElement("div");
     this.gOver.id = "gameOver";
     this.gOver.setAttribute("style","width:35%; height:20%; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; visibility:hidden; color:#fff;text-align:center;");
     this.gOver.innerHTML = "GAME OVER";    
     this.parent.appendChild(this.gOver);
+    */
     /*
     =================
     Replay game button
     =================
     */
+    /*
     this.gReplay = document.createElement("div");
     this.gReplay.id = "gameReplayBtn";
     this.gReplay.setAttribute("style","width:230px; height:50px; line-height:50px; position:absolute; bottom:20%;left:0; right:0; margin:auto; visibility:hidden; color:#fff;text-align:center; border-radius:10px; background:#808ed2; border: 1px solid #fff; cursor:pointer;");
     this.gReplay.innerHTML = "Try Again";    
     this.parent.appendChild(this.gReplay);
+    
+    */
     this.textFormatting();
 };
 gameView.prototype.textFormatting = function(){
@@ -537,8 +568,14 @@ gameView.prototype.textFormatting = function(){
     fitText(document.querySelectorAll('#gdScore'), 0.4);
     
     fitText(document.querySelectorAll('#getReady'), 0.5);
-    fitText(document.querySelectorAll('#gameOver'), 0.7);
+    
+    fitText(document.querySelectorAll('#labelRecapScore'), 1.5);
+    fitText(document.querySelectorAll('#recapScore'), 1.9);
+    fitText(document.querySelectorAll('#labelRecapTrough'), 1.5);
+    fitText(document.querySelectorAll('#recapTrough'), 1.9);
+    fitText(document.querySelectorAll('#gameOver'), 1);
     fitText(document.querySelectorAll('#gameReplayBtn'), 0.8);
+    
     
 };
 gameView.prototype.hoverEffect = function(button){    
@@ -555,7 +592,7 @@ function Init(data){
     this.gamePlay = new gamePlay(data);    
     this.view = new gameView();
     this.view.render();  
-    this.view.gReplay.onclick = function(){
+    document.getElementById("gameReplayBtn").onclick = function(){
         location.reload();    
     };
     for (var i = 0; this.view.btnLevels.length > i; i++){   
