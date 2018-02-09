@@ -171,6 +171,7 @@ AccordionIntImg.prototype.init = function(){
     }.bind(this));
     document.getElementById("playGameR").onclick = function(){ location.href='../eshAurunmilla/madDog.html'};
     document.getElementById("playGameL").onclick = function(){ location.href='../spaceAce/index.html'};
+    document.getElementById("playGameC").onclick = function(){ location.href='../dragonsLair/index.html'};
 };
         
 var a = new AccordionIntImg(
