@@ -511,18 +511,17 @@ gameView.prototype.render = function(){
     =================
     */
     this.ModalGameOver = document.createElement("div");
-    this.ModalGameOver.id = "ModalGameOver";
-    //this.ModalGameOver.setAttribute("style","max-width:600px; max-height:500px; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; text-align:center;border-radius:20px 20px 0 0; visibility:hidden; opacity:0;");
+    this.ModalGameOver.id = "ModalGameOver";    
     this.ModalGameOver.innerHTML = 
         "<div id='ModalGameOverHead'>"+
             "<div id='gameOver'>GAME OVER</div>"+
         "</div>"+
         "<div id='ModalGameOverBody'>"+
             "<div id='labelRecapScore'>Total score:</div>"+
-            "<div id='recapScore'>10000</div>"+
+            "<div id='recapScore'>0</div>"+
             "<hr style='width:75%;'>"+
             "<div id='labelRecapTrough'>Game complete</div>"+
-            "<div id='recapTrough'>1.5%</div>"+
+            "<div id='recapTrough'>0%</div>"+
             "<hr style='width:75%;'>"+
             "<div id='gameReplayBtn'>Try Again</div>"+
         "</div>";
@@ -565,7 +564,7 @@ gameView.prototype.textFormatting = function(){
     
     fitText(document.querySelectorAll('#gdLivesLabel'), 0.3); 
     fitText(document.querySelectorAll('#gdScoreLabel'), 0.3);    
-    fitText(document.querySelectorAll('#gdScore'), 0.4);
+    //fitText(document.querySelectorAll('#gdScore'), 0.3);
     
     fitText(document.querySelectorAll('#getReady'), 0.5);
     
