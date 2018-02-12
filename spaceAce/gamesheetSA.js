@@ -49,10 +49,12 @@ var gameCfg = {
         "Dont fall, use your reflex to ride Don Davis on the disappearing floating platform"
     ]
 };
-var gameSheet = {
+var data = {
     "checkPointScore":0,
-    "checkPoints":[                
-        {   // meteor island enter
+    "checkPoints":[ 
+        /*
+        {   
+            "id":1,
             "newStage": 48.9,
             "title": "spying enemy basement1",
             "active":false,
@@ -63,16 +65,17 @@ var gameSheet = {
             "correctMove":"right",                     
             "wrongMove1":{
                 //"kind": "left",
-                "failStartTime":96.5, 
-                "failEndTime":97.8
+                "failStartTime":96.75, 
+                "failEndTime":97.75
             },
             "wrongMove2":{
                 //"kind": "none",
-                "failStartTime":96.5, 
-                "failEndTime":97.8
-            },                    
-        },                     
+                 "failStartTime":96.75, 
+                "failEndTime":97.75
+            },      
+        },       
         {   // electric wall
+            "id":1,
             "title": "spying enemy basement3",
             "active":false,
             "startTime":56,
@@ -81,17 +84,16 @@ var gameSheet = {
             "pressed": false,
             "correctMove":"right",
              "wrongMove1":{               
-                "failStartTime":96.5, 
-                "failEndTime":97.8
+                "failStartTime":96.75, 
+                "failEndTime":97.75
             },
-            "wrongMove2":{                
-                "failStartTime":96.5, 
-                "failEndTime":97.8
-            },  
+            "wrongMove2":{               
+                 "failStartTime":96.75, 
+                "failEndTime":97.75
+            },     
         },  
         {   // electric wall
-            "jumpToDelay":5,
-            "jumpTo": 80,
+            "id":1,
             "title": "run to take spaceship1",
             "active":false,
             "startTime":59.7,
@@ -99,16 +101,17 @@ var gameSheet = {
             "complete": false,
             "pressed": false,
             "correctMove":"left",
-            "wrongMove1":{
-                "failStartTime":96.5, 
-                "failEndTime":97.8
+            "wrongMove1":{               
+                "failStartTime":96.75, 
+                "failEndTime":97.75
             },
-            "wrongMove2":{
-                "failStartTime":96.5, 
-                "failEndTime":97.8
-            }
+            "wrongMove2":{               
+                 "failStartTime":96.75, 
+                "failEndTime":97.75
+            }, 
         },
         {   // electric wall
+            "id":1,
             "title": "run to take spaceship2",
             "active":false,
             "startTime":61.5,
@@ -116,37 +119,57 @@ var gameSheet = {
             "complete": false,
             "pressed": false,
             "correctMove":"left",
-            "wrongMove1":{
-                "failStartTime":96.5, 
-                "failEndTime":97.9
+            "wrongMove1":{               
+                "failStartTime":96.75, 
+                "failEndTime":97.75
             },
-            "wrongMove2":{
-                "failStartTime":96.5, 
-                "failEndTime":97.9
-            }
+            "wrongMove2":{               
+                 "failStartTime":96.75, 
+                "failEndTime":97.75
+            }, 
+        },
+        {   // electric wall
+            "id":1,
+            "title": "run to take spaceship2",
+            "active":false,
+            "startTime":63.5,
+            "endTime":64.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{               
+                "failStartTime":96.75, 
+                "failEndTime":97.75
+            },
+            "wrongMove2":{               
+                 "failStartTime":96.75, 
+                "failEndTime":97.75
+            }, 
         },
         {   // direnction
+            "id":1,
             "title":"energy fire",
             "active":false,
-            "startTime":67.7,
-            "endTime":68.7,
+            "startTime":67.5,
+            "endTime":68.5,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":98, 
-                "failEndTime":100
+                "failStartTime":98.25, 
+                "failEndTime":99.5
             },
             "wrongMove2":{
-                "failStartTime":98, 
-                "failEndTime":100
+                "failStartTime":98.25, 
+                "failEndTime":99.5
             }
         },        
         {   // blade 
+            "id":1,
             "title": "energy jump",
             "active":false,
-            "startTime":70,
-            "endTime":70.7,
+            "startTime":69.5,
+            "endTime":70.5,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
@@ -160,6 +183,7 @@ var gameSheet = {
             }
         },        
         {   // platform mobile 
+            "id":1,
             "title": "platform mobile",
             "active":false,
             "startTime":71.5,
@@ -175,27 +199,9 @@ var gameSheet = {
                "failStartTime":108.1, 
                 "failEndTime":110
             }
-        },
-        /*
+        },        
         {   // platform mobile 
-            "title": "platform mobile",
-            "active":false,
-            "startTime":72.5,
-            "endTime":73,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-            "wrongMove1":{
-                "failStartTime":108.1, 
-                "failEndTime":110
-            },
-            "wrongMove2":{
-               "failStartTime":108.1, 
-                "failEndTime":110
-            }
-        },
-        */
-        {   // platform mobile 
+            "id":1,
             "title": "platform mobile",
             "active":false,
             "startTime":73.5,
@@ -204,15 +210,16 @@ var gameSheet = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":104.2, 
-                "failEndTime":108
+                "failStartTime":104.25, 
+                "failEndTime":107.75
             },
             "wrongMove2":{
-                "failStartTime":98, 
-                "failEndTime":100
+                "failStartTime":98.25, 
+                "failEndTime":99.5
             }
         },
-        {   // platform mobile 
+        {   // platform mobile
+            "id":1,
             "title": "platform mobile",
             "active":false,
             "startTime":76.2,
@@ -230,6 +237,7 @@ var gameSheet = {
             }
         },
         {   // platform mobile 
+            "id":1,
             "title": "platform mobile",
             "active":false,
             "startTime":81,
@@ -238,15 +246,16 @@ var gameSheet = {
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":102.6, 
-                "failEndTime":104.1
+                "failStartTime":102.5, 
+                "failEndTime":104
             },
             "wrongMove2":{
-                 "failStartTime":102.6, 
-                "failEndTime":104.1
+                 "failStartTime":102.5, 
+                "failEndTime":104
             }
         },
         {   // platform mobile 
+            "id":1,
             "title": "platform mobile",
             "active":false,
             "startTime":83,
@@ -255,15 +264,16 @@ var gameSheet = {
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":102.6, 
-                "failEndTime":104.1
+                "failStartTime":102.5, 
+                "failEndTime":104
             },
             "wrongMove2":{
-                 "failStartTime":102.6, 
-                "failEndTime":104.1
+                 "failStartTime":102.5, 
+                "failEndTime":104
             }
         },
-        {   // platform mobile 
+        {   // platform mobile
+            "id":1,
             "title": "platform mobile",
             "active":false,
             "startTime":85,
@@ -272,15 +282,16 @@ var gameSheet = {
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":102.6, 
-                "failEndTime":104.1
+                "failStartTime":102.5, 
+                "failEndTime":104
             },
             "wrongMove2":{
-                 "failStartTime":102.6, 
-                "failEndTime":104.1
+                 "failStartTime":102.5, 
+                "failEndTime":104
             }
         },
         {   // platform mobile 
+            "id":1,
             "title": "platform mobile",
             "active":false,
             "startTime":87.7,
@@ -289,16 +300,17 @@ var gameSheet = {
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":102.6, 
-                "failEndTime":104.1
+                "failStartTime":102.5, 
+                "failEndTime":104
             },
             "wrongMove2":{
-                 "failStartTime":102.6, 
-                "failEndTime":104.1
+                 "failStartTime":102.5, 
+                "failEndTime":104
             }
         },
-        {   // platform mobile            
-            "jumpTo":112.1,
+        {   // platform mobile
+            "id":1,
+            "jumpTo": 112.1,
             "title": "platform mobile",
             "active":false,
             "startTime":91.2,
@@ -307,17 +319,22 @@ var gameSheet = {
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":102.6, 
-                "failEndTime":104.1
+                "failStartTime":102.5, 
+                "failEndTime":104
             },
             "wrongMove2":{
-                 "failStartTime":102.6, 
-                "failEndTime":104.1
-            }
-            //,"endStage":96
+                 "failStartTime":102.5, 
+                "failEndTime":104
+            },
+            "finishStage":96.25
+            
         }, 
+        */
+        //fine id 1
         {   // spaceship labirynt
-           
+            "id":2,
+            //"newStage":112.25,
+            "newStage":124.25,
             "title": "labirynt move",
             "active":false,
             "startTime":125.5,
@@ -327,12 +344,363 @@ var gameSheet = {
             "correctMove":"up",
             "wrongMove1":{
                 "failStartTime":153, 
-                "failEndTime":154.3
+                "failEndTime":154
             },
             "wrongMove2":{
                 "failStartTime":153, 
-                "failEndTime":154.3
+                "failEndTime":154
+            }
+        },
+        {   // spaceship labirynt
+            "id":2,
+            "title": "labirynt move2",
+            "active":false,
+            "startTime":127.7,
+            "endTime":128.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":153, 
+                "failEndTime":154
             },
+            "wrongMove2":{
+                "failStartTime":154.5, 
+                "failEndTime":155.75
+            }
+        },
+        {   
+            //ERROR //ERROR //ERROR //ERROR
+            "id":2,
+            "title": "labirynt move3",
+            "active":false,
+            "startTime":130,
+            "endTime":131,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+               "failStartTime":153, 
+                "failEndTime":154
+            },
+            "wrongMove2":{
+                "failStartTime":154.5, 
+                "failEndTime":155.75
+            }
+        },
+        {   
+            "id":2,
+            "title": "labirynt ball fire",
+            "active":false,
+            "startTime":132.25,
+            "endTime":133.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":158.25, 
+                "failEndTime":159.7
+            },
+            "wrongMove2":{
+                "failStartTime":158.25, 
+                "failEndTime":159.7
+            },
+        },
+        {   // spaceship labirynt
+            "id":2,
+            "title": "labirynt move4",
+            "active":false,
+            "startTime":135,
+            "endTime":136,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+             "wrongMove1":{
+                "failStartTime":153, 
+                "failEndTime":154
+            },
+            "wrongMove2":{
+                "failStartTime":154.5, 
+                "failEndTime":156
+            },
+        },
+        {   // spaceship labirynt
+            "id":2,
+            "title": "labirynt ball fire",
+            "active":false,
+            "startTime":136.75,
+            "endTime":137.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":158.25, 
+                "failEndTime":159.75
+            },
+            "wrongMove2":{
+                "failStartTime":158.25, 
+                "failEndTime":159.75
+            },
+        },
+        {   // spaceship labirynt
+            "id":2,
+            "title": "labirynt move5",
+            "active":false,
+            "startTime":138.9,
+            "endTime":139.9,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+             "wrongMove1":{
+                "failStartTime":153, 
+                "failEndTime":154
+            },
+            "wrongMove2":{
+                "failStartTime":154.5, 
+                "failEndTime":156.2
+            },
+        },
+        {   // spaceship labirynt
+            "id":2,
+            "title": "labirynt ball fire",
+            "active":false,
+            "startTime":141.75,
+            "endTime":142.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":158.25, 
+                "failEndTime":159.75
+            },
+            "wrongMove2":{
+               "failStartTime":158.25, 
+                "failEndTime":159.75
+            },
+        },        
+        {   // spaceship labirynt
+            "id":2,
+            "jumpTo": 216.6,
+            "title": "base landing",
+            "active":false,
+            "startTime":144.2,
+            "endTime":145.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+            "wrongMove1":{
+                "failStartTime":160.75, 
+                "failEndTime":164
+            },
+            "wrongMove2":{
+                "failStartTime":160.75, 
+                "failEndTime":164
+            },
+            "finishStage":145.8           
+        },
+        
+        //fine ID 2
+        
+        {   // inside borf's base
+            "id":3,
+            "newStage":216.6,
+            "title": "energy trap move Dexter",
+            "active":false,
+            "startTime":218.5,
+            "endTime":219.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base   
+            "id":3,
+            "title": "energy trap move2 Dexter",
+            "active":false,
+            "startTime":221,
+            "endTime":222,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":272.2, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.2, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base   
+            "id":3,
+            "title": "energy trap move3 Dexter",
+            "active":false,
+            "startTime":223.5,
+            "endTime":224.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base  
+            "id":3,
+            "title": "energy trap move4 Dexter",
+            "active":false,
+            "startTime":225.7,
+            "endTime":226.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+           "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base     
+            "id":3,
+            "title": "energy trap move1 Ace",
+            "active":false,
+            "startTime":233.2,
+            "endTime":234.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":265, 
+                "failEndTime":268.2
+            },
+            "wrongMove2":{
+                "failStartTime":265, 
+                "failEndTime":268.2
+            },
+        },
+        {   // inside borf's base   
+            "id":3,
+            "title": "enemy fire Ace",
+            "active":false,
+            "startTime":235,
+            "endTime":235.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+            "wrongMove2":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+        },
+        {   // inside borf's base     
+            "id":3,
+            "title": "energy trap move2 Ace",
+            "active":false,
+            "startTime":237.5,
+            "endTime":238.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+            "wrongMove2":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+        },
+        {   // inside borf's base    
+            "id":3,
+            "title": "energy trap move2 Ace",
+            "active":false,
+            "startTime":239.5,
+            "endTime":240.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+            "wrongMove2":{
+                 "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+        },
+        {   // inside borf's base  
+            "id":3,
+            "title": "enemy fire Ace",
+            "active":false,
+            "startTime":242.2,
+            "endTime":243.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+              "wrongMove1":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+            "wrongMove2":{
+                "failStartTime":153, 
+                "failEndTime":272.2
+            },
+        },
+        {   // inside borf's base  
+            "id":3,
+            "title": "energy trap move5 Dexter",
+            "active":false,
+            "startTime":247,
+            "endTime":248,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base
+            "id":3,
+            "title": "energy trap move6 Dexter",
+            "jumpTo":336.5,
+            "active":false,
+            "startTime":252,
+            "endTime":253,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+           "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "finishStage":254.2
         },
     ],          
 };
