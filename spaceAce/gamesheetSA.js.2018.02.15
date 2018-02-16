@@ -331,11 +331,10 @@ var data = {
         }, 
         */
         //fine id 1
-        /*
         {   // spaceship labirynt
             "id":2,
-            "newStage":112.25,
-            //"newStage":124.25,
+            //"newStage":112.25,
+            "newStage":124.25,
             "title": "labirynt move",
             "active":false,
             "startTime":125.5,
@@ -499,9 +498,9 @@ var data = {
             },
             "finishStage":145.8           
         },
-        */
+        
         //fine ID 2
-        /*
+        
         {   // inside borf's base
             "id":3,
             "newStage":216.6,
@@ -543,8 +542,8 @@ var data = {
             "id":3,
             "title": "energy trap move3 Dexter",
             "active":false,
-            "startTime":223,
-            "endTime":224,
+            "startTime":223.5,
+            "endTime":224.5,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
@@ -561,8 +560,8 @@ var data = {
             "id":3,
             "title": "energy trap move4 Dexter",
             "active":false,
-            "startTime":225.25,
-            "endTime":226.25,
+            "startTime":225.7,
+            "endTime":226.7,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
@@ -579,36 +578,18 @@ var data = {
             "id":3,
             "title": "energy trap move1 Ace",
             "active":false,
-            "startTime":228,
-            "endTime":229,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-           "wrongMove1":{
-                "failStartTime":272.7, 
-                "failEndTime":276
-            },
-            "wrongMove2":{
-                "failStartTime":272.7, 
-                "failEndTime":276
-            },
-        },
-        {   // inside borf's base     
-            "id":3,
-            "title": "energy trap move1 Ace",
-            "active":false,
-            "startTime":232.5,
-            "endTime":233.5,
+            "startTime":233.2,
+            "endTime":234.2,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
                 "failStartTime":265, 
-                "failEndTime":267.75
+                "failEndTime":268.2
             },
             "wrongMove2":{
                 "failStartTime":265, 
-                "failEndTime":267.75
+                "failEndTime":268.2
             },
         },
         {   // inside borf's base   
@@ -616,7 +597,7 @@ var data = {
             "title": "enemy fire Ace",
             "active":false,
             "startTime":235,
-            "endTime":236,
+            "endTime":235.7,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
@@ -651,8 +632,8 @@ var data = {
             "id":3,
             "title": "energy trap move2 Ace",
             "active":false,
-            "startTime":240,
-            "endTime":241,
+            "startTime":239.5,
+            "endTime":240.5,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
@@ -669,8 +650,8 @@ var data = {
             "id":3,
             "title": "enemy fire Ace",
             "active":false,
-            "startTime":242.25,
-            "endTime":243.25,
+            "startTime":242.2,
+            "endTime":243.2,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
@@ -704,10 +685,10 @@ var data = {
         {   // inside borf's base
             "id":3,
             "title": "energy trap move6 Dexter",
-            "jumpTo":336.75,
+            "jumpTo":336.5,
             "active":false,
-            "startTime":251.75,
-            "endTime":252.75,
+            "startTime":252,
+            "endTime":253,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
@@ -721,16 +702,375 @@ var data = {
             },
             "finishStage":254.2
         },
-        // end ID 3
-        */
-        /*
-        {   
-            "id":4,
-            "newStage":336.75,
+    ],          
+};
+var gameSheet2 = {
+    "checkPoints":[
+        {   // spaceship labirynt
+            "newStage":112.1,
+            "title": "labirynt move",
+            "active":false,
+            "startTime":125.5,
+            "endTime":126.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":153, 
+                "failEndTime":154.3
+            },
+            "wrongMove2":{
+                "failStartTime":153, 
+                "failEndTime":154.3
+            },
+        },
+        {   // spaceship labirynt
+          
+            "title": "labirynt move2",
+            "active":false,
+            "startTime":127.7,
+            "endTime":128.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":153, 
+                "failEndTime":154.3
+            },
+            "wrongMove2":{
+                "failStartTime":154.5, 
+                "failEndTime":156.2
+            },
+        },
+        {   // spaceship labirynt
+           
+            "title": "labirynt move3",
+            "active":false,
+            "startTime":130,
+            "endTime":131,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":153, 
+                "failEndTime":154.3
+            },
+            "wrongMove2":{
+                "failStartTime":154.5, 
+                "failEndTime":156.2
+            },
+        },
+        {   // spaceship labirynt
+          
+            "title": "labirynt ball fire",
+            "active":false,
+            "startTime":132.7,
+            "endTime":133.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":158, 
+                "failEndTime":160
+            },
+            "wrongMove2":{
+                "failStartTime":158, 
+                "failEndTime":160
+            },
+        },
+        {   // spaceship labirynt
+          
+            "title": "labirynt move4",
+            "active":false,
+            "startTime":135,
+            "endTime":136,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+             "wrongMove1":{
+                "failStartTime":153, 
+                "failEndTime":154.3
+            },
+            "wrongMove2":{
+                "failStartTime":154.5, 
+                "failEndTime":156.2
+            },
+        },
+        {   // spaceship labirynt
+          
+            "title": "labirynt ball fire",
+            "active":false,
+            "startTime":136.9,
+            "endTime":137.9,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":158, 
+                "failEndTime":160
+            },
+            "wrongMove2":{
+                "failStartTime":158, 
+                "failEndTime":160
+            },
+        },
+        {   // spaceship labirynt
+          
+            "title": "labirynt move5",
+            "active":false,
+            "startTime":138.9,
+            "endTime":139.9,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+             "wrongMove1":{
+                "failStartTime":153, 
+                "failEndTime":154.3
+            },
+            "wrongMove2":{
+                "failStartTime":154.5, 
+                "failEndTime":156.2
+            },
+        },
+        {   // spaceship labirynt          
+            "title": "labirynt ball fire",
+            "active":false,
+            "startTime":142,
+            "endTime":143,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":158, 
+                "failEndTime":160
+            },
+            "wrongMove2":{
+                "failStartTime":158, 
+                "failEndTime":160
+            },
+        },        
+        {   // spaceship labirynt          
+            "title": "base landing",
+            "active":false,
+            "startTime":144.2,
+            "endTime":145.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+            "wrongMove1":{
+                "failStartTime":160.2, 
+                "failEndTime":163.8
+            },
+            "wrongMove2":{
+                 "failStartTime":160.2, 
+                "failEndTime":163.8
+            },
+            "endStage":145.8
+        },
+        
+    ],
+};
+var gameSheet3 = {
+    "checkPoints":[
+        {   // inside borf's base
+            "newStage":216.6,
+            "title": "energy trap move Dexter",
+            "active":false,
+            "startTime":218.5,
+            "endTime":219.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base          
+            "title": "energy trap move2 Dexter",
+            "active":false,
+            "startTime":221,
+            "endTime":222,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":272.2, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.2, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base          
+            "title": "energy trap move3 Dexter",
+            "active":false,
+            "startTime":223.5,
+            "endTime":224.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base          
+            "title": "energy trap move4 Dexter",
+            "active":false,
+            "startTime":225.7,
+            "endTime":226.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+           "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base          
+            "title": "energy trap move1 Ace",
+            "active":false,
+            "startTime":233.2,
+            "endTime":234.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":265, 
+                "failEndTime":268.2
+            },
+            "wrongMove2":{
+                "failStartTime":265, 
+                "failEndTime":268.2
+            },
+        },
+        {   // inside borf's base          
+            "title": "enemy fire Ace",
+            "active":false,
+            "startTime":235,
+            "endTime":235.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+            "wrongMove2":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+        },
+        {   // inside borf's base          
+            "title": "energy trap move2 Ace",
+            "active":false,
+            "startTime":237.5,
+            "endTime":238.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+            "wrongMove2":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+        },
+        {   // inside borf's base          
+            "title": "energy trap move2 Ace",
+            "active":false,
+            "startTime":239.5,
+            "endTime":240.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+            "wrongMove1":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+            "wrongMove2":{
+                 "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+        },
+        {   // inside borf's base          
+            "title": "enemy fire Ace",
+            "active":false,
+            "startTime":242.2,
+            "endTime":243.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+              "wrongMove1":{
+                "failStartTime":268.5, 
+                "failEndTime":272.2
+            },
+            "wrongMove2":{
+                "failStartTime":153, 
+                "failEndTime":272.2
+            },
+        },
+        {   // inside borf's base          
+            "title": "energy trap move5 Dexter",
+            "active":false,
+            "startTime":247,
+            "endTime":248,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+        },
+        {   // inside borf's base          
+            "title": "energy trap move6 Dexter",
+            "active":false,
+            "startTime":252,
+            "endTime":253,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+           "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "endStage":254.2
+        },
+    ],
+};
+var gameSheet4 = {
+    "checkPoints":[
+        {   // inside borf's base2
+            "newStage":336.5,
             "title": "sentinel robot Dexter",
             "active":false,
-            "startTime":339.75,
-            "endTime":340.75,
+            "startTime":340,
+            "endTime":341,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
@@ -741,14 +1081,13 @@ var data = {
             "wrongMove2":{
                  "failStartTime":394.7, 
                 "failEndTime":397.7
-            }
+            },
         },
-        {   
-            "id":4,
+        {   // inside borf's base2          
             "title": "sentinel robot2 Dexter",
             "active":false,
-            "startTime":342.75,
-            "endTime":343.75,
+            "startTime":343,
+            "endTime":344,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
@@ -759,28 +1098,9 @@ var data = {
             "wrongMove2":{
                  "failStartTime":394.7, 
                 "failEndTime":397.7
-            }
-        },
-        {  
-            "id":4,
-            "title": "sentinel robot3 ace",
-            "active":false,
-            "startTime":346.75,
-            "endTime":347.75,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":394.7, 
-                "failEndTime":397.7
             },
-            "wrongMove2":{
-                 "failStartTime":394.7, 
-                "failEndTime":397.7
-            }
         },
-        {  
-            "id":4,
+        {   // inside borf's base2          
             "title": "sentinel robot3 ace",
             "active":false,
             "startTime":350.2,
@@ -789,70 +1109,19 @@ var data = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":385, 
-                "failEndTime":386
-            },
-            "wrongMove2":{
-                "failStartTime":386.75, 
-                "failEndTime":389.25
-            }
-        },
-        {   "id":4,          
-            "title": "sentinel robot3 ace",
-            "active":false,
-            "startTime":353.25,
-            "endTime":354.25,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-            "wrongMove1":{
-                "failStartTime":386.75, 
-                "failEndTime":389.25
-            },
-            "wrongMove2":{
-                 "failStartTime":386.75, 
-                "failEndTime":389.25
-            }
-        },        
-         {   "id":4,        
-            "title": "sentinel robot3 ace",
-            "active":false,
-            "startTime":356,
-            "endTime":357,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-             "wrongMove1":{
                 "failStartTime":383.9, 
                 "failEndTime":386
             },
             "wrongMove2":{
                 "failStartTime":386, 
                 "failEndTime":389.3
-            }
-        },
-        {   "id":4,          
-            "title": "sentinel robot3 ace",
-            "active":false,
-            "startTime":358.5,
-            "endTime":359.5,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-             "wrongMove1":{
-                "failStartTime":383.9, 
-                "failEndTime":386
             },
-            "wrongMove2":{
-                "failStartTime":386, 
-                "failEndTime":389.3
-            }
         },
-        {   "id":4,          
+        {   // inside borf's base2          
             "title": "sentinel robot3 ace",
             "active":false,
-            "startTime":360.5,
-            "endTime":361.5,
+            "startTime":353.2,
+            "endTime":354.2,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
@@ -863,13 +1132,81 @@ var data = {
             "wrongMove2":{
                   "failStartTime":386.4, 
                 "failEndTime":389.3
-            }
+            },
         },
-        {   "id":4,         
+        {   // inside borf's base2          
             "title": "sentinel robot3 ace",
             "active":false,
-            "startTime":364.25,
-            "endTime":365.25,
+            "startTime":355.5,
+            "endTime":356.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"up",
+           "wrongMove1":{
+                 "failStartTime":386.4, 
+                "failEndTime":389.3
+            },
+            "wrongMove2":{
+                  "failStartTime":386.4, 
+                "failEndTime":389.3
+            },
+        },
+         {   // inside borf's base2          
+            "title": "sentinel robot3 ace",
+            "active":false,
+            "startTime":357,
+            "endTime":358,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+             "wrongMove1":{
+                "failStartTime":383.9, 
+                "failEndTime":386
+            },
+            "wrongMove2":{
+                "failStartTime":386, 
+                "failEndTime":389.3
+            },
+        },
+        {   // inside borf's base2          
+            "title": "sentinel robot3 ace",
+            "active":false,
+            "startTime":359,
+            "endTime":360,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+             "wrongMove1":{
+                "failStartTime":383.9, 
+                "failEndTime":386
+            },
+            "wrongMove2":{
+                "failStartTime":386, 
+                "failEndTime":389.3
+            },
+        },
+        {   // inside borf's base2          
+            "title": "sentinel robot3 ace",
+            "active":false,
+            "startTime":361,
+            "endTime":362,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                 "failStartTime":386.4, 
+                "failEndTime":389.3
+            },
+            "wrongMove2":{
+                  "failStartTime":386.4, 
+                "failEndTime":389.3
+            },
+        },
+        {   // inside borf's base2          
+            "title": "sentinel robot3 ace",
+            "active":false,
+            "startTime":363.7,
+            "endTime":364.7,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
@@ -880,10 +1217,9 @@ var data = {
             "wrongMove2":{
                 "failStartTime":386, 
                 "failEndTime":389.3
-            }
+            },
         },
-        {   "id":4,    
-            "jumpTo":378,
+        {   // inside borf's base2          
             "title": "sentinel robot3 ace",
             "active":false,
             "startTime":367,
@@ -899,16 +1235,15 @@ var data = {
                 "failStartTime":386, 
                 "failEndTime":389.3
             },
-            "finishStage":370
-        },             
-        {   "id":4,         
+        },
+        {   // inside borf's base2          
             "title": "sentinel robot3 Dexter",
             "active":false,
-            "startTime":377,
-            "endTime":378,
+            "startTime":370.7,
+            "endTime":371.7,
             "complete": false,
             "pressed": false,
-            "correctMove":"left",
+            "correctMove":"right",
             "wrongMove1":{
                 "failStartTime":393, 
                 "failEndTime":394.2
@@ -917,10 +1252,59 @@ var data = {
                 "failStartTime":393, 
                 "failEndTime":394.2
             },
-        }, 
-        
-        {   "id":4,
-            "newStage": 375,
+        },
+        /*{   // inside borf's base2          
+            "title": "sentinel robot3 Dexter",
+            "active":false,
+            "startTime":373,
+            "endTime":374,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":394.2, 
+                "failEndTime":397.9
+            },
+            "wrongMove2":{
+                "failStartTime":394.2, 
+                "failEndTime":397.9
+            },
+        },*/
+        {   // inside borf's base2          
+            "title": "sentinel robot3 Dexter",
+            "active":false,
+            "startTime":375.7,
+            "endTime":376.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":393, 
+                "failEndTime":394.2
+            },
+            "wrongMove2":{
+                "failStartTime":393, 
+                "failEndTime":394.2
+            },
+        },
+        /*{   // inside borf's base2          
+            "title": "sentinel robot3 Dexter",
+            "active":false,
+            "startTime":377.5,
+            "endTime":378.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+            "wrongMove2":{
+                "failStartTime":272.7, 
+                "failEndTime":276
+            },
+        },*/
+        {   // inside borf's base2          
             "title": "sentinel robot3 Dexter",
             "active":false,
             "startTime":379,
@@ -937,12 +1321,11 @@ var data = {
                 "failEndTime":394.2
             },
         },
-        {  "id":4,  
-           "jumpTo": 459.75,
+        {   // inside borf's base2          
             "title": "sentinel robot3 Dexter",
             "active":false,
-            "startTime":381,
-            "endTime":382,
+            "startTime":380.7,
+            "endTime":381.7,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
@@ -954,14 +1337,14 @@ var data = {
                 "failStartTime":393, 
                 "failEndTime":394.2
             },
-         "finishStage":383
+            "endStage":382.8
         },        
-        //End id 4
-        */
-        /*
-        {   
-            "id":5,
-            "newStage":459.75,
+        ]
+    };
+var gameSheet5 = {
+    "checkPoints":[
+        {   // inside borf's base4
+            "newStage":459.8,
             "title": "escape fire and green wolves Dexter",
             "active":false,
             "startTime":460.7,
@@ -976,9 +1359,9 @@ var data = {
             "wrongMove2":{
                 "failStartTime":504.2, 
                 "failEndTime":507.2
-            }
-        },
-        {   "id":5,          
+            },
+        },    
+        {   // inside borf's base4           
             "title": "escape fire and green wolves2 Dexter",
             "active":false,
             "startTime":462.7,
@@ -993,9 +1376,9 @@ var data = {
             "wrongMove2":{
                 "failStartTime":504.2, 
                 "failEndTime":507.2
-            }
+            },
         },    
-        {   "id":5,          
+        {   // inside borf's base4           
             "title": "escape fire and green wolves3 Dexter",
             "active":false,
             "startTime":464.5,
@@ -1010,9 +1393,9 @@ var data = {
             "wrongMove2":{
                 "failStartTime":504.2, 
                 "failEndTime":507.2
-            }
+            },
         },    
-        {   "id":5,    
+        {   // inside borf's base4           
             "title": "energy Ace",
             "active":false,
             "startTime":466.7,
@@ -1027,9 +1410,9 @@ var data = {
             "wrongMove2":{
                  "failStartTime":502.2, 
                 "failEndTime":503.8
-            }
+            },
         },    
-        {   "id":5,
+        {   // inside borf's base4           
             "title": "wolves fight Ace",
             "active":false,
             "startTime":470,
@@ -1044,9 +1427,9 @@ var data = {
             "wrongMove2":{
                  "failStartTime":502.2, 
                 "failEndTime":503.8
-            }
+            },
         },
-        {   "id":5,         
+        {   // inside borf's base4           
             "title": "robot fight Ace",
             "active":false,
             "startTime":472.5,
@@ -1061,9 +1444,9 @@ var data = {
             "wrongMove2":{
                  "failStartTime":499, 
                 "failEndTime":500.2
-            }
+            },
         },
-        {   "id":5,          
+        {   // inside borf's base4           
             "title": "escape fire Ace",
             "active":false,
             "startTime":474.2,
@@ -1078,9 +1461,9 @@ var data = {
             "wrongMove2":{
                  "failStartTime":499, 
                 "failEndTime":500.2
-            }
+            },
         },
-        {   "id":5,            
+        {   // inside borf's base4           
             "title": "escape fire wolves Ace",
             "active":false,
             "startTime":476,
@@ -1095,9 +1478,9 @@ var data = {
             "wrongMove2":{
                  "failStartTime":499, 
                 "failEndTime":500.2
-            }
+            },
         },
-         {  "id":5,            
+         {   // inside borf's base4           
             "title": "escape fire2  Ace",
             "active":false,
             "startTime":478.7,
@@ -1112,9 +1495,9 @@ var data = {
             "wrongMove2":{
                  "failStartTime":502.2, 
                 "failEndTime":503.8
-            }
+            },
         },
-        {   "id":5,        
+        {   // inside borf's base4           
             "title": "robot fight2 Ace",
             "active":false,
             "startTime":481,
@@ -1129,10 +1512,9 @@ var data = {
             "wrongMove2":{
                  "failStartTime":499, 
                 "failEndTime":500.2
-            }
+            },
         },
-        {   "id":5, 
-            "jumpTo": 555.7,
+        {   // inside borf's base4           
             "title": "escape fire3 Ace",
             "active":false,
             "startTime":483.7,
@@ -1148,12 +1530,13 @@ var data = {
                  "failStartTime":499, 
                 "failEndTime":500.2
             },
-            "finishStage":491,
+            "endStage":491,
         },
-        //end of id 5
-        */
-        /*
-        {   "id":6,
+    ],
+};
+var gameSheet6 = {
+    "checkPoints":[
+        {   // downtown borf's headquarter
             "newStage":555.7,
             "title": "robot fire Dexter",
             "active":false,
@@ -1163,15 +1546,15 @@ var data = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":585.75, 
-                "failEndTime":589
+                "failStartTime":585.9, 
+                "failEndTime":589.1
             },
             "wrongMove2":{
-                "failStartTime":585.75, 
-                "failEndTime":589
-            }
+                "failStartTime":585.9, 
+                "failEndTime":589.1
+            },
         },
-        {   "id":6,      
+        {   // downtown borf's headquarter            
             "title": "press Dexter",
             "active":false,
             "startTime":558.5,
@@ -1180,15 +1563,15 @@ var data = {
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":589.5, 
-                "failEndTime":590.5
+                "failStartTime":589.2, 
+                "failEndTime":590.4
             },
             "wrongMove2":{
-                 "failStartTime":589.5, 
-                "failEndTime":590.5
-            }
+                 "failStartTime":589.2, 
+                "failEndTime":590.4
+            },
         },
-        {   "id":6,          
+        {   // downtown borf's headquarter            
             "title": "floating pistons Dexter",
             "active":false,
             "startTime":560.2,
@@ -1197,49 +1580,49 @@ var data = {
             "pressed": false,
             "correctMove":"up",
             "wrongMove1":{
-                "failStartTime":591, 
-                "failEndTime":592
+                "failStartTime":590.6, 
+                "failEndTime":592.2
             },
             "wrongMove2":{
-                "failStartTime":591, 
-                "failEndTime":592
-            }
+                "failStartTime":590.6, 
+                "failEndTime":592.2
+            },
         },
-        {   "id":6,       
+        {   // downtown borf's headquarter            
             "title": "energy ace",
             "active":false,
-            "startTime":563.25,
-            "endTime":564.25,
+            "startTime":563.2,
+            "endTime":564.2,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
              "wrongMove1":{
-                "failStartTime":586, 
-                "failEndTime":589
+                "failStartTime":585.9, 
+                "failEndTime":589.1
             },
             "wrongMove2":{
-                "failStartTime":586, 
-                "failEndTime":589
-            }
+                "failStartTime":585.9, 
+                "failEndTime":589.1
+            },
         },
-        {   "id":6,    
+        {   // downtown borf's headquarter            
             "title": "monster fire Ace",
             "active":false,
-            "startTime":565.25,
-            "endTime":566.25,
+            "startTime":565.5,
+            "endTime":566.5,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":592.5, 
-                "failEndTime":594.25
+                "failStartTime":592.4, 
+                "failEndTime":594.4
             },
             "wrongMove2":{
-                "failStartTime":594.75, 
-                "failEndTime":595.75
-            }
+                "failStartTime":594.5, 
+                "failEndTime":595.9
+            },
         },
-        {   "id":6,
+        {   // downtown borf's headquarter            
             "title": "monster fire Ace",
             "active":false,
             "startTime":567.2,
@@ -1248,15 +1631,15 @@ var data = {
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":598.25, 
-                "failEndTime":599.25
+                "failStartTime":598.1, 
+                "failEndTime":599.6
             },
             "wrongMove2":{
-                 "failStartTime":598.25, 
-                "failEndTime":599.25
-            }
+                "failStartTime":598.1, 
+                "failEndTime":599.6
+            },
         },
-        {   "id":6,       
+        {   // downtown borf's headquarter            
             "title": "monster fire Ace",
             "active":false,
             "startTime":568.7,
@@ -1264,16 +1647,16 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
-             "wrongMove1":{
-               "failStartTime":592.5, 
-                "failEndTime":594.25
+            "wrongMove1":{
+                "failStartTime":594.5, 
+                "failEndTime":595.9
             },
             "wrongMove2":{
-                "failStartTime":594.75, 
-                "failEndTime":595.75
-            }
+                 "failStartTime":596, 
+                "failEndTime":598.19
+            },
         },
-        {   "id":6,        
+        {   // downtown borf's headquarter            
             "title": "monster fire Ace",
             "active":false,
             "startTime":570,
@@ -1282,15 +1665,15 @@ var data = {
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                 "failStartTime":598.5, 
-                "failEndTime":599.25
+                 "failStartTime":598.1, 
+                "failEndTime":599.6
             },
             "wrongMove2":{
-                "failStartTime":600, 
-                "failEndTime":603.5
-            }
+                "failStartTime":599.7, 
+                "failEndTime":603.6
+            },
         },
-        {   "id":6,     
+        {   // downtown borf's headquarter            
             "title": "monster fire Ace",
             "active":false,
             "startTime":572.2,
@@ -1299,15 +1682,15 @@ var data = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":592.75, 
-                "failEndTime":594
+                "failStartTime":592.3, 
+                "failEndTime":594.3
             },
             "wrongMove2":{
-                "failStartTime":594.75, 
-                "failEndTime":595.75
-            }
+                "failStartTime":594.5, 
+                "failEndTime":595.8
+            },
         },
-        {   "id":6,        
+        {   // downtown borf's headquarter            
             "title": "monster fire Dexter",
             "active":false,
             "startTime":574,
@@ -1316,15 +1699,15 @@ var data = {
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-               "failStartTime":589.5, 
-                "failEndTime":590.5
+                "failStartTime":589.2, 
+                "failEndTime":590.4
             },
             "wrongMove2":{
-                 "failStartTime":589.5, 
-                "failEndTime":590.5
-            }           
+                 "failStartTime":589.2, 
+                "failEndTime":590.4
+            },           
         },
-        {   "id":6,         
+        {   // downtown borf's headquarter            
             "title": "monster fire Dexter",
             "active":false,
             "startTime":577,
@@ -1333,15 +1716,34 @@ var data = {
             "pressed": false,
             "correctMove":"fire",
              "wrongMove1":{
-                "failStartTime":586, 
-                "failEndTime":589
+                "failStartTime":585.9, 
+                "failEndTime":589.1
             },
             "wrongMove2":{
-                "failStartTime":586, 
-                "failEndTime":589
-            }
-        },         
-        {   "id":6,
+                "failStartTime":585.9, 
+                "failEndTime":589.1
+            },
+            //"endStage":576
+        },  
+        /*{   // downtown borf's headquarter            
+            "title": "monster fire Dexter",
+            "active":false,
+            "startTime":577,
+            "endTime":578.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+             "wrongMove1":{
+                "failStartTime":589.4, 
+                "failEndTime":590.8
+            },
+            "wrongMove2":{
+                 "failStartTime":589.4, 
+                "failEndTime":590.8
+            },
+            //"endStage":576
+        },*/
+        {   // downtown borf's headquarter            
             "title": "monster fire Dexter",
             "active":false,
             "startTime":579,
@@ -1350,15 +1752,16 @@ var data = {
             "pressed": false,
             "correctMove":"right",
              "wrongMove1":{
-               "failStartTime":589.75, 
-                "failEndTime":590.5
+               "failStartTime":589.4, 
+                "failEndTime":590.8
             },
             "wrongMove2":{
-               "failStartTime":589.75, 
-                "failEndTime":590.5
-            }
+                "failStartTime":589.4, 
+                "failEndTime":590.8
+            },
+            //"endStage":576
         },  
-        {   "id":6,
+        {   // downtown borf's headquarter            
             "title": "monster fire Dexter",
             "active":false,
             "startTime":580.7,
@@ -1366,17 +1769,17 @@ var data = {
             "complete": false,
             "pressed": false,
             "correctMove":"left",
-             "wrongMove1":{
-               "failStartTime":589.75, 
-                "failEndTime":590.5
+            "wrongMove1":{
+                "failStartTime":589.4, 
+                "failEndTime":590.8
             },
             "wrongMove2":{
-               "failStartTime":589.75, 
-                "failEndTime":590.5
-            }
+                "failStartTime":589.4, 
+                "failEndTime":590.8
+            },
+            //"endStage":576
         }, 
-        {   "id":6,
-            "jumpTo":652,
+        {   // downtown borf's headquarter            
             "title": "monster fire Dexter",
             "active":false,
             "startTime":582.5,
@@ -1385,38 +1788,35 @@ var data = {
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-               "failStartTime":589.75, 
-                "failEndTime":590.5
+               "failStartTime":589.4, 
+                "failEndTime":590.8
             },
             "wrongMove2":{
-               "failStartTime":589.75, 
-                "failEndTime":590.5
+               "failStartTime":589.4, 
+                "failEndTime":590.8
             },
-            "finishStage":585.25
+            //"endStage":576
         }, 
-        // end id 6
-        */
-        {   "id":7,
-            "newStage":652,
-            "title": "flame escape Dexter",
+        {   // downtown borf's headquarter            
+            "title": "monster fire Dexter",
             "active":false,
-            "startTime":652,
-            "endTime":653,
+            "startTime":584,
+            "endTime":585,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
             "wrongMove1":{
-                "failStartTime":688.1, 
-                "failEndTime":691.4
+                "failStartTime":589.4, 
+                "failEndTime":590.8
             },
             "wrongMove2":{
-                 "failStartTime":688.1, 
-                "failEndTime":691.4
-            }
-        },
-    ],          
+                "failStartTime":589.4, 
+                "failEndTime":590.8
+            },
+            "endStage":585.5
+        }, 
+    ],
 };
-
 var gameSheet7 = {
     "checkPoints":[
         {   // spaceship fight
