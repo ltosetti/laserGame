@@ -1396,7 +1396,8 @@ var data = {
         }, 
         // end id 6
         */
-        {   "id":7,
+        /*
+        {   "id":7.1,
             "newStage":652,
             "title": "flame escape Dexter",
             "active":false,
@@ -1413,133 +1414,93 @@ var data = {
                  "failStartTime":688.1, 
                 "failEndTime":691.4
             }
-        },
-    ],          
-};
-
-var gameSheet7 = {
-    "checkPoints":[
-        {   // spaceship fight
-            "newStage":652,
-            "title": "flame escape Dexter",
-            "active":false,
-            "startTime":652,
-            "endTime":653,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"up",
-            "wrongMove1":{
-                "failStartTime":688.1, 
-                "failEndTime":691.4
-            },
-            "wrongMove2":{
-                 "failStartTime":688.1, 
-                "failEndTime":691.4
-            },
-        },
-        {   // spaceship fight            
-            "title": "flame escape2 Dexter",
-            "active":false,
-            "startTime":653.7,
-            "endTime":654.7,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-             "wrongMove1":{
-                "failStartTime":688.1, 
-                "failEndTime":691.4
-            },
-            "wrongMove2":{
-                 "failStartTime":688.1, 
-                "failEndTime":691.4
-            },
-        },
-        {   // spaceship fight            
+        },        
+        {   "id":7.2,            
             "title": "enter space island Dexter",
             "active":false,
-            "startTime":655.2,
-            "endTime":656.2,
+            "startTime":655.25,
+            "endTime":656.25,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
              "wrongMove1":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
             "wrongMove2":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
         },
-        {   // spaceship fight            
+        {   "id":7.3,            
             "title": "avoid laser enemy laser Dexter",
             "active":false,
-            "startTime":657.5,
-            "endTime":658.5,
+            "startTime":657.25,
+            "endTime":658.25,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
            "wrongMove1":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
             "wrongMove2":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
         },
-        {   // spaceship fight            
+        {   "id":7.4,            
             "title": "avoid enemy laser2 Dexter",
             "active":false,
-            "startTime":659,
-            "endTime":660,
+            "startTime":659.25,
+            "endTime":660.25,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
             "wrongMove2":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
         },
-        {   // spaceship fight            
+        {   "id":7.5,            
             "title": "avoid enemy laser3 Dexter",
             "active":false,
-            "startTime":660.9,
-            "endTime":661.7,
+            "startTime":661,
+            "endTime":662,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
             "wrongMove2":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
         },
-        {   // spaceship fight            
+        {   "id":7.6,            
             "title": "avoid enemy laser4 Dexter",
             "active":false,
-            "startTime":662.7,
-            "endTime":663.7,
+            "startTime":662.5,
+            "endTime":663.5,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":683.75, 
+                "failEndTime":685
             },
             "wrongMove2":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":683.75, 
+                "failEndTime":685
             },
         },
-        {   // spaceship fight            
+        {   "id":7.7,            
             "title": "avoid enemy laser5 Dexter",
             "active":false,
             "startTime":664.2,
@@ -1548,15 +1509,15 @@ var gameSheet7 = {
             "pressed": false,
             "correctMove":"fire",
              "wrongMove1":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":683.75, 
+                "failEndTime":685
             },
             "wrongMove2":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":683.75, 
+                "failEndTime":685
             },
         },
-        {   // spaceship fight            
+        {   "id":7.8,            
             "title": "avoid enemy laser5 Dexter",
             "active":false,
             "startTime":667.7,
@@ -1565,15 +1526,15 @@ var gameSheet7 = {
             "pressed": false,
             "correctMove":"down",
             "wrongMove1":{
-                "failStartTime":680.8, 
-                "failEndTime":682.3
+                "failStartTime":680.75, 
+                "failEndTime":682
             },
             "wrongMove2":{
-                 "failStartTime":680.8, 
-                "failEndTime":682.3
+                 "failStartTime":680.75, 
+                "failEndTime":682
             },
         },
-        {   // spaceship fight            
+        {   "id":7.9,            
             "title": "avoid enemy laser6 Dexter",
             "active":false,
             "startTime":669,
@@ -1583,14 +1544,14 @@ var gameSheet7 = {
             "correctMove":"up",
             "wrongMove1":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
             "wrongMove2":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
         },
-        {   // spaceship fight            
+        {   "id":7.10,            
             "title": "avoid enemy laser7 Dexter",
             "active":false,
             "startTime":670.5,
@@ -1599,15 +1560,15 @@ var gameSheet7 = {
             "pressed": false,
             "correctMove":"fire",
              "wrongMove1":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":684, 
+                "failEndTime":685
             },
             "wrongMove2":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":684, 
+                "failEndTime":685
             },
         },
-        {   // spaceship fight            
+        {   "id":7.11,            
             "title": "space castle Dexter",
             "active":false,
             "startTime":672,
@@ -1617,14 +1578,14 @@ var gameSheet7 = {
             "correctMove":"up",
            "wrongMove1":{
                 "failStartTime":682.5, 
-                "failEndTime":683.8
+                "failEndTime":683.75
             },
             "wrongMove2":{
                 "failStartTime":682.5, 
-                "failEndTime":683.8
+                "failEndTime":683.75
             },
         },
-        {   // spaceship fight            
+        {   "id":7.12,          
             "title": "space castle Dexter",
             "active":false,
             "startTime":673,
@@ -1633,123 +1594,123 @@ var gameSheet7 = {
             "pressed": false,
             "correctMove":"fire",
              "wrongMove1":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":684, 
+                "failEndTime":685
             },
             "wrongMove2":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":684, 
+                "failEndTime":685
             },
         },
-        {   // spaceship fight            
+        {   "id":7.13,            
             "title": "space castle Dexter",
             "active":false,
-            "startTime":674.7,
-            "endTime":675.7,
+            "startTime":674.75,
+            "endTime":675.75,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
             "wrongMove1":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
             "wrongMove2":{
                 "failStartTime":679.5, 
-                "failEndTime":680.7
+                "failEndTime":680.25
             },
         },
-        {   // spaceship fight            
+        {   "id":7.14,
+            "jumpTo":731.5,
             "title": "space castle Dexter",
             "active":false,
-            "startTime":676.9,
-            "endTime":677.9,
+            "startTime":677,
+            "endTime":678,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
              "wrongMove1":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":684, 
+                "failEndTime":685
             },
             "wrongMove2":{
-                "failStartTime":683.8, 
-                "failEndTime":685.1
+                "failStartTime":684, 
+                "failEndTime":685
             },
-            "endStage": 679.3
+            "finishStage": 679
         },
-        ],
-};
-var gameSheet8 = {
-    "checkPoints":[
-        {   // circular platform floating
-            "newStage":731.2,
+        */
+        //end id 7
+        /*
+        {   "id":8.1,
+            "newStage":731.5,
             "title": "escape inside drone Dexter",
             "active":false,
-            "startTime":734.4,
-            "endTime":735.4,
+            "startTime":734.5,
+            "endTime":735.5,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
             "wrongMove1":{
-                "failStartTime":762, 
-                "failEndTime":763.3
+                "failStartTime":762.25, 
+                "failEndTime":763
             },
             "wrongMove2":{
-                "failStartTime":762, 
-                "failEndTime":763.3
+                 "failStartTime":762.25, 
+                "failEndTime":763
             },
         },
-         {  // circular platform floating           
+        {   "id":8.2,           
             "title": "escape inside drone2 Dexter",
             "active":false,
-            "startTime":736.2,
-            "endTime":737.1,
+            "startTime":736,
+            "endTime":737,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
              "wrongMove1":{
-                "failStartTime":762, 
-                "failEndTime":763.3
+                "failStartTime":762.25, 
+                "failEndTime":763
             },
             "wrongMove2":{
-                "failStartTime":762, 
-                "failEndTime":763.3
+                 "failStartTime":762.25, 
+                "failEndTime":763
             },
         },
-        {   // spaceship fight            
+        {   "id":8.3,
             "title": "escape inside drone3 Dexter",
             "active":false,
-            "startTime":737.9,
-            "endTime":738.9,
+            "startTime":738,
+            "endTime":739,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
              "wrongMove1":{
-                "failStartTime":762, 
-                "failEndTime":763.3
+                "failStartTime":762.25, 
+                "failEndTime":763
             },
             "wrongMove2":{
-                "failStartTime":762, 
-                "failEndTime":763.3
+                 "failStartTime":762.25, 
+                "failEndTime":763
             },
         },
-        {   // spaceship fight            
+        {   "id":8.4,            
             "title": "escape inside drone4 Dexter",
             "active":false,
-            "startTime":739.2,
-            "endTime":740.2,
+            "startTime":739.75,
+            "endTime":740.75,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
-             "wrongMove1":{
-                "failStartTime":762, 
-                "failEndTime":763.3
+            "wrongMove1":{
+                "failStartTime":762.25, 
+                "failEndTime":763
             },
             "wrongMove2":{
-                "failStartTime":762, 
-                "failEndTime":763.3
+                 "failStartTime":762.25, 
+                "failEndTime":763
             },
         },
-        {   // spaceship fight            
+        {   "id":8.5,            
             "title": "escape inside drone5 Ace",
             "active":false,
             "startTime":741.5,
@@ -1758,191 +1719,157 @@ var gameSheet8 = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":763.2, 
-                "failEndTime":765
+                "failStartTime":763.5, 
+                "failEndTime":764.75
             },
             "wrongMove2":{
-                "failStartTime":763.2, 
-                "failEndTime":765
+                 "failStartTime":765.25, 
+                "failEndTime":768.25
             },
         },
-        {   // spaceship fight            
+        {   "id":8.6,            
             "title": "escape inside drone6 Ace",
             "active":false,
-            "startTime":743.6,
-            "endTime":744.6,
+            "startTime":743.5,
+            "endTime":744.5,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":763.2, 
-                "failEndTime":765
+                "failStartTime":763.5, 
+                "failEndTime":764.75
             },
             "wrongMove2":{
-                "failStartTime":763.2, 
-                "failEndTime":765
+                  "failStartTime":765.25, 
+                "failEndTime":768.25
             },
         },
-        {   // spaceship fight            
+        {   "id":8.7,           
             "title": "escape inside drone7 Ace",
             "active":false,
-            "startTime":745.4,
-            "endTime":746.4,
+            "startTime":745.5,
+            "endTime":746.5,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":763.2, 
-                "failEndTime":765
+                "failStartTime":763.5, 
+                "failEndTime":764.75
             },
             "wrongMove2":{
-                "failStartTime":763.2, 
-                "failEndTime":765
+                  "failStartTime":765.25, 
+                "failEndTime":768.25
             },
         },
-        {   // spaceship fight            
+        {   "id":8.8,            
             "title": "escape inside drone8 Ace",
             "active":false,
-            "startTime":747.4,
-            "endTime":748.2,
+            "startTime":747.25,
+            "endTime":748.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":763.2, 
-                "failEndTime":765
+                "failStartTime":763.5, 
+                "failEndTime":764.75
             },
             "wrongMove2":{
-                "failStartTime":763.2, 
-                "failEndTime":765
+                  "failStartTime":765.25, 
+                "failEndTime":768.25
             },
         },
-        {   // spaceship fight            
+        {   "id":8.9,            
             "title": "escape inside drone8 Ace",
             "active":false,
-            "startTime":749.5,
-            "endTime":750.3,
+            "startTime":749,
+            "endTime":750,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":802.5, 
-                "failEndTime":805.6
+                "failStartTime":763.5, 
+                "failEndTime":764.75
             },
             "wrongMove2":{
-                "failStartTime":763.2, 
-                "failEndTime":805.6
+                  "failStartTime":765.25, 
+                "failEndTime":768.25
             },
         },
-        {   // spaceship fight            
+        {   "id":8.10,            
+            "jumpTo":806,
             "title": "escape inside drone9 dexter",
             "active":false,
-            "startTime":751.5,
-            "endTime":752.2,
+            "startTime":751.25,
+            "endTime":752.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":760.25, 
-                "failEndTime":761.9
+                "failStartTime":760.5, 
+                "failEndTime":761.75
             },
             "wrongMove2":{
-                 "failStartTime":760.25, 
-                "failEndTime":761.9
+                 "failStartTime":760.5, 
+                "failEndTime":761.75
             },
-            "endStage":754.8
+            "finishStage":754.5
         },
-    ],
-};
-var gameSheet9 = {
-    "checkPoints":[
-        {   // space jungle
-            "newStage":805.8,
+        */
+        // end id 8
+        /*
+        {   "id":9.1,
+            "newStage":806,
             "title": "Dexter",
             "active":false,
-            "startTime":806.5,
-            "endTime":807.4,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"left",
-            "wrongMove1":{
-                "failStartTime":836.8, 
-                "failEndTime":838.1
-            },
-            "wrongMove2":{
-                 "failStartTime":836.8, 
-                "failEndTime":838.1
-            },
-        },
-        {   // space jungle           
-            "title": "Dexter",
-            "active":false,
-            "startTime":808.5,
-            "endTime":809.3,
+            "startTime":807.75,
+            "endTime":808.75,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":836.8, 
-                "failEndTime":838.1
+                "failStartTime":836.75, 
+                "failEndTime":838
             },
             "wrongMove2":{
-                 "failStartTime":836.8, 
-                "failEndTime":838.1
+                 "failStartTime":836.75, 
+                "failEndTime":838
             },
         },
-        {   // space jungle           
+        {   "id":9.2,           
             "title": "Dexter",
             "active":false,
-            "startTime":810.2,
+            "startTime":810.25,
             "endTime":811,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
             "wrongMove1":{
-                "failStartTime":840.2, 
-                "failEndTime":841.45
+                "failStartTime":840.25, 
+                "failEndTime":841.5
             },
             "wrongMove2":{
-                "failStartTime":840.2, 
-                "failEndTime":841.45
+                "failStartTime":840.25, 
+                "failEndTime":841.5
             },
         },
-        {   // space jungle           
+        {   "id":9.3,
             "title": "energy Dexter",
             "active":false,
-            "startTime":813.5,
-            "endTime":814.5,
+            "startTime":813.25,
+            "endTime":814.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":838.4, 
-                "failEndTime":840.1
+                "failStartTime":838.5, 
+                "failEndTime":839.75
             },
             "wrongMove2":{
-                "failStartTime":838.4, 
-                "failEndTime":840.1
+                "failStartTime":838.5, 
+                "failEndTime":839.75
             },
-        },
-        /*{   // space jungle           
-            "title": "ace",
-            "active":false,
-            "startTime":813.5,
-            "endTime":814.5,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":762, 
-                "failEndTime":763.3
-            },
-            "wrongMove2":{
-                "failStartTime":762, 
-                "failEndTime":763.3
-            },
-        },*/
-         {   // space jungle           
+        },        
+         {   "id":9.4,           
             "title": "ace",
             "active":false,
             "startTime":815.5,
@@ -1951,312 +1878,747 @@ var gameSheet9 = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":843.2, 
+                "failStartTime":843.25, 
                 "failEndTime":844.5
             },
             "wrongMove2":{
-                "failStartTime":843.2, 
+                "failStartTime":843.25, 
                 "failEndTime":844.5
             },
         },
-        {   // space jungle           
+        {   "id":9.5,          
             "title": "ace",
             "active":false,
-            "startTime":817.6,
-            "endTime":818.5,
+            "startTime":817.5,
+            "endTime":818.25,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
                 "failStartTime":844.75, 
-                "failEndTime":848
+                "failEndTime":847.75
             },
             "wrongMove2":{
                  "failStartTime":844.75, 
-                "failEndTime":848
+                "failEndTime":847.75
             },
         },
-        {   // space jungle           
+        {   "id":9.6,           
             "title": "ace",
             "active":false,
             "startTime":819,
-            "endTime":820,
+            "endTime":819.75,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":843.2, 
-                "failEndTime":844.6
+                "failStartTime":843.25, 
+                "failEndTime":844.5
             },
             "wrongMove2":{
                 "failStartTime":843.2, 
                 "failEndTime":844.6
             },
         },
-        {   // space jungle           
+        {   "id":9.7, 
+            "jumpTo":824.5,
             "title": "Dexter",
             "active":false,
-            "startTime":821.3,
-            "endTime":822.3,
+            "startTime":821.25,
+            "endTime":822.25,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":841.6, 
-                "failEndTime":843.1
+                "failStartTime":842, 
+                "failEndTime":843
             },
             "wrongMove2":{
-                "failStartTime":840.2, 
-                "failEndTime":843.1
+                "failStartTime":842, 
+                "failEndTime":843
             },
-            "endStage":823.3
+            "finishStage":822
         },
-    ],
-};
-var gameSheet10 = {
-    "checkPoints":[
-        {   // space biker
-            "newStage":890.5,
+        {   "id":9.8,           
+            "title": "ace",
+            "active":false,
+            "startTime":824.5,
+            "endTime":825.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":836.75, 
+                "failEndTime":838
+            },
+            "wrongMove2":{
+                 "failStartTime":836.75, 
+                "failEndTime":838
+            },
+        },
+        {   "id":9.8,           
+            "title": "ace",
+            "active":false,
+            "startTime":826.5,
+            "endTime":827.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":836.75, 
+                "failEndTime":838
+            },
+            "wrongMove2":{
+                 "failStartTime":836.75, 
+                "failEndTime":838
+            },
+        },
+        {   "id":9.9,           
+            "title": "ace",
+            "active":false,
+            "startTime":828.5,
+            "endTime":829.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":836.75, 
+                "failEndTime":838
+            },
+            "wrongMove2":{
+                 "failStartTime":836.75, 
+                "failEndTime":838
+            },
+        },
+        {   "id":9.10,           
+            "title": "ace",
+            "active":false,
+            "startTime":830.5,
+            "endTime":831.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":840.25, 
+                "failEndTime":841.5
+            },
+            "wrongMove2":{
+                "failStartTime":840.25, 
+                "failEndTime":841.5
+            },
+        },
+        {   "id":9.11,           
+            "title": "ace",
+            "active":false,
+            "startTime":832.25,
+            "endTime":833,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":842, 
+                "failEndTime":843
+            },
+            "wrongMove2":{
+                 "failStartTime":842, 
+                "failEndTime":843
+            },
+        },
+        {   "id":9.11,           
+            "title": "ace",
+            "active":false,
+            "startTime":833.75,
+            "endTime":834.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":841, 
+                "failEndTime":841.5
+            },
+            "wrongMove2":{
+                 "failStartTime":841, 
+                "failEndTime":841.5
+            },
+        },
+        {   "id":9.11,
+            "jumpTo":890.75,//865.5,
+            "title": "ace",
+            "active":false,
+            "startTime":835.5,
+            "endTime":836.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":838.75, 
+                "failEndTime":839.75
+            },
+            "wrongMove2":{
+                 "failStartTime":838.75, 
+                "failEndTime":839.75
+            },
+         "finishStage":836
+        },
+        */
+        //end id 9
+        /*
+        {   "id":10.1,
+            "newStage":890.75,
             "title": "Dexter",
             "active":false,
-            "startTime":891.7,
-            "endTime":892.7,
+            "startTime":891.75,
+            "endTime":892.75,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
                 "failStartTime":926.5, 
-                "failEndTime":927.4
+                "failEndTime":927.25
             },
             "wrongMove2":{
                  "failStartTime":926.5, 
-                "failEndTime":927.4
+                "failEndTime":927.25
             },
         },
-        {   // space biker            
+        {   "id":10.2,            
             "title": "Dexter",
             "active":false,
-            "startTime":895.4,
-            "endTime":896.2,
+            "startTime":895.25,
+            "endTime":896.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":927.8, 
-                "failEndTime":928.9
+                "failStartTime":927.75, 
+                "failEndTime":928.75
             },
             "wrongMove2":{
-                "failStartTime":927.8, 
-                "failEndTime":928.9
+                "failStartTime":927.75, 
+                "failEndTime":928.75
             },
         },
-         {   // space biker
+         {  "id":10.3, 
             "title": "Dexter",
             "active":false,
-            "startTime":897,
-            "endTime":898,
+            "startTime":896.75,
+            "endTime":897.75,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":927.7, 
-                "failEndTime":928.9
+                "failStartTime":927.75, 
+                "failEndTime":928.75
             },
             "wrongMove2":{
-                "failStartTime":927.7, 
-                "failEndTime":928.9
+                "failStartTime":927.75, 
+                "failEndTime":928.75
             },
         },
-        {   // space biker
+        {   "id":10.4,
             "title": "Ace",
             "active":false,
-            "startTime":899.4,
-            "endTime":900.2,
+            "startTime":899.25,
+            "endTime":900.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
                 "failStartTime":929, 
-                "failEndTime":930.1
+                "failEndTime":930
             },
             "wrongMove2":{
                  "failStartTime":929, 
-                "failEndTime":930.1
+                "failEndTime":930
             },
         },
-        {   // space biker
+        {   "id":10.5, 
             "title": "Ace",
             "active":false,
-            "startTime":901.4,
-            "endTime":902.4,
+            "startTime":901.25,
+            "endTime":902.25,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
                 "failStartTime":932.5, 
-                "failEndTime":934.2
+                "failEndTime":934
             },
             "wrongMove2":{
                   "failStartTime":932.5, 
-                "failEndTime":934.2
+                "failEndTime":934
             },
         },
-        {   // space biker
+        {   "id":10.6,
             "title": "Ace",
             "active":false,
-            "startTime":903.7,
-            "endTime":904.5,
+            "startTime":903.25,
+            "endTime":904.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":932.5, 
-                "failEndTime":934.2
+                "failStartTime":934.25, 
+                "failEndTime":935.25
             },
             "wrongMove2":{
-                  "failStartTime":932.5, 
-                "failEndTime":934.2
+                "failStartTime":934.25, 
+                "failEndTime":935.25
             },
         },
-         {   // space biker
+         {  "id":10.7, 
             "title": "Ace",
             "active":false,
-            "startTime":905.7,
-            "endTime":906.4,
+            "startTime":905,
+            "endTime":906,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":932.5, 
-                "failEndTime":934.2
+                "failStartTime":936, 
+                "failEndTime":937.25
             },
             "wrongMove2":{
                   "failStartTime":932.5, 
-                "failEndTime":934.2
+                "failEndTime":934
             },
         },
-        {   // space biker
+        {   "id":10.8, 
             "title": "Ace",
             "active":false,
-            "startTime":907.4,
-            "endTime":908.2,
+            "startTime":907,
+            "endTime":908,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":935.6, 
-                "failEndTime":937.4
+                "failStartTime":936, 
+                "failEndTime":937.25
             },
             "wrongMove2":{
-                 "failStartTime":935.6, 
-                "failEndTime":937.4
+                 "failStartTime":936, 
+                "failEndTime":937.25
             },
         },
-        {   // space biker
+        {   "id":10.9, 
             "title": "Ace",
             "active":false,
-            "startTime":909.2,
-            "endTime":910,
+            "startTime":908.75,
+            "endTime":909.75,
             "complete": false,
             "pressed": false,
             "correctMove":"down",
              "wrongMove1":{
-                "failStartTime":935.6, 
-                "failEndTime":937.4
+                "failStartTime":936, 
+                "failEndTime":937.25
             },
             "wrongMove2":{
-                 "failStartTime":935.6, 
-                "failEndTime":937.4
+                 "failStartTime":936, 
+                "failEndTime":937.25
             },
         },
-        {   // space biker
+        {   "id":10.10, 
             "title": "Ace",
             "active":false,
-            "startTime":910.7,
-            "endTime":911.3,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"down",
-             "wrongMove1":{
-                "failStartTime":935.6, 
-                "failEndTime":937.4
-            },
-            "wrongMove2":{
-                 "failStartTime":935.6, 
-                "failEndTime":937.4
-            },
-        },
-        {   // space biker
-            "title": "Ace",
-            "active":false,
-            "startTime":912.5,
-            "endTime":913.2,
+            "startTime":910.25,
+            "endTime":911.25,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
              "wrongMove1":{
-                "failStartTime":935.6, 
-                "failEndTime":937.4
+                "failStartTime":936, 
+                "failEndTime":937.25
             },
             "wrongMove2":{
-                 "failStartTime":935.6, 
-                "failEndTime":937.4
+                 "failStartTime":936, 
+                "failEndTime":937.25
             },
         },
-        {   // space biker
+        {   "id":10.11, 
             "title": "Ace",
             "active":false,
-            "startTime":914,
-            "endTime":914.7,
+            "startTime":912,
+            "endTime":913,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+             "wrongMove1":{
+                "failStartTime":936, 
+                "failEndTime":937.25
+            },
+            "wrongMove2":{
+                 "failStartTime":936, 
+                "failEndTime":937.25
+            },
+        },
+        {   "id":10.12, 
+            "title": "Ace",
+            "active":false,
+            "startTime":913.5,
+            "endTime":914.5,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":935.6, 
-                "failEndTime":937.4
+                "failStartTime":936, 
+                "failEndTime":937.25
             },
             "wrongMove2":{
-                 "failStartTime":935.6, 
-                "failEndTime":937.4
+                 "failStartTime":936, 
+                "failEndTime":937.25
             },
         },
-        {   // space biker
+        {   "id":10.13, 
             "title": "Ace",
             "active":false,
-            "startTime":915.7,
-            "endTime":916.5,
+            "startTime":915.25,
+            "endTime":916.25,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":937.5, 
-                "failEndTime":941.2
+                "failStartTime":937.75, 
+                "failEndTime":941
             },
             "wrongMove2":{
-                 "failStartTime":937.5, 
-                "failEndTime":941.2
+                 "failStartTime":937.75, 
+                "failEndTime":941
             },
         },
-        {   // space biker
+        {   "id":10.14, 
+            "jumpTo":992.75,
             "title": "Ace",
             "active":false,
-            "startTime":917.4,
-            "endTime":918.4,
+            "startTime":916.75,
+            "endTime":917.75,
             "complete": false,
             "pressed": false,
             "correctMove":"up",
             "wrongMove1":{
-                "failStartTime":937.5, 
-                "failEndTime":941.2
+                "failStartTime":937.75, 
+                "failEndTime":941
             },
             "wrongMove2":{
-                 "failStartTime":937.5, 
-                "failEndTime":941.2
+                 "failStartTime":937.75, 
+                "failEndTime":941
             },
-            "endStage":919.7
+            "finishStage":919.75
         },
-    ],
+        */
+        //end id 10        
+        {   "id":11.1,
+            "newStage":992.75,
+            "title": "Dexter",
+            "active":false,
+            "startTime":997.5,
+            "endTime":998.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":1050, 
+                "failEndTime":1051.25
+            },
+            "wrongMove2":{
+                 "failStartTime":1050, 
+                "failEndTime":1051.25
+            },
+        },
+        {   "id":11.2,           
+            "title": "Dexter",
+            "active":false,
+            "startTime":1000,
+            "endTime":1001,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":1051.5, 
+                "failEndTime":1052.75
+            },
+            "wrongMove2":{
+                 "failStartTime":1051.5, 
+                "failEndTime":1052.75
+            },
+        },
+        {   "id":11.3,           
+            "title": "Dexter",
+            "active":false,
+            "startTime":1001.75,
+            "endTime":1002.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":1052.75, 
+                "failEndTime":1054
+            },
+            "wrongMove2":{
+                "failStartTime":1052.75, 
+                "failEndTime":1054
+            },
+        },
+        {   "id":11.4,           
+            "title": "ace",
+            "active":false,
+            "startTime":1004.75,
+            "endTime":1005.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":1054.25, 
+                "failEndTime":1055.5
+            },
+            "wrongMove2":{
+                "failStartTime":1054.25, 
+                "failEndTime":1055.5
+            },
+        },
+        {   "id":11.5,           
+            "title": "ace",
+            "active":false,
+            "startTime":1008.5,
+            "endTime":1009.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":1061.75, 
+                "failEndTime":1065
+            },
+            "wrongMove2":{
+                 "failStartTime":1061.75, 
+                "failEndTime":1065
+            },
+        },
+        {   "id":11.6,           
+            "title": "ace",
+            "active":false,
+            "startTime":1010.75,
+            "endTime":1011.75,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":1061.75, 
+                "failEndTime":1065
+            },
+            "wrongMove2":{
+                 "failStartTime":1061.75, 
+                "failEndTime":1065
+            },
+        },
+        {   "id":11.7,           
+            "title": "ace",
+            "active":false,
+            "startTime":1013.5,
+            "endTime":1014.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+            "wrongMove2":{
+                 "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+        },
+        {   "id":11.8,           
+            "title": "ace",
+            "active":false,
+            "startTime":1017.5,
+            "endTime":1018.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"down",
+            "wrongMove1":{
+                "failStartTime":1057.1, 
+                "failEndTime":1058.6
+            },
+            "wrongMove2":{
+                "failStartTime":1057.1, 
+                "failEndTime":1058.6
+            },
+        },
+        {   "id":11.9,           
+            "title": "ace",
+            "active":false,
+            "startTime":1019,
+            "endTime":1019.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+            "wrongMove1":{
+                "failStartTime":1057.1, 
+                "failEndTime":1058.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1057.1, 
+                "failEndTime":1058.5
+            },
+        },
+        {   "id":11.10,           
+            "title": "pink ace",
+            "active":false,
+            "startTime":1020.7,
+            "endTime":1021.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":1060.2, 
+                "failEndTime":1061.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1060.2, 
+                "failEndTime":1061.5
+            },
+        },
+        {   "id":11.12,           
+            "title": "ace",
+            "active":false,
+            "startTime":1022.2,
+            "endTime":1023.2,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+             "wrongMove1":{
+                "failStartTime":1060.2, 
+                "failEndTime":1061.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1060.2, 
+                "failEndTime":1061.5
+            },
+        },
+        {   "id":11.13,           
+            "title": "ace",
+            "active":false,
+            "startTime":1024.5,
+            "endTime":1025.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+             "wrongMove1":{
+                "failStartTime":1060.2, 
+                "failEndTime":1061.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1060.2, 
+                "failEndTime":1061.5
+            },
+        },
+        {   "id":11.14,           
+            "title": "ace",
+            "active":false,
+            "startTime":1027.6,
+            "endTime":1028.6,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+           "wrongMove1":{
+                "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+            "wrongMove2":{
+                 "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+        },
+        {   "id":11.15,           
+            "title": "ace",
+            "active":false,
+            "startTime":1029.6,
+            "endTime":1030.6,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+           "wrongMove1":{
+                "failStartTime":1060.2, 
+                "failEndTime":1061.5
+            },
+            "wrongMove2":{
+                 "failStartTime":1060.2, 
+                "failEndTime":1061.5
+            },
+        },
+        {   "id":11.16,           
+            "title": "ace",
+            "active":false,
+            "startTime":1031.6,
+            "endTime":1032.6,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+            "wrongMove2":{
+                 "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+        },
+         {   "id":11.17,           
+            "title": "ace",
+            "active":false,
+            "startTime":1035.9,
+            "endTime":1036.8,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+           "wrongMove1":{
+                "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+            "wrongMove2":{
+                 "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+        },
+        {   "id":11.18,           
+            "title": "ace",
+            "active":false,
+            "startTime":1037.7,
+            "endTime":1038.7,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"right",
+           "wrongMove1":{
+                "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+            "wrongMove2":{
+                 "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+        },
+        {   "id":11.19, 
+            "jumpTo":1138.5,
+            "title": "ace",
+            "active":false,
+            "startTime":1039.5,
+            "endTime":1040.5,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"fire",
+            "wrongMove1":{
+                "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+            "wrongMove2":{
+                 "failStartTime":1061.7, 
+                "failEndTime":1065
+            },
+            "finishStage":1039.9
+        },
+    ],          
 };
+
+
 var gameSheet11 = {
     "checkPoints":[
         {   // space biker
