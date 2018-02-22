@@ -699,9 +699,10 @@ var data = {
                 "failEndTime":276
             },
         },
+       
         {   // inside borf's base
             "id":3,
-            "title": "energy trap move6 Dexter",
+            "title": "energy trap move6 Dexter",            
             "jumpTo":336.75,
             "active":false,
             "startTime":251.75,
@@ -717,8 +718,9 @@ var data = {
                 "failStartTime":272.7, 
                 "failEndTime":276
             },
-            "finishStage":254.2
-        },                
+            "finishStage":253.75
+        },  
+         
         //end ID 3
         
         {   
@@ -917,7 +919,7 @@ var data = {
         }, 
         
         {   "id":4,
-            "newStage": 375,
+            
             "title": "sentinel robot3 Dexter",
             "active":false,
             "startTime":379,
@@ -934,8 +936,10 @@ var data = {
                 "failEndTime":394.2
             },
         },
+        
         {  "id":4,  
            "jumpTo": 459.75,
+            "newStage": 381,
             "title": "sentinel robot3 Dexter",
             "active":false,
             "startTime":381,
@@ -952,9 +956,9 @@ var data = {
                 "failEndTime":394.2
             },
          "finishStage":383
-        },       
+        }, 
         
-        //End id 4
+        //End id 4 
         
         {   
             "id":5,
@@ -1127,9 +1131,10 @@ var data = {
                  "failStartTime":499, 
                 "failEndTime":500.2
             }
-        },
+        },       
         {   "id":5, 
             "jumpTo": 555.7,
+            "newStage":483,
             "title": "escape fire3 Ace",
             "active":false,
             "startTime":483.7,
@@ -1371,9 +1376,10 @@ var data = {
                "failStartTime":589.75, 
                 "failEndTime":590.5
             }
-        }, 
+        },         
         {   "id":6,
             "jumpTo":652,
+            "newStage":581.5,
             "title": "monster fire Dexter",
             "active":false,
             "startTime":582.5,
@@ -1389,11 +1395,10 @@ var data = {
                "failStartTime":589.75, 
                 "failEndTime":590.5
             },
-            "finishStage":585.25
-        },        
+            "finishStage":585
+        }, 
         
-        // end id 6
-        
+        // end id 6        
         {   "id":7.1,
             "newStage":652,
             "title": "flame escape Dexter",
@@ -1616,8 +1621,10 @@ var data = {
                 "failEndTime":680.25
             },
         },
+        
         {   "id":7.14,
             "jumpTo":731.5,
+            "newStage":677,
             "title": "space castle Dexter",
             "active":false,
             "startTime":677,
