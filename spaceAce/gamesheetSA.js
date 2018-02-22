@@ -2305,7 +2305,8 @@ var data = {
             "finishStage":919.75
         },
         */
-        //end id 10        
+        //end id 10 
+        /*
         {   "id":11.1,
             "newStage":992.75,
             "title": "Dexter",
@@ -2317,11 +2318,11 @@ var data = {
             "correctMove":"left",
             "wrongMove1":{
                 "failStartTime":1050, 
-                "failEndTime":1051.25
+                "failEndTime":1051
             },
             "wrongMove2":{
                  "failStartTime":1050, 
-                "failEndTime":1051.25
+                "failEndTime":1051
             },
         },
         {   "id":11.2,           
@@ -2334,11 +2335,11 @@ var data = {
             "correctMove":"right",
             "wrongMove1":{
                 "failStartTime":1051.5, 
-                "failEndTime":1052.75
+                "failEndTime":1052.25
             },
             "wrongMove2":{
                  "failStartTime":1051.5, 
-                "failEndTime":1052.75
+                "failEndTime":1052.25
             },
         },
         {   "id":11.3,           
@@ -2351,11 +2352,11 @@ var data = {
             "correctMove":"fire",
             "wrongMove1":{
                 "failStartTime":1052.75, 
-                "failEndTime":1054
+                "failEndTime":1053.75
             },
             "wrongMove2":{
                 "failStartTime":1052.75, 
-                "failEndTime":1054
+                "failEndTime":1053.75
             },
         },
         {   "id":11.4,           
@@ -2395,8 +2396,8 @@ var data = {
         {   "id":11.6,           
             "title": "ace",
             "active":false,
-            "startTime":1010.75,
-            "endTime":1011.75,
+            "startTime":1010.5,
+            "endTime":1011.5,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
@@ -2418,12 +2419,12 @@ var data = {
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
+                "failStartTime":1057.25, 
+                "failEndTime":1058.75
             },
             "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
+                "failStartTime":1057.25, 
+                "failEndTime":1058.75
             },
         },
         {   "id":11.8,           
@@ -2435,169 +2436,153 @@ var data = {
             "pressed": false,
             "correctMove":"down",
             "wrongMove1":{
-                "failStartTime":1057.1, 
-                "failEndTime":1058.6
+                "failStartTime":1057.25, 
+                "failEndTime":1058.75
             },
             "wrongMove2":{
-                "failStartTime":1057.1, 
-                "failEndTime":1058.6
+                "failStartTime":1057.25, 
+                "failEndTime":1058.75
             },
         },
         {   "id":11.9,           
             "title": "ace",
             "active":false,
-            "startTime":1019,
-            "endTime":1019.7,
+            "startTime":1018.75,
+            "endTime":1019.5,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":1057.1, 
-                "failEndTime":1058.5
+                "failStartTime":1059, 
+                "failEndTime":1060
             },
             "wrongMove2":{
-                 "failStartTime":1057.1, 
-                "failEndTime":1058.5
+                 "failStartTime":1059, 
+                "failEndTime":1060
             },
         },
         {   "id":11.10,           
             "title": "pink ace",
             "active":false,
-            "startTime":1020.7,
-            "endTime":1021.5,
+            "startTime":1020.25,
+            "endTime":1021.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1060.2, 
-                "failEndTime":1061.5
+                "failStartTime":1060.5, 
+                "failEndTime":1061.25
             },
             "wrongMove2":{
-                 "failStartTime":1060.2, 
-                "failEndTime":1061.5
+                 "failStartTime":1060.5, 
+                "failEndTime":1061.25
             },
         },
         {   "id":11.12,           
             "title": "ace",
             "active":false,
-            "startTime":1022.2,
-            "endTime":1023.2,
+            "startTime":1022,
+            "endTime":1023,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
              "wrongMove1":{
-                "failStartTime":1060.2, 
-                "failEndTime":1061.5
+                "failStartTime":1060.5, 
+                "failEndTime":1061.25
             },
             "wrongMove2":{
-                 "failStartTime":1060.2, 
-                "failEndTime":1061.5
+                 "failStartTime":1060.5, 
+                "failEndTime":1061.25
             },
         },
         {   "id":11.13,           
             "title": "ace",
             "active":false,
-            "startTime":1024.5,
-            "endTime":1025.5,
+            "startTime":1024,
+            "endTime":1025,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
              "wrongMove1":{
-                "failStartTime":1060.2, 
-                "failEndTime":1061.5
+                "failStartTime":1060.5, 
+                "failEndTime":1061.25
             },
             "wrongMove2":{
-                 "failStartTime":1060.2, 
-                "failEndTime":1061.5
+                 "failStartTime":1060.5, 
+                "failEndTime":1061.25
             },
         },
-        {   "id":11.14,           
-            "title": "ace",
-            "active":false,
-            "startTime":1027.6,
-            "endTime":1028.6,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-           "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-        },
+        
         {   "id":11.15,           
             "title": "ace",
             "active":false,
-            "startTime":1029.6,
-            "endTime":1030.6,
+            "startTime":1029.25,
+            "endTime":1030.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
            "wrongMove1":{
-                "failStartTime":1060.2, 
-                "failEndTime":1061.5
+                "failStartTime":1060.5, 
+                "failEndTime":1061.25
             },
             "wrongMove2":{
-                 "failStartTime":1060.2, 
-                "failEndTime":1061.5
+                 "failStartTime":1060.5, 
+                "failEndTime":1061.25
             },
         },
         {   "id":11.16,           
             "title": "ace",
             "active":false,
-            "startTime":1031.6,
-            "endTime":1032.6,
+            "startTime":1031.75,
+            "endTime":1032.75,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
+                "failStartTime":1062, 
+                "failEndTime":1064.75
             },
             "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
+                 "failStartTime":1062, 
+                "failEndTime":1064.75
             },
         },
          {   "id":11.17,           
             "title": "ace",
             "active":false,
-            "startTime":1035.9,
-            "endTime":1036.8,
+            "startTime":1036,
+            "endTime":1037,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
            "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
+                "failStartTime":1062, 
+                "failEndTime":1064.75
             },
             "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
+                 "failStartTime":1062, 
+                "failEndTime":1064.75
             },
         },
         {   "id":11.18,           
             "title": "ace",
             "active":false,
-            "startTime":1037.7,
-            "endTime":1038.7,
+            "startTime":1037.75,
+            "endTime":1038.75,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
            "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
+                "failStartTime":1062, 
+                "failEndTime":1064.75
             },
             "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
+                 "failStartTime":1062, 
+                "failEndTime":1064.75
             },
         },
         {   "id":11.19, 
-            "jumpTo":1138.5,
+            "jumpTo":1138.75,
             "title": "ace",
             "active":false,
             "startTime":1039.5,
@@ -2606,424 +2591,109 @@ var data = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
+                "failStartTime":1062, 
+                "failEndTime":1064.75
             },
             "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
+                 "failStartTime":1062, 
+                "failEndTime":1064.75
             },
-            "finishStage":1039.9
+            "finishStage":1043.75
         },
-    ],          
-};
-
-
-var gameSheet11 = {
-    "checkPoints":[
-        {   // space biker
-            "newStage":992.6,
+        */
+        //end id 11
+        /*
+        {   "id":12.1,
+            "newStage":1138.75,
             "title": "Dexter",
             "active":false,
-            "startTime":997.7,
-            "endTime":998.7,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"left",
-            "wrongMove1":{
-                "failStartTime":1050.1, 
-                "failEndTime":1051.3
-            },
-            "wrongMove2":{
-                 "failStartTime":1050.1, 
-                "failEndTime":1051.3
-            },
-        },
-        {   // space biker           
-            "title": "Dexter",
-            "active":false,
-            "startTime":1000,
-            "endTime":1001,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-            "wrongMove1":{
-                "failStartTime":1051.3, 
-                "failEndTime":1052.5
-            },
-            "wrongMove2":{
-                 "failStartTime":1051.3, 
-                "failEndTime":1052.5
-            },
-        },
-        {   // space biker           
-            "title": "Dexter",
-            "active":false,
-            "startTime":1002,
-            "endTime":1003,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":1052.7, 
-                "failEndTime":1054.1
-            },
-            "wrongMove2":{
-                "failStartTime":1052.7, 
-                "failEndTime":1054.1
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1004.5,
-            "endTime":1005.5,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":1054.1, 
-                "failEndTime":1055.6
-            },
-            "wrongMove2":{
-                "failStartTime":1054.1, 
-                "failEndTime":1055.6
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1008.6,
-            "endTime":1009.6,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1010.7,
-            "endTime":1011.7,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1013.8,
-            "endTime":1014.6,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-            "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1017.5,
-            "endTime":1018.3,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"down",
-            "wrongMove1":{
-                "failStartTime":1057.1, 
-                "failEndTime":1058.6
-            },
-            "wrongMove2":{
-                "failStartTime":1057.1, 
-                "failEndTime":1058.6
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1019,
-            "endTime":1019.7,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-            "wrongMove1":{
-                "failStartTime":1057.1, 
-                "failEndTime":1058.5
-            },
-            "wrongMove2":{
-                 "failStartTime":1057.1, 
-                "failEndTime":1058.5
-            },
-        },
-        {   // space biker           
-            "title": "pink ace",
-            "active":false,
-            "startTime":1020.7,
-            "endTime":1021.5,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":1060.2, 
-                "failEndTime":1061.5
-            },
-            "wrongMove2":{
-                 "failStartTime":1060.2, 
-                "failEndTime":1061.5
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1022.2,
-            "endTime":1023.2,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-             "wrongMove1":{
-                "failStartTime":1060.2, 
-                "failEndTime":1061.5
-            },
-            "wrongMove2":{
-                 "failStartTime":1060.2, 
-                "failEndTime":1061.5
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1024.5,
-            "endTime":1025.5,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-             "wrongMove1":{
-                "failStartTime":1060.2, 
-                "failEndTime":1061.5
-            },
-            "wrongMove2":{
-                 "failStartTime":1060.2, 
-                "failEndTime":1061.5
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1027.6,
-            "endTime":1028.6,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-           "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1029.6,
-            "endTime":1030.6,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-           "wrongMove1":{
-                "failStartTime":1060.2, 
-                "failEndTime":1061.5
-            },
-            "wrongMove2":{
-                 "failStartTime":1060.2, 
-                "failEndTime":1061.5
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1031.6,
-            "endTime":1032.6,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"left",
-            "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-        },
-         {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1035.9,
-            "endTime":1036.8,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-           "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1037.7,
-            "endTime":1038.7,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"right",
-           "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-        },
-        {   // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1039.5,
-            "endTime":1040.5,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "wrongMove2":{
-                 "failStartTime":1061.7, 
-                "failEndTime":1065
-            },
-            "endStage":1039.9
-        },
-     ]
-};
-var gameSheet12 = {
-    "checkPoints":[
-        {   // space biker
-            "newStage":1138.5,
-            "title": "Dexter",
-            "active":false,
-            "startTime":1141.2,
-            "endTime":1142,
+            "startTime":1141.5,
+            "endTime":1142.5,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
                 "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.5
             },
             "wrongMove2":{
                   "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.5
             },
         },
-         {  // space biker           
+        {  "id":12.2,           
             "title": "Dexter",
             "active":false,
-            "startTime":1143,
-            "endTime":1143.7,
+            "startTime":1142.75,
+            "endTime":1143.75,
             "complete": false,
             "pressed": false,
-            "correctMove":"up",
+            "correctMove":"left",
              "wrongMove1":{
                 "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.5
             },
             "wrongMove2":{
                   "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.5
             },
         },
-        {  // space biker           
+        {  "id":12.3,           
             "title": "Dexter",
             "active":false,
-            "startTime":1144.2,
+            "startTime":1144,
             "endTime":1145,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
                 "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.5
             },
             "wrongMove2":{
                   "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.5
             },
         },
-         {  // space biker           
+        {  "id":12.4,          
             "title": "energy ace",
             "active":false,
-            "startTime":1145.2,
-            "endTime":1146,
+            "startTime":1145.5,
+            "endTime":1146.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
              "wrongMove1":{
                 "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.5
             },
             "wrongMove2":{
                   "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.5
             },
         },
-        {  // space biker           
+        {  "id":12.5,            
             "title": "ace",
             "active":false,
-            "startTime":1146.2,
-            "endTime":1147,
+            "startTime":1146.5,
+            "endTime":1147.25,
             "complete": false,
             "pressed": false,
-            "correctMove":"left",
+            "correctMove":"down",
             "wrongMove1":{
-                "failStartTime":1201.9, 
-                "failEndTime":1204.4
+                "failStartTime":1202, 
+                "failEndTime":1204.5
             },
             "wrongMove2":{
-                 "failStartTime":1204.4, 
-                "failEndTime":1205.7
+                 "failStartTime":1204.75, 
+                "failEndTime":1205.25
             },
         },
-         {  // space biker           
+        {  "id":12.6,           
             "title": "ace",
             "active":false,
-            "startTime":1147.2,
-            "endTime":1148,
+            "startTime":1147.5,
+            "endTime":1148.5,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
@@ -3032,147 +2702,115 @@ var gameSheet12 = {
                 "failEndTime":1204.4
             },
             "wrongMove2":{
-                 "failStartTime":1204.4, 
-                "failEndTime":1205.7
+                   "failStartTime":1204.75, 
+                "failEndTime":1205.25
             },
         },
-        {  // space biker           
+        {  "id":12.7,           
             "title": "ace",
             "active":false,
-            "startTime":1148.5,
-            "endTime":1149.5,
+            "startTime":1149,
+            "endTime":1150,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
              "wrongMove1":{
-                "failStartTime":1201.9, 
-                "failEndTime":1204.4
+                "failStartTime":1202.25, 
+                "failEndTime":1204.25
             },
             "wrongMove2":{
-                 "failStartTime":1204.4, 
-                "failEndTime":1205.7
+                 "failStartTime":1204.25, 
+                "failEndTime":1205.5
             },
         },
-        {  // space biker           
+        {  "id":12.8,            
             "title": "ace",
             "active":false,
-            "startTime":1150,
-            "endTime":1150.7,
+            "startTime":1150.5,
+            "endTime":1151.25,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
              "wrongMove1":{
-                "failStartTime":1201.9, 
-                "failEndTime":1204.4
+                "failStartTime":1202.25, 
+                "failEndTime":1204.25
             },
             "wrongMove2":{
-                 "failStartTime":1204.4, 
-                "failEndTime":1205.7
+                  "failStartTime":1204.75, 
+                "failEndTime":1205.25
             },
-        },
-        {  // space biker           
+        },        
+        {  "id":12.10,            
             "title": "ace",
             "active":false,
-            "startTime":1151,
-            "endTime":1151.7,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"up",
-             "wrongMove1":{
-                "failStartTime":1201.9, 
-                "failEndTime":1204.4
-            },
-            "wrongMove2":{
-                 "failStartTime":1204.4, 
-                "failEndTime":1205.7
-            },
-        },
-        {  // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1152.2,
-            "endTime":1152.8,
+            "startTime":1151.75,
+            "endTime":1152.5,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":1201.9, 
-                "failEndTime":1204.4
+                "failStartTime":1202.25, 
+                "failEndTime":1204.25
             },
             "wrongMove2":{
-                 "failStartTime":1204.4, 
-                "failEndTime":1205.7
+                 "failStartTime":1204.75, 
+                "failEndTime":1205.25
             },
         },
-        {  // space biker           
+        
+        {  "id":12.11,           
             "title": "ace",
             "active":false,
             "startTime":1153,
-            "endTime":1153.7,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"up",
-            "wrongMove1":{
-                "failStartTime":1201.9, 
-                "failEndTime":1204.4
-            },
-            "wrongMove2":{
-                 "failStartTime":1204.4, 
-                "failEndTime":1205.7
-            },
-        },
-        {  // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1160,
-            "endTime":1161,
+            "endTime":1154,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":1207.4, 
-                "failEndTime":1208.8
+                "failStartTime":1202.25, 
+                "failEndTime":1204.25
             },
             "wrongMove2":{
-                "failStartTime":1207.4, 
-                "failEndTime":1208.8
+                 "failStartTime":1204.75, 
+                "failEndTime":1205.25
             },
         },
-        {  // space biker           
+        //
+        {  "id":12.12,           
             "title": "ace",
             "active":false,
-            "startTime":1163.4,
-            "endTime":1164.4,
+            "startTime":1159.25,
+            "endTime":1160.25,
+            "complete": false,
+            "pressed": false,
+            "correctMove":"left",
+            "wrongMove1":{
+                "failStartTime":1207.5, 
+                "failEndTime":1208.75
+            },
+            "wrongMove2":{
+                "failStartTime":1207.5, 
+                "failEndTime":1208.75
+            },
+        },
+        {  "id":12.13,           
+            "title": "ace",
+            "active":false,
+            "startTime":1163,
+            "endTime":1164,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1205.6, 
-                "failEndTime":1207.3
+                "failStartTime":1206, 
+                "failEndTime":1207
             },
             "wrongMove2":{
-                "failStartTime":1205.6, 
-                "failEndTime":1207.3
+                "failStartTime":1206, 
+                "failEndTime":1207
             },
-        },
-        /*{  // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1167,
-            "endTime":1168,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-            "wrongMove1":{
-                "failStartTime":1050.1, 
-                "failEndTime":1051.3
-            },
-            "wrongMove2":{
-                 "failStartTime":1050.1, 
-                "failEndTime":1051.3
-            },
-        },*/
-         {  // space biker           
+        },       
+         {  "id":12.14,            
             "title": "ace",
             "active":false,
             "startTime":1170,
@@ -3181,32 +2819,32 @@ var gameSheet12 = {
             "pressed": false,
             "correctMove":"down",
             "wrongMove1":{
-                "failStartTime":1210.8, 
-                "failEndTime":1212.4
+                "failStartTime":1211, 
+                "failEndTime":1212
             },
             "wrongMove2":{
-                "failStartTime":1210.8, 
-                "failEndTime":1212.4
+                "failStartTime":1211, 
+                "failEndTime":1212
             },
         },
-         {  // space biker           
+         {  "id":12.15,            
             "title": "ace",
             "active":false,
-            "startTime":1171.7,
-            "endTime":1172.4,
+            "startTime":1171.5,
+            "endTime":1172.5,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":1210.8, 
-                "failEndTime":1212.4
+                "failStartTime":1211, 
+                "failEndTime":1212
             },
             "wrongMove2":{
-                "failStartTime":1210.8, 
-                "failEndTime":1212.4
+                "failStartTime":1211, 
+                "failEndTime":1212
             },
         },
-        {  // space biker           
+        {  "id":12.16,           
             "title": "ace",
             "active":false,
             "startTime":1174,
@@ -3215,49 +2853,32 @@ var gameSheet12 = {
             "pressed": false,
             "correctMove":"right",
            "wrongMove1":{
-                "failStartTime":1208.8, 
-                "failEndTime":1210.8
+                "failStartTime":1209, 
+                "failEndTime":1210.75
             },
             "wrongMove2":{
-                 "failStartTime":1208.8,  
-                "failEndTime":1210.8
+                 "failStartTime":1209,  
+                "failEndTime":1210.75
             },
         },
-        {  // space biker           
+        {  "id":12.17,            
             "title": "ace",
             "active":false,
-            "startTime":1176.2,
-            "endTime":1177.2,
+            "startTime":1176.25,
+            "endTime":1177.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1208.8, 
-                "failEndTime":1210.8
+                 "failStartTime":1209,  
+                "failEndTime":1210.75
             },
             "wrongMove2":{
-                 "failStartTime":1208.8,  
-                "failEndTime":1210.8
+                 "failStartTime":1209,  
+                "failEndTime":1210.75
             },
-        },
-        {  // space biker           
-            "title": "ace",
-            "active":false,
-            "startTime":1177.7,
-            "endTime":1178.7,
-            "complete": false,
-            "pressed": false,
-            "correctMove":"fire",
-           "wrongMove1":{
-                "failStartTime":1208.8, 
-                "failEndTime":1210.8
-            },
-            "wrongMove2":{
-                 "failStartTime":1050.1, 
-                "failEndTime":1210.8
-            },
-        },
-        {  // space biker           
+        },        
+        {  "id":12.19,            
             "title": "ace",
             "active":false,
             "startTime":1179,
@@ -3266,55 +2887,54 @@ var gameSheet12 = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1212.3, 
-                "failEndTime":1213.8
+                "failStartTime":1212.75, 
+                "failEndTime":1213.75
             },
             "wrongMove2":{
-                  "failStartTime":1212.3, 
-                "failEndTime":1213.8
+                  "failStartTime":1212.75, 
+                "failEndTime":1213.75
             },
         },
-        {  // space biker           
+        {  "id":12.20,            
             "title": "ace",
             "active":false,
-            "startTime":1181,
-            "endTime":1181.7,
+            "startTime":1180.75,
+            "endTime":1181.75,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":1213.8, 
-                "failEndTime":1217.4
+                "failStartTime":1214.25, 
+                "failEndTime":1217.25
             },
             "wrongMove2":{
-                 "failStartTime":1213.8, 
-                "failEndTime":1217.4
+                  "failStartTime":1214.25, 
+                "failEndTime":1217.25
             },
         },
-        {  // space biker           
+        {  "id":12.21, 
+            "jumpTo":1297.25,
             "title": "ace",
             "active":false,
-            "startTime":1182.7,
+            "startTime":1182.5,
             "endTime":1183.5,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                 "failStartTime":1213.8, 
-                "failEndTime":1217.4
+                "failStartTime":1214.25, 
+                "failEndTime":1217.25
             },
             "wrongMove2":{
-                 "failStartTime":1213.8, 
-                "failEndTime":1217.4
+                  "failStartTime":1214.25, 
+                "failEndTime":1217.25
             },
-            "endStage":1185.9
+            "finishStage":1185.75
         },
-     ]
-};
-var gameSheet13 = {
-    "checkPoints":[
-        {   // space biker
-            "newStage":1297.2,
+        */
+        //end id 12        
+        {   "id":13.1,
+            "newStage":1297.25,
             "title": "Dexter",
             "active":false,
             "startTime":1302.5,
@@ -3324,99 +2944,100 @@ var gameSheet13 = {
             "correctMove":"left",
             "wrongMove1":{
                 "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.75
             },
             "wrongMove2":{
                   "failStartTime":1196.5, 
-                "failEndTime":1198.9
+                "failEndTime":1198.75
             },
-        },
-         {   // space biker           
-            "title": "Dexter",
+        },       
+        {   "id":13.2,           
+            "title": "Dexter",            
             "active":false,
-            "startTime":1305.7,
+            "startTime":1305.5,
             "endTime":1306.5,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1411.5, 
-                "failEndTime":1413.7
+                "failStartTime":1411.75, 
+                "failEndTime":1413.5
             },
             "wrongMove2":{
-                   "failStartTime":1411.5, 
-                "failEndTime":1413.7
+                   "failStartTime":1411.75, 
+                "failEndTime":1413.5
             },
         },
-        {   // space biker           
-            "title": "Dexter",
+        
+        {   "id":13.3,           
+            "title": "Dexter",            
             "active":false,
             "startTime":1307,
-            "endTime":1307.7,
+            "endTime":1307.75,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1411.5, 
-                "failEndTime":1413.7
+                "failStartTime":1411.75, 
+                "failEndTime":1413.5
             },
             "wrongMove2":{
-                   "failStartTime":1411.5, 
-                "failEndTime":1413.7
+                   "failStartTime":1411.75, 
+                "failEndTime":1413.5
             },
         },
-        {   // space biker           
+        {   "id":13.4,        
             "title": "Dexter",
             "active":false,
             "startTime":1309,
-            "endTime":1309.8,
+            "endTime":1310,
             "complete": false,
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":1413.8, 
+                "failStartTime":1414, 
                 "failEndTime":1418
             },
             "wrongMove2":{
-                "failStartTime":1413.8, 
+                "failStartTime":1414, 
                 "failEndTime":1418
             },
         },
-        {   // space biker           
+        {   "id":13.5,           
             "title": "Dexter",
             "active":false,
-            "startTime":1312.8,
-            "endTime":1313.7,
+            "startTime":1312.75,
+            "endTime":1313.75,
             "complete": false,
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":1413.8, 
+                "failStartTime":1414, 
                 "failEndTime":1418
             },
             "wrongMove2":{
-                "failStartTime":1413.8, 
+                "failStartTime":1414, 
                 "failEndTime":1418
             },
         },
-        {   // space biker           
+        {   "id":13.6,           
             "title": "ace",
             "active":false,
-            "startTime":1315,
-            "endTime":1315.7,
+            "startTime":1314.75,
+            "endTime":1315.75,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",
            "wrongMove1":{
-                "failStartTime":1413.8, 
+                "failStartTime":1414, 
                 "failEndTime":1418
             },
             "wrongMove2":{
-                "failStartTime":1413.8, 
+                "failStartTime":1414, 
                 "failEndTime":1418
             },
         },
-        {   // space biker           
+        {   "id":13.7,             
             "title": "ace fight1",
             "active":false,
             "startTime":1318,
@@ -3425,15 +3046,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1393.4, 
-                "failEndTime":1394.8
+                "failStartTime":1393.75, 
+                "failEndTime":1394.5
             },
             "wrongMove2":{
                   "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.5
             },
         },
-        {   // space biker           
+        {   "id":13.8,             
             "title": "ace fight2",
             "active":false,
             "startTime":1319.5,
@@ -3442,15 +3063,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"right",
              "wrongMove1":{
-                "failStartTime":1393.4, 
-                "failEndTime":1394.8
+                "failStartTime":1393.75, 
+                "failEndTime":1394.5
             },
             "wrongMove2":{
                   "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.5
             },
         },
-        {   // space biker           
+        {   "id":13.9,             
             "title": "ace fight2 face",
             "active":false,
             "startTime":1322.5,
@@ -3459,15 +3080,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1398.1, 
-                "failEndTime":1400.1
+                "failStartTime":1398.25, 
+                "failEndTime":1400
             },
             "wrongMove2":{
                 "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.75
             },
         },
-        {   // space biker           
+        {   "id":13.10,            
             "title": "ace fight3 hole",
             "active":false,
             "startTime":1324.8,
@@ -3476,15 +3097,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1396.8, 
-                "failEndTime":1398.1
+                "failStartTime":1397, 
+                "failEndTime":1398
             },
             "wrongMove2":{
-                  "failStartTime":1393.4, 
-                "failEndTime":1394.8
+                  "failStartTime":1393.75, 
+                "failEndTime":1395
             },
         },
-        {   // space biker           
+        {   "id":13.11,           
             "title": "ace fight4",
             "active":false,
             "startTime":1326.8,
@@ -3493,15 +3114,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"up",
              "wrongMove1":{
-                "failStartTime":1398.1, 
-                "failEndTime":1400.1
+                "failStartTime":1398.25, 
+                "failEndTime":1400
             },
             "wrongMove2":{
                 "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.75
             },
         },
-        {   // space biker           
+        {   "id":13.12,          
             "title": "ace fight5",
             "active":false,
             "startTime":1328,
@@ -3510,15 +3131,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"down",
             "wrongMove1":{
-                "failStartTime":1398.1, 
-                "failEndTime":1400.1
+                "failStartTime":1398.25, 
+                "failEndTime":1400
             },
             "wrongMove2":{
                 "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.75
             },
         },
-        {   // space biker           
+        {   "id":13.13,           
             "title": "ace fight6",
             "active":false,
             "startTime":1330.7,
@@ -3527,15 +3148,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1398.1, 
-                "failEndTime":1400.1
+                "failStartTime":1398.25, 
+                "failEndTime":1400
             },
             "wrongMove2":{
                 "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.75
             },
         },
-        {   // space biker           
+        {   "id":13.14,           
             "title": "ace fight7",
             "active":false,
             "startTime":1332.8,
@@ -3544,15 +3165,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":1398.1, 
-                "failEndTime":1400.1
+                "failStartTime":1398.25, 
+                "failEndTime":1400
             },
             "wrongMove2":{
                 "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.75
             },
         },
-        {   // space biker           
+        {   "id":13.15,           
             "title": "ace fight8",
             "active":false,
             "startTime":1334,
@@ -3561,15 +3182,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"up",
              "wrongMove1":{
-                "failStartTime":1398.1, 
-                "failEndTime":1400.1
+                "failStartTime":1398.25, 
+                "failEndTime":1400
             },
             "wrongMove2":{
                 "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.75
             },
         },
-          {   // space biker           
+          {   "id":13.16,           
             "title": "ace fight9",
             "active":false,
             "startTime":1337,
@@ -3578,15 +3199,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"down",
              "wrongMove1":{
-                "failStartTime":1398.1, 
-                "failEndTime":1400.1
+                "failStartTime":1398.25, 
+                "failEndTime":1400
             },
             "wrongMove2":{
                 "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.75
             },
         },
-        {   // space biker           
+        {   "id":13.17,          
             "title": "ace fight10",
             "active":false,
             "startTime":1340,
@@ -3595,15 +3216,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"up",
              "wrongMove1":{
-                "failStartTime":1393.4, 
-                "failEndTime":1394.8
+                "failStartTime":1393.75, 
+                "failEndTime":1394.5
             },
             "wrongMove2":{
                   "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.5
             },
         },
-        {   // space biker           
+        {   "id":13.18,           
             "title": "ace fight11",
             "active":false,
             "startTime":1341.2,
@@ -3612,15 +3233,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-                "failStartTime":1393.4, 
-                "failEndTime":1394.8
+                "failStartTime":1393.75, 
+                "failEndTime":1394.5
             },
             "wrongMove2":{
                   "failStartTime":1395, 
-                "failEndTime":1396.8
+                "failEndTime":1396.5
             },
         },
-        {   // space biker           
+        {   "id":13.19,           
             "title": "ace liana",
             "active":false,
             "startTime":1343,
@@ -3629,15 +3250,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":1400.1, 
-                "failEndTime":1402.4
+                "failStartTime":1400.25, 
+                "failEndTime":1402.25
             },
             "wrongMove2":{
-                 "failStartTime":1400.1, 
-                "failEndTime":1402.4
+                 "failStartTime":1400.25, 
+                "failEndTime":1402.25
             },
         },
-        {   // space biker           
+        {   "id":13.20,           
             "title": "ace",
             "active":false,
             "startTime":1346,
@@ -3646,15 +3267,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"right",
             "wrongMove1":{
-                "failStartTime":1402.6, 
-                "failEndTime":1403.9
+                "failStartTime":1402.75, 
+                "failEndTime":1403.75
             },
             "wrongMove2":{
-                  "failStartTime":1402.6, 
-                "failEndTime":1403.9
+                  "failStartTime":1402.75, 
+                "failEndTime":1403.75
             },
         },
-        {   // space biker           
+        {   "id":13.21,           
             "title": "ace",
             "active":false,
             "startTime":1348.7,
@@ -3663,15 +3284,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"left",
             "wrongMove1":{
-                "failStartTime":1400.1, 
-                "failEndTime":1402.4
+                "failStartTime":1400.25, 
+                "failEndTime":1402.25
             },
             "wrongMove2":{
-                  "failStartTime":1400.1, 
-                "failEndTime":1402.4
+                  "failStartTime":1400.25, 
+                "failEndTime":1402.25
             },
         },
-        {   // space biker           
+        {   "id":13.22,           
             "title": "ace",
             "active":false,
             "startTime":1350,
@@ -3680,15 +3301,15 @@ var gameSheet13 = {
             "pressed": false,
             "correctMove":"fire",
             "wrongMove1":{
-               "failStartTime":1400.1, 
-                "failEndTime":1402.4
+                "failStartTime":1400.25, 
+                "failEndTime":1402.25
             },
             "wrongMove2":{
-                "failStartTime":1400.1, 
-                "failEndTime":1402.4
+                  "failStartTime":1400.25, 
+                "failEndTime":1402.25
             },
         },
-        {   // space biker           
+        {   "id":13.23,           
             "title": "ace",
             "active":false,
             "startTime":1351.7,
@@ -3698,14 +3319,14 @@ var gameSheet13 = {
             "correctMove":"left",
             "wrongMove1":{
                 "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
             "wrongMove2":{
                  "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
         },
-        {   // space biker           
+        {   "id":13.24,           
             "title": "ace",
             "active":false,
             "startTime":1353,
@@ -3715,14 +3336,14 @@ var gameSheet13 = {
             "correctMove":"right",
              "wrongMove1":{
                 "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
             "wrongMove2":{
                  "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
         },
-        {   // space biker           
+        {   "id":13.25,           
             "title": "ace",
             "active":false,
             "startTime":1354.9,
@@ -3732,14 +3353,14 @@ var gameSheet13 = {
             "correctMove":"right",
             "wrongMove1":{
                 "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
             "wrongMove2":{
                  "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
         },
-        {   // space biker           
+        {   "id":13.26,           
             "title": "ace",
             "active":false,
             "startTime":1357.4,
@@ -3749,14 +3370,14 @@ var gameSheet13 = {
             "correctMove":"right",
              "wrongMove1":{
                 "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
             "wrongMove2":{
                  "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
         },
-        {   // space biker           
+        {   "id":13.27,         
             "title": "ace",
             "active":false,
             "startTime":1359.5,
@@ -3766,15 +3387,15 @@ var gameSheet13 = {
             "correctMove":"fire",
             "wrongMove1":{
                 "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
             "wrongMove2":{
                  "failStartTime":1404, 
-                "failEndTime":1407.3
+                "failEndTime":1407
             },
-            "endStage":1384.4
+            "finishStage":1384.25
         },
-        ]
+    ],          
 };
 
 
