@@ -52,7 +52,7 @@ var gameCfg = {
 var data = {
     "checkPointScore":0,
     "checkPoints":[ 
-        /*
+        
         {   
             "id":1,
             "newStage": 48.9,
@@ -310,7 +310,7 @@ var data = {
         },
         {   // platform mobile
             "id":1,
-            "jumpTo": 112.1,
+            "jumpTo": 112.25,
             "title": "platform mobile",
             "active":false,
             "startTime":91.2,
@@ -326,12 +326,10 @@ var data = {
                  "failStartTime":102.5, 
                 "failEndTime":104
             },
-            "finishStage":96.25
+            "finishStage":96
             
-        }, 
-        */
-        //fine id 1
-        /*
+        },       
+        //fine id 1        
         {   // spaceship labirynt
             "id":2,
             "newStage":112.25,
@@ -499,9 +497,9 @@ var data = {
             },
             "finishStage":145.8           
         },
-        */
+        
         //fine ID 2
-        /*
+        
         {   // inside borf's base
             "id":3,
             "newStage":216.6,
@@ -720,10 +718,9 @@ var data = {
                 "failEndTime":276
             },
             "finishStage":254.2
-        },
-        // end ID 3
-        */
-        /*
+        },                
+        //end ID 3
+        
         {   
             "id":4,
             "newStage":336.75,
@@ -955,10 +952,10 @@ var data = {
                 "failEndTime":394.2
             },
          "finishStage":383
-        },        
+        },       
+        
         //End id 4
-        */
-        /*
+        
         {   
             "id":5,
             "newStage":459.75,
@@ -1149,10 +1146,10 @@ var data = {
                 "failEndTime":500.2
             },
             "finishStage":491,
-        },
-        //end of id 5
-        */
-        /*
+        },        
+        
+        //end  id 5
+        
         {   "id":6,
             "newStage":555.7,
             "title": "robot fire Dexter",
@@ -1393,10 +1390,10 @@ var data = {
                 "failEndTime":590.5
             },
             "finishStage":585.25
-        }, 
+        },        
+        
         // end id 6
-        */
-        /*
+        
         {   "id":7.1,
             "newStage":652,
             "title": "flame escape Dexter",
@@ -1638,9 +1635,9 @@ var data = {
             },
             "finishStage": 679
         },
-        */
+        
         //end id 7
-        /*
+        
         {   "id":8.1,
             "newStage":731.5,
             "title": "escape inside drone Dexter",
@@ -1814,9 +1811,9 @@ var data = {
             },
             "finishStage":754.5
         },
-        */
-        // end id 8
-        /*
+        
+        //end id 8
+        
         {   "id":9.1,
             "newStage":806,
             "title": "Dexter",
@@ -2060,9 +2057,9 @@ var data = {
             },
          "finishStage":836
         },
-        */
+        
         //end id 9
-        /*
+        
         {   "id":10.1,
             "newStage":890.75,
             "title": "Dexter",
@@ -2304,9 +2301,9 @@ var data = {
             },
             "finishStage":919.75
         },
-        */
+        
         //end id 10 
-        /*
+        
         {   "id":11.1,
             "newStage":992.75,
             "title": "Dexter",
@@ -2600,9 +2597,9 @@ var data = {
             },
             "finishStage":1043.75
         },
-        */
+        
         //end id 11
-        /*
+        
         {   "id":12.1,
             "newStage":1138.75,
             "title": "Dexter",
@@ -2931,7 +2928,7 @@ var data = {
             },
             "finishStage":1185.75
         },
-        */
+        
         //end id 12        
         {   "id":13.1,
             "newStage":1297.25,
@@ -3377,7 +3374,8 @@ var data = {
                 "failEndTime":1407
             },
         },
-        {   "id":13.27,         
+        {   "id":13.27,
+            "jumpTo":1420,
             "title": "ace",
             "active":false,
             "startTime":1359.5,
