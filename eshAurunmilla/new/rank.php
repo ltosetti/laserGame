@@ -156,9 +156,10 @@
         #submit:hover {
             border: 3px solid #323a45;
             color: #323a45;
-            box-shadow: 6px 5px #e35d5d;
+            /*box-shadow: 6px 5px #e35d5d;*/
             background: #fff;
         }
+        * {outline:0}
     </style>    
      <script src="../lib/fitText.js" type="text/javascript"></script>
 </head>
@@ -166,8 +167,7 @@
 <?php
     // define variables and set to empty values
     $score = $name = "";
-?>  
-    
+?>      
     <div id="rankContainer">
         <h1 class="rankTitle">Esh Aurunmilla Ranking - TOP TEN</h1>
         <div id="row_1" class="row"></div><br>
