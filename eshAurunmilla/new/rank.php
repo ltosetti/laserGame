@@ -76,38 +76,47 @@
             border-radius: 10px;
             color:#323a45
         }
-        .row{
+        .row, .index {
             position :relative; 
             /*width:55%; */
             width:90%;
             height:65px;/*45px;*/
-            margin: 0 auto;
-            line-height: 60px;
+            margin: 0 auto;            
+            line-height: 60px;            
             background: #e35d5d;
             /*border: 3px solid #fff;*/
             border-radius: 10px;           
             box-shadow: 6px 5px #fff;
         }
-        .itemScore{
-            /*width:60%; */
+        .index {
+            height:35px;          
+            line-height: 35px; 
+            background: #8cace7;
+            border: 1px solid #374867;
+            box-shadow: 6px 5px #374867;
+            
+        }
+        .itemScore, #labelRankScore {           
             width:25%;
-            height:auto;
+            height:auto;           
             display:inline-block; 
             position:absolute; 
             top:0; 
+            bottom:0;
+            margin:auto;
             left:5%;
             font-size: 4vmin;                       
-            color: #fff;  
-            padding-left:5px;
+            color: #fff;             
         }
-        .itemDivided {
-            width:50%;
+        .itemDivided, #labelRankStage {
+            width:43%;
             height: 100%;
             position:absolute;
-            top:0; left:25%;
+            top:0; left:30%;
             text-align: center;
+            color: #fff;
         }
-        .itemName{
+        .itemName, #labelRankName{
             width:25%; 
             height:auto;
             display:inline-block;
@@ -121,7 +130,7 @@
             /*width:80%;
             height:100%;
             height: 95%;*/
-            width:1024px;
+            width:60%;
             height:100%;
             position: absolute; 
             top:0; 
@@ -137,6 +146,34 @@
             color:#fff;
             margin-bottom:0;
         }
+        /*
+        #labelRankScore {
+            position: absolute;           
+            top: 72px;
+            left: 5%;           
+            color: #fff;
+            width: 25%;
+            border: 1px solid red;
+        }
+        #labelRankStage {
+            position: absolute;           
+            top: 72px;
+            left: 30%;           
+            color: #fff;
+            width: 43%;
+            text-align: center
+            border: 1px solid red;   
+        }
+        #labelRankName {
+            width:25%; 
+            height:auto;
+            display:inline-block;
+            position:absolute; 
+            top:72; 
+            right:2%;
+            color:#fff;     
+        }
+        */
         #submit {            
             width: 230px;
             height: 50px;
@@ -160,16 +197,37 @@
             background: #fff;
         }
         * {outline:0}
+        @media screen 
+            and (min-width: 200px) 
+            and (max-width: 800px)
+        {
+            .row {
+                position: relative;                
+                width: 90%;
+                height: 35px;
+                line-height: 35px;
+            }
+            #closeRanking {
+               width:9%; 
+            }
+        }
+        
     </style>    
      <script src="../lib/fitText.js" type="text/javascript"></script>
 </head>
 <body>    
 <?php
     // define variables and set to empty values
-    $score = $name = "";
+    $score = $stage = $name = "";
 ?>      
     <div id="rankContainer">
         <h1 class="rankTitle">Esh Aurunmilla Ranking - TOP TEN</h1>
+        <div id="index" class="index">
+            <div id="labelRankScore">Score</div>
+            <div id="labelRankStage">Stage completed</div>
+            <div id="labelRankName">Name</div>
+        </div><br>
+        
         <div id="row_1" class="row"></div><br>
         <div id="row_2" class="row"></div><br>
         <div id="row_3" class="row"></div><br>
@@ -188,6 +246,8 @@
             <form method="post" action="">  
                 <label>score: </label><input id="newScore" type="number" name="score" value="<?php echo (int)$score;?>" disabled="disabled">         
                 <br><br>
+                <label>stage: </label> <input id="newStage" type="text" name="name" value="<?php echo (int)$stage;?>" input disabled="disabled">         
+                <br><br>  
                 <label>name: </label> <input id="newName" type="text" name="name" value="<?php echo $name;?>" input autocomplete="off" required>         
                 <br><br>       
                 <input id="submit" type="submit" name="submit" value="send ranking">  
@@ -199,11 +259,27 @@
     <script>
 //inserire il close buttun della classifica
 var newScores;
+var newStages;
 var rankingCall = {};
 var dataInsered = false;        
+function isJson(str) {
+    var my_JSON_object = true;
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return my_JSON_object;
+} 
 window.addEventListener("message", function (evt) {  
-    newScores = parseFloat(evt.data);    
-    console.log(newScores);
+    if (isJson(evt.data)) {
+        var data = JSON.parse(evt.data);        
+    }
+    console.log(data.score);
+    //newScores = parseFloat(evt.data);
+    newScores = parseFloat(data.score);
+    newStages = parseFloat(data.stage);
+    console.log(newScores, newStages);
     var rankingCall = new RankingCall();
     rankingCall.init();
     document.getElementById("submit").addEventListener("click", function(e){
@@ -222,7 +298,7 @@ window.addEventListener("message", function (evt) {
         },1000);           
     });   
 });
-
+   
 //var newScore = 1500;
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -232,6 +308,7 @@ var hsObj = {};
 function Ranking(){
     this.number = ["one","two","three","four","five","six","seven","height","nine","ten"];
     this.name = ["oneName","twoName","threeName","fourName","fiveName","sixName","sevenName","heightName","nineName","tenName"];
+    this.stage = ["oneStage","twoStage","threeStage","fourStage","fiveStage","sixStage","sevenStage","heightStage","nineStage","tenStage"];
     this.data;
     this.scoreList;
     //console.log(this.data);
@@ -241,6 +318,7 @@ Ranking.prototype.render = function(data){
     this.scoreList = this.data.scoreList
     var userNum = 10;
     var getAllNum = [];
+    var getAllStage = [];
     var elScore = [];  
     var elScoreName = []; 
     var elDiv = [];
@@ -250,17 +328,17 @@ Ranking.prototype.render = function(data){
         elScore[i] = document.createElement("div");
         elScore[i].id = "item_"+(i+1);
         elScore[i].classList.add("itemScore");
-        //elScore[i].setAttribute("style", "width:450px; height:auto;display:inline-block; position:absolute; top:0; left:0;color:#fff; font-size: 4vmin;");        
+             
         rows[i].appendChild(elScore[i]);               
         elScore[i].innerHTML = numberWithCommas(this.scoreList[this.number[i]]);
         elScoreName[i] = document.createElement("div");
         elScoreName[i].classList.add("itemName");
-        //elScoreName[i].setAttribute("style", "width:40%; height:auto;display:inline-block;position:absolute; top:0; left:60%;color:#fff;");
+       
         console.log(this.scoreList[this.name[i]]);
         
         elDiv[i] = document.createElement("div");
         elDiv[i].classList.add("itemDivided");
-        //elDiv[i].innerHTML = "..........................................";
+        elDiv[i].innerHTML = this.scoreList[this.stage[i]];
         rows[i].appendChild(elDiv[i]);
         
         elScoreName[i].innerHTML = this.scoreList[this.name[i]];        
@@ -273,15 +351,20 @@ Ranking.prototype.render = function(data){
                 console.log(getAllNum[x], elScore[x]);
                 //elScore[x].innerHTML = newScore;           
                 document.getElementById("formContainer").style.display = "block";
-                document.getElementById("newScore").value = newScores;                
+                document.getElementById("newScore").value = newScores;
+                document.getElementById("newStage").value = newStages;
                 break;
             }  
         }   
     }    
     console.log(getAllNum);
-    fitText(document.querySelectorAll('.itemScore'), 0.7);
-    fitText(document.querySelectorAll('.itemDivided'), 0.9);
-    fitText(document.querySelectorAll('.itemName'), 0.9);  
+    fitText(document.querySelectorAll('.itemScore'), 1.1);
+    fitText(document.querySelectorAll('.itemDivided'), 1.6);
+    fitText(document.querySelectorAll('.itemName'), 1.3);  
+    fitText(document.querySelectorAll('#labelRankScore'), 1);
+    fitText(document.querySelectorAll('#labelRankStage'), 1.7);
+    fitText(document.querySelectorAll('#labelRankName'), 1.1);   
+    fitText(document.querySelectorAll('.rankTitle'), 3); 
 };
         
 function RankingCall(options){  
@@ -322,16 +405,8 @@ RankingCall.prototype.request = function(url,success,fail) {
 };
 RankingCall.prototype.init = function(){    
     self.request(self.getManifestUrl(),function(data){        
-        self.rank = JSON.parse(data.responseText); 
-        //console.log(this.rank); 
-        hsObj = this.rank;
-        /*render*/
-        /*for (key in this.rank){           
-            if (key == "scoreList"){
-                 //console.log(this.rank.scoreList);
-            }
-        } */               
-        
+        self.rank = JSON.parse(data.responseText);         
+        hsObj = this.rank;       
         self.ranking.render(self.rank);
         
         return true;
@@ -351,8 +426,9 @@ function rankingDataSend(){
     //var url = "http://www.shaa.it/demo/maddog/submit.php";//"submit.php";
     var url = "submit.php";//"submit.php";
     var nS = document.getElementById("newScore").value;
+    var nSt = document.getElementById("newStage").value;
     var nN = document.getElementById("newName").value;
-    var vars = "score="+nS+"&name="+nN;
+    var vars = "score="+nS+"&stage="+nSt+"&name="+nN;
     hr.open("POST", url, true);
     hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     // Access the onreadystatechange event for the XMLHttpRequest object

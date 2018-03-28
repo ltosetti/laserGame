@@ -265,6 +265,7 @@ GameData.prototype.render = function(){
         paused:true, 
         onComplete:function(){console.log("open")}           
     });
+    this.rankingClick();
 };
 GameData.prototype.textFormatting = function(){   
     fitText(document.querySelectorAll('.levelBtn'), 0.38);  
@@ -658,12 +659,9 @@ GameData.prototype.settingCheckPoint = function(){
                                 cStage = a+1;
                                 
                                 //setTimeout(function(){
-                                var pm = new Postmessage();                                
+                                var pm = new Postmessage(cStage);                                
                                     pm.sendJson(document.getElementById("ifrRanking"),pm.pmObj);
-                                this.showRanking();
-                                //document.getElementById("ifrRanking").style.height = "100%";
-                                //},1000);
-                                
+                                this.showRanking();                              
                                 
                                 this.gameRecap(cStage, a, this.levels[this.levelChoose]);
                                 break;
@@ -744,19 +742,12 @@ GameData.prototype.hoverEffect = function(button){
 GameData.prototype.showRanking = function(){
     var cd = new Countdown(11);
     var iframeRanking = document.getElementById("ifrRanking");
-    iframeRanking.classList.add("visible");
-    iframeRanking.classList.remove("hidden");
-    iframeRanking.style.height = "100%";
+    TweenMax.to(iframeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
     var closeRanking = document.getElementById("closeRanking");
-    closeRanking.classList.add("visible");
-    closeRanking.classList.remove("hidden");
-    closeRanking.style.display = "block";
+    TweenMax.to(closeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
     closeRanking.onclick = function(evt){
-        iframeRanking.style.height = 0;  
-        iframeRanking.classList.remove("visible");
-        iframeRanking.classList.add("hidden");
-        evt.target.classList.remove("visible");
-        evt.target.classList.add("hidden");
+        TweenMax.to(iframeRanking, 0.5,{autoAlpha:0, top:"-100%"});
+        TweenMax.to(evt.target, 0.5,{autoAlpha:0, top:"-100%"});       
         cd.render(document.getElementById("countdownW"));
         cd.start(); 
     }.bind(this);
@@ -862,6 +853,24 @@ GameData.prototype.preload = function(){
     //req.send();
     */
 };
+GameData.prototype.seeRanking = function(){
+    var iframeRanking = document.getElementById("ifrRanking");
+    TweenMax.to(iframeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
+    var closeRanking = document.getElementById("closeRanking");
+    TweenMax.to(closeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
+    closeRanking.onclick = function(evt){
+        TweenMax.to(iframeRanking, 0.5,{autoAlpha:0, top:"-100%"});
+        TweenMax.to(evt.target, 0.5,{autoAlpha:0, top:"-100%"});      
+    }.bind(this);    
+};
+GameData.prototype.rankingClick = function(){
+    document.getElementById("showRanking").onclick = function(){
+        var pm = new Postmessage("1");
+        pm.sendJson(document.getElementById("ifrRanking"),pm.pmObj);
+        this.seeRanking();
+    }.bind(this);
+};
+
 /* ======================================================================================================================================
 COUNTDOWN if contdown is required ======================================================================================================================================
 */
@@ -1009,15 +1018,18 @@ TosnelloObj.prototype.init = function(){
 /* ======================================================================================================================================
 POSTMESSAGE ======================================================================================================================================
 */
-function Postmessage(options){
+function Postmessage(stage){
     postM                       = this;           
     this.parentUrl              = window.location.href;//location.protocol + "//192.168.32.137";        
-    this.pmObj                  = gameData.scoreEl.innerHTML;      
+    this.pmObj                  = {
+        score: gameData.scoreEl.innerHTML, 
+        stage: stage
+    };    
     this.targetMessage;    
 };
 Postmessage.prototype.sendJson = function(target, message){     
     //target.contentWindow.postMessage(JSON.stringify(postM.pmObj),postM.parentUrl);    
-    target.contentWindow.postMessage(postM.pmObj,postM.parentUrl);    
+    target.contentWindow.postMessage(JSON.stringify(message),postM.parentUrl);    
 };
 /*
 ======================================================================================================================================
