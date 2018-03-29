@@ -57,6 +57,7 @@ function GameData(options, options2, options3, options4, options5, options6, opt
     this.levelChoose;
     this.stageSuccesMove = 0; 
     this.stageTotalCheckpoints;
+    this.rankingFirstTimeRq = true;
 };
 GameData.prototype.render = function(){
     /* 
@@ -659,7 +660,7 @@ GameData.prototype.settingCheckPoint = function(){
                                 cStage = a+1;
                                 
                                 //setTimeout(function(){
-                                var pm = new Postmessage(cStage);                                
+                                var pm = new Postmessage((cStage-1));                                
                                     pm.sendJson(document.getElementById("ifrRanking"),pm.pmObj);
                                 this.showRanking();                              
                                 
@@ -854,7 +855,7 @@ GameData.prototype.preload = function(){
     */
 };
 GameData.prototype.seeRanking = function(){
-    var iframeRanking = document.getElementById("ifrRanking");
+    var iframeRanking = document.getElementById("ifrRankingOnlyShow");
     TweenMax.to(iframeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
     var closeRanking = document.getElementById("closeRanking");
     TweenMax.to(closeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
@@ -864,9 +865,7 @@ GameData.prototype.seeRanking = function(){
     }.bind(this);    
 };
 GameData.prototype.rankingClick = function(){
-    document.getElementById("showRanking").onclick = function(){
-        var pm = new Postmessage("1");
-        pm.sendJson(document.getElementById("ifrRanking"),pm.pmObj);
+    document.getElementById("showRanking").onclick = function(){       
         this.seeRanking();
     }.bind(this);
 };
@@ -1018,13 +1017,13 @@ TosnelloObj.prototype.init = function(){
 /* ======================================================================================================================================
 POSTMESSAGE ======================================================================================================================================
 */
-function Postmessage(stage){
+function Postmessage(stage, desktopRequest){
     postM                       = this;           
     this.parentUrl              = window.location.href;//location.protocol + "//192.168.32.137";        
     this.pmObj                  = {
         score: gameData.scoreEl.innerHTML, 
-        stage: stage
-    };    
+        stage: stage       
+    };
     this.targetMessage;    
 };
 Postmessage.prototype.sendJson = function(target, message){     
@@ -1040,4 +1039,5 @@ var gameData = new GameData(gameSheet, gameSheet2, gameSheet3, gameSheet4, gameS
 console.log(gameData);
 
 document.getElementById("ifrRanking").src = "rank.php";
+
                                 

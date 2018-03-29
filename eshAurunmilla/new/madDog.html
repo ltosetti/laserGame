@@ -68,7 +68,6 @@
             top:0%; 
             left:0;
             background:#028282;
-            /*background:#4860a6;*/
         }
         #stageWrapper {
             opacity:0;
@@ -107,8 +106,7 @@
             color:#ffffff;
             text-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;  
         }
-        #gdScoreWrap {
-            /*width:15%; */
+        #gdScoreWrap {           
             width:18%;
             height:10%;
             position:absolute; 
@@ -136,11 +134,9 @@
             font-family: 'Roboto', sans-serif;            
             text-align:right;
         }
-        #gdLivesWrap {
-            /*width:15%; */
+        #gdLivesWrap {            
             width:300px;
-            height:55px;
-            /*height:10%;*/
+            height:55px;            
             position:absolute; 
             top:2%; 
             left:2%;
@@ -174,13 +170,11 @@
             color:#fff;
             font-size:20px;
         }
-        #gdLives{
-            /*width:50%; */
+        #gdLives{            
             width:30px;
             height:100%;
             position:absolute; 
-            top:0; 
-            /*right:0%;*/
+            top:0;            
             font-size:53px;
             left:222px;
             color:#fff;
@@ -198,20 +192,14 @@
         }
         button.btnStages{
             overflow: hidden;
-            z-index: 20;
-            /*background-size: cover;*/
-            /*background-size:110% !important;*/
+            z-index: 20;            
             background-position:50% 50% !important;
             z-index: 9999;
         }
         button.btnStages.active{
             text-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
             box-sizing: border-box;            
-            /*-moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            border: 2px solid #5fceca;*/
-            box-shadow: inset 0 0 70px #5fceca;
-            
+            box-shadow: inset 0 0 70px #5fceca;            
         }
         button.btnStages.completed {border: none; box-shadow: none;}
         button.btnStages #padlock {
@@ -239,7 +227,6 @@
             position:absolute;
             top:-100%;            
             left:0;            
-            /*background-color:#4860a6;*/
             background-color:#e6775d;
             color:#000;            
             width:100%;
@@ -264,8 +251,7 @@
             width:50%; 
             height:25%;
             bottom:23%; 
-            left:2%; 
-            /*color:#000;*/
+            left:2%;
             color:#fff;
         }
         button.btnStages hr {
@@ -282,8 +268,7 @@
         button.btnStages span.btnPlayStage {
             width:30%;
             height:45px;
-            line-height:45px;           
-            /*background:#4860a6;*/
+            line-height:45px;
             background:#e35d5d;
             border:3px solid #fff; 
             color:#fff;
@@ -361,7 +346,7 @@
         #countdownW {
             width:15px;
         }
-        #ifrRanking{
+        #ifrRanking, #ifrRankingOnlyShow{
             width:100%; 
             height:100%;
             position:absolute; 
@@ -399,6 +384,7 @@
     </div>
     <!--<div id="ifrWrapper">-->
         <iframe id="ifrRanking" src="">postmessage</iframe>
+        <iframe id="ifrRankingOnlyShow" src="rank.html"></iframe>
         <button id="closeRanking">X Close</button>
     <!--<button id="pmessage" style="width:100px; height:20px;"></button>-->
     <!--</div>-->
