@@ -1,13 +1,9 @@
-<?php
-    // define variables and set to empty values
-    //$score = $name = "";
-
+<?php    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $score = test_input($_POST["score"]);
         $stage = test_input($_POST["stage"]);
         $name = test_input($_POST["name"]);   
     }
-
     function test_input($data) {
       $data = trim($data);
       $data = stripslashes($data);

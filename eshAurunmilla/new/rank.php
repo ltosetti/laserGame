@@ -16,7 +16,7 @@
         }
         #formContainer {
             width:500px; 
-            height:335px; 
+            height:400px; 
             position: absolute; 
             top:0; 
             bottom:0; 
@@ -31,7 +31,7 @@
         #formContainer #formContainerHeader {
             width:100%; 
             height:90px; 
-            background:#4860a6;
+            background:#323a45;
             /*background:#5fceca; */
             color:#fff;
             border-radius: 15px 15px 0 0;
@@ -51,40 +51,39 @@
             position:absolute; top:90px; left:0; right:0;
             text-align: center;
             
-        }
-        #formContainer #formContainerBody #newScore, #newStage{
-            /*margin:0 auto;
-            border:none;
-            font-size:3vmin;
-            text-align: right;*/
-            /*width:180px;*/
-            background:#4860a6;
-            margin-top:30px;
-            color:#fff;
-            
-        }
+        }        
         #formContainer #formContainerBody #newName, #newScore, #newStage{
             border:none;
             border:1px solid #e35d5d;
             width:180px;
             padding:5px;
-            color:#fff;
-            /*background:#5fceca; */
+            color:#fff;            
             box-shadow: 6px 5px #e35d5d;
             background:#fff;
             font-size:2.5vmin;
             border-radius: 10px;
             color:#323a45
         }
+        #formContainer #formContainerBody #newScore, #newStage{           
+            background:#4860a6;
+            margin-top:30px;
+            color:#fff;
+            
+        }
+        #formContainer #formContainerBody #newStage{            
+            background:#4860a6;  
+            text-align: center;
+            margin-top:0px;
+            color:#fff;
+            
+        }
         .row, .index {
-            position :relative; 
-            /*width:55%; */
+            position :relative;            
             width:90%;
             height:60px;/*45px;*/
             margin: 0 auto;            
             line-height: 60px;            
-            background: #e35d5d;
-            /*border: 3px solid #fff;*/
+            background: #e35d5d;           
             border-radius: 10px;           
             box-shadow: 6px 5px #374867;
         }
@@ -126,10 +125,7 @@
             color:#fff;  
         }
         #status {opacity:0; visibility:hidden; height:0; width:0;}
-        #rankContainer {
-            /*width:80%;
-            height:100%;
-            height: 95%;*/
+        #rankContainer {            
             width:60%;
             height:100%;
             position: absolute; 
@@ -145,39 +141,10 @@
             text-align: center;
             color:#fff;
             margin-bottom:0;
-        }
-        /*
-        #labelRankScore {
-            position: absolute;           
-            top: 72px;
-            left: 5%;           
-            color: #fff;
-            width: 25%;
-            border: 1px solid red;
-        }
-        #labelRankStage {
-            position: absolute;           
-            top: 72px;
-            left: 30%;           
-            color: #fff;
-            width: 43%;
-            text-align: center
-            border: 1px solid red;   
-        }
-        #labelRankName {
-            width:25%; 
-            height:auto;
-            display:inline-block;
-            position:absolute; 
-            top:72; 
-            right:2%;
-            color:#fff;     
-        }
-        */
+        }        
         #submit {            
             width: 230px;
-            height: 50px;
-            /*line-height: 50px;*/
+            height: 50px;            
             color: #fff;
             text-align: center;
             border-radius: 10px;
@@ -193,7 +160,6 @@
         #submit:hover {
             border: 3px solid #323a45;
             color: #323a45;
-            /*box-shadow: 6px 5px #e35d5d;*/
             background: #fff;
         }
         * {outline:0}
@@ -209,10 +175,7 @@
                 width: 100%;
                 height: 25px;
                 line-height: 25px;                
-            }
-            #row_6, #row_7, #row_8, #row_9, #row_10 {
-                /*display: none;*/
-            }
+            }            
             .itemScore, 
             .itemDivided, 
             .itemName,
@@ -356,10 +319,10 @@ window.addEventListener("message", function (evt) {
         rankingDataSend(); 
         setTimeout(function(){
             rankingCall.init();
-        },2000);
+        },2500);
         setTimeout(function(){
             document.getElementById("formContainer").style.display="none";
-        },1000);            
+        },2000);            
     });  
    
 });

@@ -16,8 +16,7 @@
 ---------- mistake 2.
 ------------ load mistake 1 scene.
 ------------ at the end of scene reload the miss checkpoint.       
-......         
-
+......
 */
 function GameData(options, options2, options3, options4, options5, options6, options7, options8, options9,options10,options11,options12,options13,options14, option15, option16, gameCfg) {
     _this = this;
@@ -72,6 +71,11 @@ GameData.prototype.render = function(){
     this.btnLevelWprapEl = document.createElement("div");
     this.btnLevelWprapEl.id = "levelBtnWrapper";    
     this.levelChoiceEl.appendChild(this.btnLevelWprapEl);
+    
+    this.showRankingBtn = document.createElement("button");
+    this.showRankingBtn.id = "showRanking";
+    this.showRankingBtn.innerHTML = "Top Ten";
+    this.levelChoiceEl.appendChild(this.showRankingBtn);
     
     var title = document.createElement("h1");
     title.id = "levelTitle";
@@ -285,6 +289,8 @@ GameData.prototype.textFormatting = function(){
     fitText(document.querySelectorAll('#gdScore'), 0.4);
     fitText(document.querySelectorAll('#getReady'), 0.5);
     
+    fitText(document.querySelectorAll('#closeRanking'), 0.7);
+    fitText(document.querySelectorAll('#showRanking'), 0.7);    
 };
 GameData.prototype.setSize = function(){
     var a = this.parent//document.querySelector("body");
@@ -745,7 +751,7 @@ GameData.prototype.showRanking = function(){
     var iframeRanking = document.getElementById("ifrRanking");
     TweenMax.to(iframeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
     var closeRanking = document.getElementById("closeRanking");
-    TweenMax.to(closeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
+    TweenMax.to(closeRanking, 0.5,{autoAlpha:1, top:"20px", zIndex:99999});    
     closeRanking.onclick = function(evt){
         TweenMax.to(iframeRanking, 0.5,{autoAlpha:0, top:"-100%"});
         TweenMax.to(evt.target, 0.5,{autoAlpha:0, top:"-100%"});       
@@ -856,12 +862,19 @@ GameData.prototype.preload = function(){
 };
 GameData.prototype.seeRanking = function(){
     var iframeRanking = document.getElementById("ifrRankingOnlyShow");
+    iframeRanking.src = "rank.html";
     TweenMax.to(iframeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
     var closeRanking = document.getElementById("closeRanking");
-    TweenMax.to(closeRanking, 0.5,{autoAlpha:1, top:0, zIndex:99999});    
+    TweenMax.to(closeRanking, 0.5,{autoAlpha:1, top:"20px", zIndex:99999});    
     closeRanking.onclick = function(evt){
-        TweenMax.to(iframeRanking, 0.5,{autoAlpha:0, top:"-100%"});
-        TweenMax.to(evt.target, 0.5,{autoAlpha:0, top:"-100%"});      
+        TweenMax.to(iframeRanking, 0.5,{
+            autoAlpha:0, 
+            onComplete: function(){
+                iframeRanking.src = "";
+            }.bind(this),
+            top:"-100%"
+        });
+        TweenMax.to(evt.target, 0.5,{autoAlpha:0});      
     }.bind(this);    
 };
 GameData.prototype.rankingClick = function(){
@@ -869,8 +882,8 @@ GameData.prototype.rankingClick = function(){
         this.seeRanking();
     }.bind(this);
 };
-
-/* ======================================================================================================================================
+/* 
+======================================================================================================================================
 COUNTDOWN if contdown is required ======================================================================================================================================
 */
 function Countdown(seconds){
@@ -1013,8 +1026,8 @@ TosnelloObj.prototype.init = function(){
     this.setContentRatio();    
     //window.addEventListener("resize", this.setContentRatio.bind(this));    
 };
-
-/* ======================================================================================================================================
+/* 
+======================================================================================================================================
 POSTMESSAGE ======================================================================================================================================
 */
 function Postmessage(stage, desktopRequest){
