@@ -231,8 +231,7 @@
         #ModalGameOver #ModalGameOverBody #recapScore {
             padding:10px 0 10px 0;
             color:#999;
-        }
-        
+        }        
         #ModalGameOver #ModalGameOverBody #labelRecapTrough {
             color:#808ed2;
             padding:10px 0 0 0;
@@ -447,13 +446,13 @@
             color:#fda83b;
         }
  */       
-        #log {
-  position: fixed;
-  bottom: 0;
-  right: 1em;
-  color: #FFF;
-  background-color: rgba(0, 0, 0, .5);
-            z-index: 99;
+#log {
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 99;
 }
     </style>    
     <script src="../lib/fitText.js" type="text/javascript"></script>
@@ -463,11 +462,13 @@
     <div id="log"></div>
     <div id="mainArea">    
         <!--<video id="scene" width="400" controls src="EshsAurunmilla.ogv" type="video/mp4"></video>-->
-         <video id="scene" width="400" src="../videointeri/SpaceAce.mp4" type="video/mp4"></video>
+        <video id="scene" width="400" src="../videointeri/SpaceAce.mp4" type="video/mp4"></video>
+        <video id="tutorialScene" width="400" src="../videointeri/SpaceAce.mp4" style="width:60%; height:70%;position:absolute; top:0;left:0;bottom:0; right:0; margin:auto; border-radius: 15px;"type="video/mp4"></video>
         <audio id="audioError" src="../sound/dl2_bad.wav" ></audio>
         <audio id="audioSuccess" src="../sound/dl2_good.wav" ></audio>
         <div id="tutorial"></div>
         <img id="showMoving" src="">        
+        <button id="tutorialBtn" class="" style="width:100px; height:30px;  position: absolute; top:0; right:0; z-index: 9999;">Tutorial</button>
     </div>
     <!--<div id="ifrWrapper">-->
         <iframe id="ifrRanking" class="hidden" src="">postmessage</iframe>
@@ -476,5 +477,7 @@
     <!--</div>-->
     <script src="gamesheetSA.js"></script>
     <script src="gameConfig3.js"></script>
+    <script src="tutorial/tutorial_gamesheetSA.js"></script>
+    <script src="tutorial/tutorial_gameConfig.js"></script>
 </body>
 </html>
