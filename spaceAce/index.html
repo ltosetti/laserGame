@@ -348,7 +348,7 @@ tutorial section
     padding:0;
     color:#fff;
     text-align: center;
-    font-size:3vmin;
+    font-size:2.5vmin;
     }
 #showMovingTutorial{
     bottom: 3%;
@@ -373,11 +373,13 @@ tutorial section
                     <!--Esegui la mossa premendo il tasto selezionato nell'icona in basso a destra per guidare correttamente Dexter-->
                 </h1>
             </div>
-           
             <video id="tutorialScene" width="400" src="../videointeri/SpaceAce.mp4" type="video/mp4"></video>
         </div>        
-        <h1 class="tutorialTitle">Ad un determinato minutaggio apparir&aacute; un icona nel video in basso a destra che ti avviser&aacute; quando dovrai eseguire l'azione, per eseguire la mossa correttamente, premere il tasto corrispondente sulla tastiera.<br>
-        Attento perch&egrave; avrai a disposizione un tempo limitato per compiere la mossa.<br>(per le azioni di movimento utilizzare i tasti freccia, per le azioni di fuoco, premere il tasto "S" che sar&aacute; comunque segnalato con un icona).</h1>
+        <h1 class="tutorialTitle">
+            Ad un determinato minutaggio apparir&aacute; un icona nel video in basso a destra che ti avviser&aacute; quando dovrai eseguire l'azione.<br>
+            Per eseguire la mossa correttamente, premere il tasto corrispondente sulla tastiera.<br>
+            Attento perch&egrave; avrai a disposizione un tempo limitato per compiere la mossa.<br>(per le azioni di movimento utilizzare i tasti freccia, per le azioni di fuoco, premere il tasto "S" che sar&aacute; comunque segnalato con un icona).
+        </h1>
         <audio id="audioError" src="../sound/dl2_bad.wav" ></audio>
         <audio id="audioSuccess" src="../sound/dl2_good.wav" ></audio>       
         <img id="showMoving" src="">       
@@ -385,8 +387,8 @@ tutorial section
         <button id="tutorialBtn" class="" style="">Tutorial</button>
     </div>
     <!--<div id="ifrWrapper">-->
-        <iframe id="ifrRanking" class="hidden" src="">postmessage</iframe>
-        <button id="closeRanking" class="hidden">X Close</button>
+    <iframe id="ifrRanking" class="hidden" src="">postmessage</iframe>
+    <button id="closeRanking" class="hidden">X Close</button>
     <!--<button id="pmessage" style="width:100px; height:20px;"></button>-->
     <!--</div>-->
     <script src="gamesheetSA.js"></script>
