@@ -78,8 +78,9 @@ TutorialgamePlay.prototype.playThrough = function(){
             if (this.gameOver)break;
             (function(index){                
                 if (!success && !pressed && this.videoEl.currentTime > this.gd.moveArrayCheckStart[index] && this.videoEl.currentTime < this.gd.moveArrayCheckEnd[index] && !this.gd.stageActive[index] && !this.gd.stageComplete[index]){
-                    document.getElementById("showMoving").style.display = "block";
-                    document.getElementById("showMoving").src = "img/"+this.gd.keyDirection[i]+".png";
+                    document.getElementById("tutorialLayer").style.display = "block";
+                    document.getElementById("showMovingTutorial").style.display = "block";
+                    document.getElementById("showMovingTutorial").src = "img/"+this.gd.keyDirection[i]+".png";                    
                     this.videoEl.pause();
                     this.current = [
                         this.gd.keyDirection[index], this.gd.moveArrayCheckStart[index], this.gd.moveArrayCheckEnd[index],this.gd.moveArrayfailed1Start[index], this.gd.moveArrayfailed1End[index],this.gd.moveArrayfailed2Start[index], this.gd.moveArrayfailed2End[index],this.gd.stageJump[index],this.gd.stageJumpDlay[index],true,this.gd.stageComplete[index],this.gd.stagePressed[index],this.gd.finishStage[index]
@@ -139,7 +140,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                                             console.log("**************** error ******************");
                                         }
                                     }
-                                    document.getElementById("showMoving").style.display = "none";
+                                    document.getElementById("showMovingTutorial").style.display = "none";
+                                    document.getElementById("tutorialLayer").style.display = "none";
                                     this.current[11] = true;
                                     //pressed = true;
                                     break;
@@ -159,7 +161,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                                             console.log("**************** error ******************");                                        
                                         } 
                                     }                          
-                                    document.getElementById("showMoving").style.display = "none";   
+                                    document.getElementById("showMovingTutorial").style.display = "none"; 
+                                    document.getElementById("tutorialLayer").style.display = "none";
                                     this.current[11] = true;
                                     //pressed = true;
                                     break;                                    
@@ -179,7 +182,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                                             console.log("**************** error ******************");                                        
                                         } 
                                     }                    
-                                    document.getElementById("showMoving").style.display = "none";
+                                    document.getElementById("showMovingTutorial").style.display = "none";
+                                    document.getElementById("tutorialLayer").style.display = "none";
                                     this.current[11] = true;
                                     //pressed = true;
                                     break;
@@ -200,7 +204,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                                             console.log("**************** error ******************");                                        
                                         } 
                                     }                         
-                                    document.getElementById("showMoving").style.display = "none";
+                                    document.getElementById("showMovingTutorial").style.display = "none";
+                                    document.getElementById("tutorialLayer").style.display = "none";
                                     this.current[11] = true;
                                     //pressed = true;
                                     break;
@@ -221,7 +226,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                                             console.log("**************** error ******************");                                        
                                         } 
                                     }                        
-                                    document.getElementById("showMoving").style.display = "none";
+                                    document.getElementById("showMovingTutorial").style.display = "none";
+                                    document.getElementById("tutorialLayer").style.display = "none";
                                     this.current[11] = true;
                                     //pressed = true;                            
                                     break;
@@ -247,7 +253,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                             //if you pressed a wrong key
                             failEnd = this.current[4]
                             this.videoEl.currentTime =  this.current[3];
-                            document.getElementById("showMoving").style.display = "none";                       
+                            document.getElementById("showMovingTutorial").style.display = "none";  
+                            document.getElementById("tutorialLayer").style.display = "none";
                             console.log("**************** error ******************");
                             this.current[11] = false;
                             error=true;
@@ -258,7 +265,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                         console.log(error);                        
                         failEnd = this.current[6]
                         this.videoEl.currentTime =  this.current[5];
-                        document.getElementById("showMoving").style.display = "none";
+                        document.getElementById("showMovingTutorial").style.display = "none";
+                        document.getElementById("tutorialLayer").style.display = "none";
                         //this.prev[10] = true;this.prev[10] = true;this.prev[9] = false;
                         console.log("******************* error *****************");
                     }
@@ -266,7 +274,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                         var gotoNextStep = setInterval(function(){ 
                             if (parseInt(this.videoEl.currentTime) >= this.current[12]){
                                 clearInterval(gotoNextStep);
-                                this.videoEl.currentTime = this.current[7];                                                
+                                //this.videoEl.currentTime = this.current[7];  
+                                this.videoEl.pause();                                
                             }                            
                         }.bind(this), 250);                   
                     }               
@@ -274,7 +283,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                 }
                 //if (!success && error && pressed && this.videoEl.currentTime > failEnd && !this.current[10]){
                 if (!success && error && pressed && this.videoEl.currentTime > this.current[4] && !this.current[10]){
-                    document.getElementById("showMoving").style.display = "none";
+                    document.getElementById("showMovingTutorial").style.display = "none";
+                    document.getElementById("tutorialLayer").style.display = "none";
                     pressed = false;
                     this.current[11] = false;
                     //if (this.lives > 0) {
@@ -315,7 +325,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                 } 
                 //else if (!success && error && !pressed && this.videoEl.currentTime > failEnd && !this.gd.stageComplete[i]){
                 else if (!success && error && !pressed && this.videoEl.currentTime > this.current[6] && !this.gd.stageComplete[i]){
-                     document.getElementById("showMoving").style.display = "none";
+                     document.getElementById("showMovingTutorial").style.display = "none";
+                    document.getElementById("tutorialLayer").style.display = "none";
                      //if (this.lives > 0) {
                         //this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1;                                   
                         //document.getElementById("gdLives").innerHTML = this.lives;              
@@ -372,6 +383,18 @@ TutorialgamePlay.prototype.game_over = function(error, pressed){
     
     TweenMax.to("#ModalGameOver",0.5,{autoAlpha:1});
 };
+TutorialgamePlay.prototype.exit = function(){   
+    TweenMax.to("#tutorialWrapper",0.5,{
+        autoAlpha:0,
+        onComplete: function(){
+            document.getElementById("mainArea").removeChild(document.getElementById("tutorialWrapper"));
+            document.getElementById("mainArea").removeChild(document.querySelector(".tutorialTitle"));
+            document.getElementById("mainArea").removeChild(document.querySelector("#tutorialBtn"));
+            document.getElementById("mainArea").removeChild(document.querySelector("#exitTutorialBtn"));
+            TweenMax.to("#levelWrapper",0.5,{autoAlpha:1});
+        }
+    });       
+};
 
 function Init(data){
     var _this = this;
@@ -380,8 +403,19 @@ function Init(data){
     document.getElementById("tutorialBtn").onclick = function(){
         this.gamePlay.start();
         document.getElementById("levelWrapper").style.visibility = "hidden";
+        TweenMax.to("#levelWrapper",0.5,{
+            autoAlpha:0,
+            onComplete: function(){
+                TweenMax.to("#tutorialBtn",0.5,{autoAlpha:0});
+                TweenMax.to("#tutorialWrapper",0.5,{autoAlpha:1});
+                TweenMax.to("#exitTutorialBtn",0.5,{autoAlpha:1});
+            }
+        });
         //this.gamePlay.videoEl.style.zIndex = "9999";//tutorialScene
     }.bind(this);   
+     document.getElementById("exitTutorialBtn").onclick = function(){
+         this.gamePlay.exit(); 
+    }.bind(this); 
 };
 
 var init = new Init(data);
