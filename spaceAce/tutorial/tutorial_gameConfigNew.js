@@ -289,38 +289,21 @@ TutorialgamePlay.prototype.playThrough = function(){
                     document.getElementById("tutorialLayer").style.display = "none";
                     pressed = false;
                     this.current[11] = false;
-                    //if (this.lives > 0) {
-                        //this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1;                                   
-                        //document.getElementById("gdLives").innerHTML = this.lives;              
-                    /*
-                        TweenMax.to("#gdLives",0.3,{
-                            scale:2,
-                            opacity:0.4,
-                            //color:"#ff0000",
-                            onComplete: function(){
-                                TweenMax.to("#gdLives",0.3,{
-                                    scale:1, 
-                                    //color:"#fff",
-                                    opacity:1
-                                });
-                            }.bind(this)
-                        });                    
-                        */
-                        this.videoEl.pause();
-                        if (this.prev == false){
-                            this.videoEl.currentTime = this.gdTutorial.startG;
-                        } else if (this.prev[7] != undefined){
-                            this.videoEl.currentTime = this.prev[7];                            
-                        } else {
-                            this.videoEl.currentTime = this.prev[2];
-                        }
-                        TweenMax.to("#getReady",0.5,{autoAlpha:1});                                 
-                        setTimeout(function(){
-                            TweenMax.to("#getReady",0.5,{autoAlpha:0});      
-                            //document.getElementById("getReady").style.visibility = "hidden";
-                            this.videoEl.play();   
-                        }.bind(this),2500);
-                        error = false;                        
+                    this.videoEl.pause();
+                    if (this.prev == false){
+                        this.videoEl.currentTime = this.gdTutorial.startG;
+                    } else if (this.prev[7] != undefined){
+                        this.videoEl.currentTime = this.prev[7];                            
+                    } else {
+                        this.videoEl.currentTime = this.prev[2];
+                    }
+                    TweenMax.to("#getReady",0.5,{autoAlpha:1});                                 
+                    setTimeout(function(){
+                        TweenMax.to("#getReady",0.5,{autoAlpha:0});      
+                        //document.getElementById("getReady").style.visibility = "hidden";
+                        this.videoEl.play();   
+                    }.bind(this),2500);
+                    error = false;                        
                     //} else { 
                     //    this.game_over(error, pressed);                       
                     //} 
@@ -328,24 +311,7 @@ TutorialgamePlay.prototype.playThrough = function(){
                 //else if (!success && error && !pressed && this.videoEl.currentTime > failEnd && !this.gdTutorial.stageComplete[i]){
                 else if (!success && error && !pressed && this.videoEl.currentTime > this.current[6] && !this.gdTutorial.stageComplete[i]){
                      document.getElementById("showMovingTutorial").style.display = "none";
-                    document.getElementById("tutorialLayer").style.display = "none";
-                     //if (this.lives > 0) {
-                        //this.lives = parseInt(document.getElementById("gdLives").innerHTML) - 1;                                   
-                        //document.getElementById("gdLives").innerHTML = this.lives;              
-                    /*    
-                    TweenMax.to("#gdLives",0.3,{
-                            scale:2,
-                            opacity:0.4,
-                            //color:"#ff0000",
-                            onComplete: function(){
-                                TweenMax.to("#gdLives",0.3,{
-                                    scale:1, 
-                                    //color:"#fff",
-                                    opacity:1
-                                });
-                            }.bind(this)
-                        });
-                        */
+                    document.getElementById("tutorialLayer").style.display = "none";                  
                         this.videoEl.pause();
                         if (this.prev == false){                        
                             this.videoEl.currentTime = this.gdTutorial.startG;
@@ -373,6 +339,7 @@ TutorialgamePlay.prototype.playThrough = function(){
     }.bind(this));                
 };
 TutorialgamePlay.prototype.start = function(){
+    TweenMax.to("#start",0.5,{autoAlpha:0});
     this.videoEl.currentTime = this.gdTutorial.startG;
     this.videoEl.play();  
 };
@@ -385,39 +352,27 @@ TutorialgamePlay.prototype.game_over = function(error, pressed){
     
     TweenMax.to("#ModalGameOver",0.5,{autoAlpha:1});
 };
-TutorialgamePlay.prototype.exit = function(){   
-    TweenMax.to("#tutorialWrapper",0.5,{
-        autoAlpha:0,
-        onComplete: function(){
-            document.getElementById("mainArea").removeChild(document.getElementById("tutorialWrapper"));
-            document.getElementById("mainArea").removeChild(document.querySelector(".tutorialTitle"));
-            document.getElementById("mainArea").removeChild(document.querySelector("#tutorialBtn"));
-            document.getElementById("mainArea").removeChild(document.querySelector("#exitTutorialBtn"));
-            TweenMax.to("#levelWrapper",0.5,{autoAlpha:1});
-        }
-    });       
+TutorialgamePlay.prototype.exit = function(){ 
+    /*
+    TweenMax.to("#start",0.5,{autoAlpha:1});
+    document.getElementById("showMovingTutorial").style.display = "none";  
+    document.getElementById("tutorialLayer").style.display = "none";
+    this.videoEl.currentTime = this.gdTutorial.startG;
+    this.videoEl.pause();       
+    */
 };
 
 function Init(data){
     var _this = this;
     this.gamePlayTutorial = new TutorialgamePlay(data);    
-   
-    document.getElementById("tutorialBtn").onclick = function(){
+    document.getElementById("start").onclick = function(){
         this.gamePlayTutorial.start();
-        document.getElementById("levelWrapper").style.visibility = "hidden";
-        TweenMax.to("#levelWrapper",0.5,{
-            autoAlpha:0,
-            onComplete: function(){
-                TweenMax.to("#tutorialBtn",0.5,{autoAlpha:0});
-                TweenMax.to("#tutorialWrapper",0.5,{autoAlpha:1});
-                TweenMax.to("#exitTutorialBtn",0.5,{autoAlpha:1});
-            }
-        });
-        //this.gamePlayTutorial.videoEl.style.zIndex = "9999";//tutorialScene
-    }.bind(this);   
-     document.getElementById("exitTutorialBtn").onclick = function(){
+    }.bind(this);
+    /*
+    document.getElementById("exitTutorialBtn").onclick = function(){
          this.gamePlayTutorial.exit(); 
     }.bind(this); 
+    */
 };
 
 var init = new Init(data);

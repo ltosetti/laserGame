@@ -351,6 +351,7 @@ gamePlay.prototype.playThrough = function(){
 };
 gamePlay.prototype.start = function(){
     this.videoEl.currentTime = this.gd.startG;
+    document.getElementById("tutorialBtn").style.display = "none";
     this.videoEl.play();  
 };
 gamePlay.prototype.game_over = function(error, pressed){
@@ -588,11 +589,31 @@ gameView.prototype.hoverEffect = function(button){
     }
 };
 
+function gameTutorial(){
+    document.getElementById("tutorialBtn").onclick = function(){
+        document.getElementById("ifrTutorial").src = "tutorial/index_tutorial.html";      
+        TweenMax.to("#ifrTutorial",0.5,{top:0});
+        TweenMax.to("#tutorialBtn",0.5,{autoAlpha:0});
+        TweenMax.to("#exitTutorialBtn",0.5,{autoAlpha:1});
+    }.bind(this);   
+    document.getElementById("exitTutorialBtn").onclick = function(){        
+        TweenMax.to("#ifrTutorial",0.5,{
+            top:"-100%",
+            onComplete: function(){
+                document.getElementById("ifrTutorial").src = "";   
+            }
+        });
+        TweenMax.to("#tutorialBtn",0.5,{autoAlpha:1});        
+        TweenMax.to("#exitTutorialBtn",0.5,{autoAlpha:0});
+    }.bind(this);   
+};
+
 function Init(data){
     var _this = this;
     this.gamePlay = new gamePlay(data);    
     this.view = new gameView();
-    this.view.render();  
+    this.view.render(); 
+    gameTutorial();
     document.getElementById("gameReplayBtn").onclick = function(){
         location.reload();    
     };
