@@ -44,10 +44,10 @@ tutorial section
     max-height: 75vh;
     max-width: 100vh;
     position:absolute; 
-    top:3%; left:0; right:0;
+    bottom:3%; left:0; right:0;
     margin: auto; 
     border-radius: 15px;
-    background: transparent;
+    background: transparent;    
     /*
     visibility: hidden;
     opacity:0;
@@ -63,7 +63,7 @@ tutorial section
     background: rgba(0, 0, 0, 0.5);
     z-index: 8;    
     display: none;
-    border: 10px solid transparent;
+    border: 5px solid transparent;
     }
  #tutorialLayer h1 {
     color: #fff;
@@ -119,20 +119,21 @@ tutorial section
     left:0;    
     margin:auto; 
     border-radius: 15px;  
-    border:10px solid #000;
+    border:5px solid #000;
     }
 .tutorialTitle {
     width:90%; 
     height:auto;
     position:absolute; 
     left:0; 
-    bottom:2%; 
+    top:1%; 
     right:0; 
     margin:auto; 
     padding:0;
     color:#000;
     text-align: center;
     font-size:2vmin;
+    font-weight: 400;
     }
 #showMovingTutorial{
     position:absolute;
@@ -148,7 +149,7 @@ tutorial section
 </head>
 <body>
     <div id="log"></div>
-    <div id="mainArea">            
+    <div id="mainArea">         
         <div id="tutorialWrapper">
             <img id="showMovingTutorial" src="">
             <div id="tutorialLayer">
@@ -160,9 +161,15 @@ tutorial section
             <button id="start" class="" style="">Start tutorial</button>-->
         </div>        
         <h1 class="tutorialTitle">
-            Ad un determinato minutaggio apparir&aacute; un icona nel video in basso a destra che ti avviser&aacute; quando dovrai eseguire l'azione.<br>
-            Per eseguire la mossa correttamente, premere il tasto corrispondente sulla tastiera.<br>
-            Attento perch&egrave; avrai a disposizione un tempo limitato per compiere la mossa.<br>(per le azioni di movimento utilizzare i tasti freccia, per le azioni di fuoco, premere il tasto "S" che sar&aacute; comunque segnalato con un icona).
+            <strong style="font-size:3vmin; color: #ff8a00">SPACE ACE - Tutorial Gameplay</strong><br><br>
+            Ad un determinato minutaggio apparir&aacute; un icona nel video in basso a destra che ti avviser&aacute; quando dovrai eseguire l'azione.
+            <br>
+            Per eseguire la mossa correttamente, premere il tasto corrispondente sulla tastiera.
+            <br>
+            Attento perch&egrave; avrai a disposizione un tempo limitato per compiere la mossa.
+            <br>
+            Per le azioni di movimento utilizzare i <strong>tasti freccia</strong>, per le azioni di fuoco, premere il <strong>tasto "S"</strong> che sar&aacute; comunque segnalato con un icona.<br>
+            Per iniziare premi il bottone <strong>"Start tutorial"</strong>.
         </h1>
         <audio id="audioError" src="../../sound/dl2_bad.wav" ></audio>
         <audio id="audioSuccess" src="../../sound/dl2_good.wav" ></audio>       
