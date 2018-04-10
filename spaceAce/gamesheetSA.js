@@ -9,7 +9,7 @@ var gameCfg = {
         },
         {
             "label":"captain",
-            "description":"Ok, This might be a little more tricky. You have 5 lives! Save Sindi!",
+            "description":"Ok, This might be a little more tricky. You have 5 lives! Save Kimmy!",
             "lives":5,
             "score":200
         },    
@@ -1641,8 +1641,7 @@ var data = {
                 "failEndTime":685
             },
             "finishStage": 679
-        },
-        
+        },        
         //end id 7
         
         {   "id":8.1,

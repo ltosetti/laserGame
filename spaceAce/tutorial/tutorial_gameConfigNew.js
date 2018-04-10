@@ -60,21 +60,14 @@ function TutorialgamePlay(options){
     this.audioSuccess.volume = .1; 
     this.audioError.volume = .1; 
     this.current, this.prev, this.next, this.count = 0;
-    /*
-    this.level = gameCfg.levels;
-    this.lives;    
-    this.score;
-    this.currentScore;
-    */
-    this.gameOver = false;
-    //this.start();
+    
+    this.gameOver = false;    
     this.playThrough();
 };
 TutorialgamePlay.prototype.playThrough = function(){
     var pressed = false, success = false, error = false, moved = false, jumpActive = false, current,prev,next, failStart, failEnd;
     var len = this.gdTutorial.checkpoints.length;
-    this.videoEl.addEventListener('timeupdate', function(){
-        //console.log(Math.round(this.videoEl.currentTime*100)/100)
+    this.videoEl.addEventListener('timeupdate', function(){       
         
         for (var i = 0; this.gdTutorial.checkpoints.length > i; i++) { 
             if (this.gameOver)break;
@@ -99,8 +92,8 @@ TutorialgamePlay.prototype.playThrough = function(){
                             this.gdTutorial.moveArrayfailed2End[(index+len-1)%len], //6
                             this.gdTutorial.stageJump[(index+len-1)%len], //7
                             this.gdTutorial.stageJumpDlay[(index+len-1)%len], //8
-                            false,//this.gdTutorial.stageActive[(index+len-1)%len], //9
-                            true,//this.gdTutorial.stageComplete[(index+len-1)%len], //10
+                            false, //9
+                            true, //10
                             this.gdTutorial.stagePressed[(index+len-1)%len], //11
                             this.gdTutorial.finishStage[(index+len-1)%len] //12
                         ];
@@ -114,13 +107,12 @@ TutorialgamePlay.prototype.playThrough = function(){
                     } else {
                         this.next = false
                     }
-                    console.log("Prev: " ,this.prev);
-                    console.log("Current: ", this.current);
-                    console.log("Next: " ,this.next);
-                    console.log(i, index, this.gdTutorial.checkpoints.length-1);
-                    console.log(this.prev[9],this.current[9], this.next[9])
-                    console.log("---------------------------------------");
-                    
+                    //console.log("Prev: " ,this.prev);
+                    //console.log("Current: ", this.current);
+                    //console.log("Next: " ,this.next);
+                    //console.log(i, index, this.gdTutorial.checkpoints.length-1);
+                    //console.log(this.prev[9],this.current[9], this.next[9])
+                    //console.log("---------------------------------------");                    
                     //check the key pressed
                     document.onkeydown = function(e){                            
                         if (this.current != undefined && this.current[9] && !this.current[11]){
@@ -133,19 +125,16 @@ TutorialgamePlay.prototype.playThrough = function(){
                                     if (!this.current[10]){
                                         if (key == this.current[0]) {                                          
                                             success = true;                                                                             
-                                            this.audioSuccess.play();                                       
-                                            console.log("******************** success *******************" , this.count);     
+                                            this.audioSuccess.play();                                              
                                             error=false;
                                         } else {                                                                               
                                             this.audioError.play();
                                             error=true;
-                                            console.log("**************** error ******************");
                                         }
                                     }
                                     document.getElementById("showMovingTutorial").style.display = "none";
                                     document.getElementById("tutorialLayer").style.display = "none";
-                                    this.current[11] = true;
-                                    //pressed = true;
+                                    this.current[11] = true;                                    
                                     break;
                                 case 39:                        
                                     key = "right";
@@ -154,19 +143,16 @@ TutorialgamePlay.prototype.playThrough = function(){
                                     if (!this.current[10]){
                                         if (key == this.current[0]) {                                          
                                             success = true;                                                                             
-                                            this.audioSuccess.play();                                       
-                                            console.log("******************** success *******************" , this.count);     
+                                            this.audioSuccess.play();                                            
                                             error=false;
                                         } else {                                                                               
                                             this.audioError.play();
-                                            error=true;
-                                            console.log("**************** error ******************");                                        
+                                            error=true;                                            
                                         } 
                                     }                          
                                     document.getElementById("showMovingTutorial").style.display = "none"; 
                                     document.getElementById("tutorialLayer").style.display = "none";
-                                    this.current[11] = true;
-                                    //pressed = true;
+                                    this.current[11] = true;                                   
                                     break;                                    
                                 case 38:                        
                                     key = "up";
@@ -175,21 +161,17 @@ TutorialgamePlay.prototype.playThrough = function(){
                                     if (!this.current[10]){
                                         if (key == this.current[0]) {                                          
                                             success = true;                                                                             
-                                            this.audioSuccess.play();                                       
-                                            console.log("******************** success *******************" , this.count);     
+                                            this.audioSuccess.play();                                           
                                             error=false;
                                         } else {                                                                               
                                             this.audioError.play();
-                                            error=true;
-                                            console.log("**************** error ******************");                                        
+                                            error=true;                                     
                                         } 
                                     }                    
                                     document.getElementById("showMovingTutorial").style.display = "none";
                                     document.getElementById("tutorialLayer").style.display = "none";
-                                    this.current[11] = true;
-                                    //pressed = true;
+                                    this.current[11] = true;                                    
                                     break;
-
                                 case 40:                        
                                     key = "down";
                                      this.current[11] = true;
@@ -197,21 +179,17 @@ TutorialgamePlay.prototype.playThrough = function(){
                                      if (!this.current[10]){
                                         if (key == this.current[0]) {                                          
                                             success = true;                                                                             
-                                            this.audioSuccess.play();                                       
-                                            console.log("******************** success *******************" , this.count);     
+                                            this.audioSuccess.play();                                            
                                             error=false;
                                         } else {                                                                               
                                             this.audioError.play();
-                                            error=true;
-                                            console.log("**************** error ******************");                                        
+                                            error=true;                                                                           
                                         } 
                                     }                         
                                     document.getElementById("showMovingTutorial").style.display = "none";
                                     document.getElementById("tutorialLayer").style.display = "none";
-                                    this.current[11] = true;
-                                    //pressed = true;
+                                    this.current[11] = true;                                   
                                     break;
-
                                 case 83:                        
                                     key = "fire";                               
                                     this.current[11] = true;
@@ -219,71 +197,60 @@ TutorialgamePlay.prototype.playThrough = function(){
                                      if (!this.current[10]){
                                         if (key == this.current[0]) {                                          
                                             success = true;                                                                             
-                                            this.audioSuccess.play();                                       
-                                            console.log("******************** success *******************" , this.count);     
+                                            this.audioSuccess.play();                                            
                                             error=false;
                                         } else {                                                                               
                                             this.audioError.play();
-                                            error=true;
-                                            console.log("**************** error ******************");                                        
+                                            error=true;                                                                       
                                         } 
                                     }                        
                                     document.getElementById("showMovingTutorial").style.display = "none";
                                     document.getElementById("tutorialLayer").style.display = "none";
-                                    this.current[11] = true;
-                                    //pressed = true;                            
+                                    this.current[11] = true;                                                             
                                     break;
                             }   
-                        }                    
-                        //key down end
+                        }
                     }.bind(this);                     
-                }
-                
+                }                
                 if (this.current != undefined && Math.round(this.videoEl.currentTime*100)/100 > this.current[2] && this.current[9] && !this.current[10]){ 
                     this.current[9] = false;
-                    if (this.current[11] || pressed){ 
-                        //if you pressed a right key
+                    if (this.current[11] || pressed){                         
                         if (success){                        
-                            this.current[10] = true;
-                            //this.prev[10] = true;this.prev[10] = true;this.prev[9] = false;
-                            this.count++;
-                            console.log("******************** success *******************" , this.count);
-                            //this.scoreUpdater();
+                            this.current[10] = true;                            
+                            this.count++;                           
                             error=false;
                             pressed = false;
-                        } else if (!success && error) {
-                            //if you pressed a wrong key
+                        } else if (!success && error) {                            
                             failEnd = this.current[4]
                             this.videoEl.currentTime =  this.current[3];
                             document.getElementById("showMovingTutorial").style.display = "none";  
-                            document.getElementById("tutorialLayer").style.display = "none";
-                            console.log("**************** error ******************");
+                            document.getElementById("tutorialLayer").style.display = "none";                           
                             this.current[11] = false;
                             error=true;
                         }                    
-                    } else {
-                        //if you dont pressed a key                    
+                    } else {                                     
                         error=true;
                         console.log(error);                        
                         failEnd = this.current[6]
                         this.videoEl.currentTime =  this.current[5];
                         document.getElementById("showMovingTutorial").style.display = "none";
-                        document.getElementById("tutorialLayer").style.display = "none";
-                        //this.prev[10] = true;this.prev[10] = true;this.prev[9] = false;
-                        console.log("******************* error *****************");
+                        document.getElementById("tutorialLayer").style.display = "none";                        
                     }
                     if (success && this.current[7] != undefined){                   
                         var gotoNextStep = setInterval(function(){ 
                             if (parseInt(this.videoEl.currentTime) >= this.current[12]){
-                                clearInterval(gotoNextStep);
-                                //this.videoEl.currentTime = this.current[7];  
+                                clearInterval(gotoNextStep);                                
+                                var endscreen = document.createElement("div");
+                                endscreen.id = "endscreen";
+                                endscreen.innerHTML = "<h1>Hai completato il tutorial<br>per iniziare a giocare premi il pulsante back e seleziona il livello di gioco<br>BUON DIVERTIMENTO!!!</h1>"
+                                document.getElementById("tutorialWrapper").appendChild(endscreen);
+                                endscreen.style.display = "block";                                
                                 this.videoEl.pause();                                
                             }                            
                         }.bind(this), 250);                   
                     }               
                 success = false;
-                }
-                //if (!success && error && pressed && this.videoEl.currentTime > failEnd && !this.current[10]){
+                }               
                 if (!success && error && pressed && this.videoEl.currentTime > this.current[4] && !this.current[10]){
                     document.getElementById("showMovingTutorial").style.display = "none";
                     document.getElementById("tutorialLayer").style.display = "none";
@@ -299,18 +266,13 @@ TutorialgamePlay.prototype.playThrough = function(){
                     }
                     TweenMax.to("#getReady",0.5,{autoAlpha:1});                                 
                     setTimeout(function(){
-                        TweenMax.to("#getReady",0.5,{autoAlpha:0});      
-                        //document.getElementById("getReady").style.visibility = "hidden";
+                        TweenMax.to("#getReady",0.5,{autoAlpha:0});                       
                         this.videoEl.play();   
                     }.bind(this),2500);
-                    error = false;                        
-                    //} else { 
-                    //    this.game_over(error, pressed);                       
-                    //} 
-                } 
-                //else if (!success && error && !pressed && this.videoEl.currentTime > failEnd && !this.gdTutorial.stageComplete[i]){
+                    error = false;                   
+                }                 
                 else if (!success && error && !pressed && this.videoEl.currentTime > this.current[6] && !this.gdTutorial.stageComplete[i]){
-                     document.getElementById("showMovingTutorial").style.display = "none";
+                    document.getElementById("showMovingTutorial").style.display = "none";
                     document.getElementById("tutorialLayer").style.display = "none";                  
                         this.videoEl.pause();
                         if (this.prev == false){                        
@@ -325,17 +287,10 @@ TutorialgamePlay.prototype.playThrough = function(){
                             TweenMax.to("#getReady",0.5,{autoAlpha:0});                            
                             this.videoEl.play();   
                         }.bind(this),2500);
-                        error = false;                          
-                    //} else {                    
-                    //    this.game_over(error, pressed);                       
-                    //}                
-
-                }                          
-                //function index end
-            }.bind(this))(i);
-           //for end 
-        }
-        //timeupdate end
+                        error = false;                   
+                }
+            }.bind(this))(i);          
+        }        
     }.bind(this));                
 };
 TutorialgamePlay.prototype.start = function(){
@@ -361,7 +316,6 @@ TutorialgamePlay.prototype.exit = function(){
     this.videoEl.pause();       
     */
 };
-
 function Init(data){
     var _this = this;
     this.gamePlayTutorial = new TutorialgamePlay(data);    
