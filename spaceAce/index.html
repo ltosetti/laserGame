@@ -300,6 +300,35 @@ tutorial section
     border: 2px solid #fda83b;
     box-shadow: 10px 9px #fda83b;
     }
+#backToLg {   
+    font-size: 20px;
+    position: absolute;
+    top: 2%;
+    left:2%; 
+    right:auto;   
+    background: #fda83b;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    z-index: 10;
+    box-shadow: 10px 9px #fff;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;    
+    text-decoration: none;
+    text-align: center;
+    }
+#backToLg:hover {
+    color: #fda83b;    
+    background: #fff;  
+    border: 2px solid #fda83b;
+    box-shadow: 10px 9px #fda83b;
+    }
 iframe#ifrTutorial {
     position:absolute;
     width:100%; height:100%;
@@ -321,7 +350,8 @@ iframe#ifrTutorial {
         <img id="showMoving" src="">       
         <iframe id="ifrTutorial" src="tutorial/index_tutorial.html"></iframe>
         <button id="exitTutorialBtn">Back</button>
-        <button id="tutorialBtn" class="" style="">Tutorial</button>
+        <button id="tutorialBtn" class="">Tutorial</button>
+        <a id="backToLg" class="" href="../main/index.html">Back to game selection</a>
     </div>    
     <iframe id="ifrRanking" class="hidden" src="">postmessage</iframe>
     <button id="closeRanking" class="hidden">X Close</button>   

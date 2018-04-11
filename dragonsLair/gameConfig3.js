@@ -348,6 +348,7 @@ gamePlay.prototype.playThrough = function(){
     }.bind(this));                
 };
 gamePlay.prototype.start = function(){
+    document.getElementById("backToLg").style.display = "none";
     this.videoEl.currentTime = this.gd.startG;
     this.videoEl.play();  
 };
@@ -364,6 +365,7 @@ gamePlay.prototype.game_over = function(error, pressed){
     console.log(this.currentScore.score, percentage+"%");
     document.getElementById("recapScore").innerHTML = this.currentScore.score;
     document.getElementById("recapTrough").innerHTML = percentage+"%";
+    document.getElementById("backToLg").style.display = "block";
 };
 gamePlay.prototype.selectLevel = function(index){         
     if (index==0) {
@@ -616,31 +618,3 @@ function Init(data){
 };
 
 var init = new Init(data);
-
-//var vid = document.querySelector('#scene');
-//video.load();
-/*vid.onloadstart = function() {
-  log('loadstart at ' + this.currentTime);
-};
-
-vid.onloadedmetadata = function() {
-  log('loadedmetadata at ' + this.currentTime);
-  vid.currentTime = 55;
-  vid.setAttribute('preload', "auto");
-  vid.play();    
-  //vid.pause();
-};
-
-vid.onloadeddata = function() {
-  log('loadeddata at ' + this.currentTime);   
-    //video.load();
-};
-
-function log(datas) {
-  document.querySelector('#log').innerHTML += '<p>' + datas + '</p>';
-}*/
-/*
-vid.bind('loadeddata', function(e) {
-  console.log(e.target.duration);
-});
-*/

@@ -413,6 +413,7 @@ GameData.prototype.selectLevel = function(el, options,l){
         this.videoEl.style.opacity = 1;       
         this.scoreWrap.style.visibility = "visible";
         this.livesWrap.style.visibility = "visible";
+        document.getElementById("backToLg").style.display = "none";
     }.bind(this);  
 };
 GameData.prototype.ieDetection = function(){
@@ -822,7 +823,7 @@ GameData.prototype.gameRecap = function(stage, stagesComplete, options){
     recapWrap.appendChild(recapHeader);
     recapWrap.appendChild(recapBody);
     recapBody.appendChild(btnReplay);    
-    
+    document.getElementById("backToLg").style.display = "block";
     //cd.render(document.getElementById("countdownW"));
     //cd.start();    
 };

@@ -15,7 +15,7 @@ function TutorialgameData(options){
     this.stagePressed = [];
     this.finishStage = [];
     this.assignMove();
-   
+    /*
     console.log(
         this.keyDirection,
         this.moveArrayCheckStart, 
@@ -30,7 +30,7 @@ function TutorialgameData(options){
         this.stageComplete,
         this.stagePressed
     );
-    
+    */
 };
 TutorialgameData.prototype.assignMove = function(){
     //console.log(this.checkpoints);  

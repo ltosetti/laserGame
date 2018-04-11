@@ -352,6 +352,7 @@ gamePlay.prototype.playThrough = function(){
 gamePlay.prototype.start = function(){
     this.videoEl.currentTime = this.gd.startG;
     document.getElementById("tutorialBtn").style.display = "none";
+    document.getElementById("backToLg").style.display = "none";
     this.videoEl.play();  
 };
 gamePlay.prototype.game_over = function(error, pressed){
@@ -367,6 +368,7 @@ gamePlay.prototype.game_over = function(error, pressed){
     console.log(this.currentScore.score, percentage+"%");
     document.getElementById("recapScore").innerHTML = this.currentScore.score;
     document.getElementById("recapTrough").innerHTML = percentage+"%";
+    document.getElementById("backToLg").style.display = "block";
 };
 gamePlay.prototype.selectLevel = function(index){         
     if (index==0) {
@@ -595,16 +597,18 @@ function gameTutorial(){
         TweenMax.to("#ifrTutorial",0.5,{top:0});
         TweenMax.to("#tutorialBtn",0.5,{autoAlpha:0});
         TweenMax.to("#exitTutorialBtn",0.5,{autoAlpha:1});
+        document.getElementById("backToLg").style.display = "none";
     }.bind(this);   
     document.getElementById("exitTutorialBtn").onclick = function(){        
         TweenMax.to("#ifrTutorial",0.5,{
             top:"-100%",
             onComplete: function(){
-                document.getElementById("ifrTutorial").src = "";   
+                document.getElementById("ifrTutorial").src = "";                  
             }
         });
         TweenMax.to("#tutorialBtn",0.5,{autoAlpha:1});        
         TweenMax.to("#exitTutorialBtn",0.5,{autoAlpha:0});
+        document.getElementById("backToLg").style.display = "block";
     }.bind(this);   
 };
 
