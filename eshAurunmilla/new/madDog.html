@@ -382,13 +382,13 @@
             border: 2px solid #fff;
             border-radius: 10px;
         }
-        #backToLg {   
+        #backToLg, #showRanking, #closeRanking {   
             font-size: 20px;
             position: absolute;
             top: 2%;
             left:2%; 
             right:auto;   
-            background: #fda83b;
+            background: #41b2b2;
             color: #fff;
             border: 2px solid #fff;
             border-radius: 10px;
@@ -405,11 +405,21 @@
             text-decoration: none;
             text-align: center;
         }
-    #backToLg:hover {
-            color: #fda83b;    
+    #backToLg:hover, #showRanking:hover, #closeRanking:hover {
+            color: #41b2b2;    
             background: #fff;  
-            border: 2px solid #fda83b;
-            box-shadow: 10px 9px #fda83b;
+            border: 2px solid #41b2b2;
+            box-shadow: 10px 9px #41b2b2;
+        }
+    #showRanking, #closeRanking {
+            width: 150px;
+            height: 50px;
+            position: absolute;
+            top:20px;
+            right:20px;
+            left:auto;
+            line-height: normal;    
+            /*background: transparent;*/
         }
     </style>    
     <script src="../lib/fitText.js" type="text/javascript"></script>
