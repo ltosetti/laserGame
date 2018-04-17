@@ -114,49 +114,8 @@ AccordionIntImg.prototype.closeCenterImg = function(){
     //.to(this.bgRightImg, 0.5, { skewX: '0deg' }, 0.2)
     //.to(this.btnClosePanelR, 0.2, {autoAlpha:1})
 }; 
-AccordionIntImg.prototype.mouseOverImg = function(){
-    TweenMax.set(this.bgRight,{zIndex:11});
-    TweenMax.to(this.bgRight,0.1,{
-        skewX: '0deg', 
-         onComplete: function(){
-            //TweenMax.to(this.bgRight,0.3,{ xPercent:62});   
-         }.bind(this)
-       
-    });
-};
-AccordionIntImg.prototype.mouseOutImg = function(){
-    /*
-    TweenMax.to(this.bgRight,0.3,{
-        xPercent: this.distance,         
-        onComplete: function(){
-            TweenMax.to(this.bgRight,0.3,{skewX: -this.skew, zIndex:0});   
-        }.bind(this)        
-    });
-    */
-    TweenMax.to(this.bgRight,0.1,{
-        skewX: -this.skew, 
-         onComplete: function(){
-            TweenMax.to(this.bgRight,0.3,{zIndex:0});   
-         }.bind(this)
-       
-    });
-     //TweenMax.set(this.bgRight,{zIndex:0});
-};
 AccordionIntImg.prototype.init = function(){
-    this.setLayout();    
-    this.bgRight.addEventListener("mouseover", function(e){
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        e.stopPropagation();        
-        //this.mouseOverImg();
-    }.bind(this));
-     this.bgRight.addEventListener("mouseout", function(e){
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        e.stopPropagation();
-        //this.mouseOutImg();
-    }.bind(this));
-    
+    this.setLayout();
     this.bgCenter.addEventListener("click", function(e){
         e.stopPropagation();
         e.preventDefault();
