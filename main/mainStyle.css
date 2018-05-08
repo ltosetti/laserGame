@@ -36,6 +36,7 @@ body {overflow: hidden;}
     height:100%;
     position:absolute;
 }
+.logo {cursor: pointer;}
 #logoCenter {
     transform: skewX(0);
     background:url(img/loghi/eshlogo.png)no-repeat center;
@@ -45,8 +46,7 @@ body {overflow: hidden;}
     position:absolute; 
     right:0; 
     left:7%; 
-    margin:auto;
-    /*bottom:0;*/
+    margin:auto;    
     top:0;
     z-index:1;
 }
