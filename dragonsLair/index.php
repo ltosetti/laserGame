@@ -26,6 +26,15 @@ if(isset($params['c']) && $params['c'] == "0"){
 
 <head>
 	<title>Mad Dog</title>
+    <meta property="og:url" content="<?php echo $params['url']; ?>" />
+    <meta property="og:type" content="<?php echo $params['type']; ?>"/>        
+    <meta property="og:title" content="<?php echo $metas['title']; ?>"/>
+    <meta property="og:image" content="http://www.shaa.it/demo/luca/<?php echo $metas['image']; ?>.jpg"/>
+    <meta property="og:description" content="<?php echo $metas['description']; ?>"/>       
+
+    <meta itemprop="name" content="">        
+    <meta itemprop="image" content="">
+    <meta itemprop="description" content="<?php echo $metas['description']; ?>">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
         html,body {
@@ -276,7 +285,7 @@ if(isset($params['c']) && $params['c'] == "0"){
             background:#808ed2; 
             border: 1px solid #fff; 
             cursor:pointer;
-            margin:40px auto 0 auto;
+            margin:40px 3px 0 auto;
             display: inline-block;
             vertical-align: middle;
         }
@@ -290,15 +299,19 @@ if(isset($params['c']) && $params['c'] == "0"){
             line-height: 50px;
             color: #fff;
             text-align: center;
-            border-radius: 10px;
-            /*background: #323a45;*/
-            border: 3px solid #fff;
+            border-radius: 10px;           
+            border: 1px solid #fff;
             cursor: pointer;
             margin: 0 auto;
             display: inline-block;
             text-decoration: none;
             vertical-align: middle;
-            margin: 40px auto 0 auto;
+            margin: 40px auto 0 3px;
+        }
+        #ModalGameOver #ModalGameOverBody .modalBtn:hover,
+        #ModalGameOver #ModalGameOverBody #gameReplayBtn:hover {
+            border: 1px solid #000;
+            color: #000;
         }
         button{
             outline:none;
@@ -604,7 +617,7 @@ iframe#ifrTutorial {
     <script src="gameConfig3.js"></script>
     <script>
         var fb_pre= "https://www.facebook.com/sharer/sharer.php?u=";          
-        var url = "http://www.shaa.it/demo/luca/around.php?c=";
+        var url = "http://www.shaa.it/demo/maddog/index.php?c=";
         document.querySelector(".shareFb").addEventListener("click",function(event){
             event.preventDefault();                
             prepend = fb_pre;              

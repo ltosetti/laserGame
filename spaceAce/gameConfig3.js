@@ -367,6 +367,7 @@ gamePlay.prototype.game_over = function(error, pressed){
     var percentage = parseFloat((this.count/this.gd.checkpoints.length)*100).toFixed(1);
     console.log(this.currentScore.score, percentage+"%");
     document.getElementById("recapScore").innerHTML = this.currentScore.score;
+    document.getElementById("inputScore").value = this.currentScore.score;
     document.getElementById("recapTrough").innerHTML = percentage+"%";
     document.getElementById("backToLg").style.display = "block";
 };
@@ -529,6 +530,7 @@ gameView.prototype.render = function(){
             "<div id='recapTrough'>0%</div>"+
             "<hr style='width:75%;'>"+
             "<div id='gameReplayBtn'>Try Again</div>"+
+            "<a class='shareFb btnShare modalBtn' href='' target='_blank'></a>"+
         "</div>";
     this.parent.appendChild(this.ModalGameOver);
     
