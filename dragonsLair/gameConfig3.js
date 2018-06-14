@@ -14,6 +14,7 @@ function gameData(options){
     this.stageComplete = [];
     this.stagePressed = [];
     this.finishStage = [];
+    this.gameComplete = [];
     this.assignMove();
    
     console.log(
@@ -48,6 +49,7 @@ gameData.prototype.assignMove = function(){
         this.stageComplete[i] = this.checkpoints[i].complete;
         this.stagePressed[i] = this.checkpoints[i].pressed;
         this.finishStage[i] = this.checkpoints[i].finishStage;
+        this.gameComplete[i] = this.checkpoints[i].gameComplete;
     }
 };
 
@@ -65,6 +67,8 @@ function gamePlay(options){
     this.score;
     this.currentScore;
     this.gameOver = false;
+    this.completeAllGames;
+    this.gameFinished;
     //this.start();
     this.playThrough();
 };
@@ -81,7 +85,7 @@ gamePlay.prototype.playThrough = function(){
                     document.getElementById("showMoving").style.display = "block";
                     document.getElementById("showMoving").src = "img/"+this.gd.keyDirection[i]+".png";
                     this.current = [
-                        this.gd.keyDirection[index], this.gd.moveArrayCheckStart[index], this.gd.moveArrayCheckEnd[index],this.gd.moveArrayfailed1Start[index], this.gd.moveArrayfailed1End[index],this.gd.moveArrayfailed2Start[index], this.gd.moveArrayfailed2End[index],this.gd.stageJump[index],this.gd.stageJumpDlay[index],true,this.gd.stageComplete[index],this.gd.stagePressed[index],this.gd.finishStage[index]
+                        this.gd.keyDirection[index], this.gd.moveArrayCheckStart[index], this.gd.moveArrayCheckEnd[index],this.gd.moveArrayfailed1Start[index], this.gd.moveArrayfailed1End[index],this.gd.moveArrayfailed2Start[index], this.gd.moveArrayfailed2End[index],this.gd.stageJump[index],this.gd.stageJumpDlay[index],true,this.gd.stageComplete[index],this.gd.stagePressed[index],this.gd.finishStage[index],this.gd.gameComplete[index]
                     ]; 
                     //this.current
                     if (index > 0){
@@ -230,12 +234,26 @@ gamePlay.prototype.playThrough = function(){
                     if (this.current[11] || pressed){ 
                         //if you pressed a right key
                         if (success){                        
-                            this.current[10] = true
+                            this.current[10] = true;
                             this.count++;
                             console.log("******************** success *******************" , this.count);
                             this.scoreUpdater();
                             error=false;
                             pressed = false;
+                            if (this.current[13] != undefined && this.current[13] == true){
+                                console.log("***************************** congrataz.... **************************");
+                                this.completeAllGames = true;
+                                this.gameFinished = document.createElement("h1");
+                                this.gameFinished.id = "gameComplete"; 
+                                this.gameFinished.setAttribute("style","width:90%; height:40%; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto;color:#fff;text-align:center;");
+                                this.gameFinished.innerHTML = "CONGRATULATION!!!!<br> You finish all stages and released the princess";
+                                //this.gameFinished.innerHTML = "CONGRATULATION!!!!<br> You finish all stages and released Kimberly";
+                                setTimeout(function(){
+                                    document.body.appendChild(this.gameFinished); 
+                                    fitText(document.querySelectorAll('#gameComplete'), 1);    
+                                }.bind(this),2500)
+                               
+                            }
                         } else if (!success && error) {
                             //if you pressed a wrong key
                             failEnd = this.current[4]
@@ -339,7 +357,12 @@ gamePlay.prototype.playThrough = function(){
                         this.game_over(error, pressed);                       
                     }                
 
-                }                          
+                }
+                if ((this.completeAllGames != undefined || this.completeAllGames) && Math.round(this.videoEl.currentTime*100)/100 > this.current[12]){
+                    document.body.removeChild(this.gameFinished);
+                    this.videoEl.pause();                    
+                    this.game_over(error, pressed);                                   
+                }
                 //function index end
             }.bind(this))(i);
            //for end 

@@ -613,7 +613,8 @@ iframe#ifrTutorial {
     <!--<button id="pmessage" style="width:100px; height:20px;"></button>-->
     <!--</div>-->
     <input type="text" name="score" id="inputScore" value="0" style="position:absolute;bottom:0;">
-    <script src="gameSheetDl.min.js"></script>
+    <!--<script src="gameSheetDl.min.js"></script>-->
+    <script src="gameSheetDl_short.js"></script>
     <script src="gameConfig3.js"></script>
     <script>
         var fb_pre= "https://www.facebook.com/sharer/sharer.php?u=";          

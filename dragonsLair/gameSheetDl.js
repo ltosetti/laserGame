@@ -1655,8 +1655,8 @@ var data = {
             },
             "finishStage":872
         },
-        */
-       /*
+        
+       
         { 
             "id":26,       
             "newStage":949,
@@ -2451,7 +2451,8 @@ var data = {
                 "failStartTime":1312, 
                 "failEndTime":1313.5
             },
-            "finishStage": 1300.5
+            "finishStage": 1300.5,
+            "gameComplete": true
         },
     ]
 };

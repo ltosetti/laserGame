@@ -425,7 +425,7 @@ iframe#ifrTutorial {
     <iframe id="ifrRanking" class="hidden" src="">postmessage</iframe>
     <button id="closeRanking" class="hidden">X Close</button> 
     <input type="text" name="score" id="inputScore" value="0" style="position:absolute;bottom:0;">
-    <script src="gamesheetSA.js"></script>
+    <script src="gamesheetSA_short.js"></script>
     <script src="gameConfig3.js"></script>
     <script>
         var fb_pre= "https://www.facebook.com/sharer/sharer.php?u=";          

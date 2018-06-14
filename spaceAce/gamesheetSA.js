@@ -3397,7 +3397,8 @@ var data = {
                  "failStartTime":1404, 
                 "failEndTime":1407
             },
-            "finishStage":1384.25
+            "finishStage":1384.25,
+            "gameComplete": true
         },
     ],          
 };
