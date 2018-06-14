@@ -818,11 +818,23 @@ GameData.prototype.gameRecap = function(stage, stagesComplete, options){
         this.livesEl.innerHTML = this.lives;
         //location.reload()
     }.bind(this);
-     
+    var btnShare = document.createElement("a");
+    btnShare.id = "shareBtn";
+    btnShare.classList.add("shareFb");
+    var fb_pre= "https://www.facebook.com/sharer/sharer.php?u=";          
+    var url = "http://www.shaa.it/demo/maddog/index.php?c=";
+    btnShare.addEventListener("click",function(event){
+        event.preventDefault();                
+        prepend = fb_pre;              
+        //window.open(prepend+escape(url+"&n="+document.querySelector("#"+" input").value));
+        var d = new Date();
+        window.open(prepend+escape(url+_this.scoreEl.innerHTML)+"&t="+d.getTime());  
+    });
     this.parent.appendChild(recapWrap);
     recapWrap.appendChild(recapHeader);
     recapWrap.appendChild(recapBody);
-    recapBody.appendChild(btnReplay);    
+    recapBody.appendChild(btnReplay); 
+    recapBody.appendChild(btnShare); 
     document.getElementById("backToLg").style.display = "block";
     //cd.render(document.getElementById("countdownW"));
     //cd.start();    

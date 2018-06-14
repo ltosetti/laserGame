@@ -1,3 +1,26 @@
+<?php
+$params = array();
+$metas = array();
+$params = $_GET;
+// defaults
+$params['url'] = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$params['type'] = (isset($_GET['type']) ? $_GET['type'] : 'article');
+$params['c'] = (isset($_GET['c']) ? $_GET['c'] : '0'); //read querystring
+if(isset($params['c']) && $params['c'] == "0"){
+    $metas['image'] = "sample";
+    $metas['score'] = isset($_GET['score']);
+    $metas['name'] = isset($_GET['name']);
+    $metas['title'] = "Esh Aurunmilla";
+    $metas['description'] = "share Esh Aurunmilla";
+} else {
+    $metas['image'] = "sample";
+    $metas['score'] = isset($_GET['score']);
+    $metas['name'] = isset($_GET['name']);
+    $metas['title'] = "Esh Aurunmilla";
+    //$metas['description'] = ucfirst($params['n'])." ha totalizzato ".ucfirst($params['n'])." punti";
+    $metas['description'] = "ha totalizzato ".$params['c']." punti";
+}
+?>
 <!DOCTYPE html>
 <html>
 

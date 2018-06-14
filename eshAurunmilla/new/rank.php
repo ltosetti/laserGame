@@ -68,6 +68,7 @@
             background:#4860a6;
             margin-top:30px;
             color:#fff;
+            text-align: center;
             
         }
         #formContainer #formContainerBody #newStage{            
