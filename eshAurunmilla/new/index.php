@@ -130,15 +130,16 @@ if(isset($params['c']) && $params['c'] == "0"){
             text-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;  
         }
         #gdScoreWrap {           
-            width:18%;
-            height:10%;
+            width:300px;
+            height:55px;
             position:absolute; 
             top:2%; 
             right:2%;
             opacity:0;
         }
+        
         #gdScoreLabel {
-            width:40%; 
+            width:50%; 
             height:100%;
             position:absolute; 
             top:0; 
@@ -148,15 +149,16 @@ if(isset($params['c']) && $params['c'] == "0"){
             text-align:center;
         }
         #gdScore {
-            width:60%; 
+            width:50%; 
             height:100%;
             position:absolute; 
             top:0; 
             right:0;
             color:#fff;
             font-family: 'Roboto', sans-serif;            
-            text-align:right;
-        }
+            text-align:right;  
+            font-size: 48px !important;
+        }        
         #gdLivesWrap {            
             width:300px;
             height:55px;            
@@ -447,7 +449,7 @@ if(isset($params['c']) && $params['c'] == "0"){
             width: 150px;
             height: 50px;
             position: absolute;
-            top:20px;
+            top:2%;
             right:20px;
             left:auto;
             line-height: normal;    
