@@ -329,7 +329,7 @@ if(isset($params['c']) && $params['c'] == "0"){
             min-width:500px; 
             min-height:700px;  
         }
-        #recapHeader, #completeGameFormHeader{
+        #recapHeader{
             width:100%; 
             height:150px; 
             background:#5fceca; 
