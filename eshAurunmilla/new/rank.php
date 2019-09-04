@@ -241,7 +241,7 @@
         }
         
     </style>    
-     <script src="../lib/fitText.js" type="text/javascript"></script>
+     <script src="../../lib/fitText.js" type="text/javascript"></script>
 </head>
 <body>    
 <?php

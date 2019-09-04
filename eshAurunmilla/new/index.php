@@ -456,18 +456,18 @@ if(isset($params['c']) && $params['c'] == "0"){
             /*background: transparent;*/
         }
     </style>    
-    <script src="../lib/fitText.js" type="text/javascript"></script>
+    <script src="../../lib/fitText.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 </head>
 <body>
     <div id="mainArea">    
         <!--<video id="scene" width="400" controls src="EshsAurunmilla.ogv" type="video/mp4"></video>-->
-        <video id="scene" width="400" src="../videointeri/EshsAurunmilla.webm" type="video/mp4"></video>
-        <audio id="audioError" src="../sound/dl2_bad.wav" ></audio>
-        <audio id="audioSuccess" src="../sound/dl2_good.wav" ></audio>
+        <video id="scene" width="400" src="../../videointeri/EshsAurunmilla.webm" type="video/mp4"></video>
+        <audio id="audioError" src="../../sound/dl2_bad.wav" ></audio>
+        <audio id="audioSuccess" src="../../sound/dl2_good.wav" ></audio>
         <div id="tutorial"></div>
         <img id="showMoving" src="">
-        <a id="backToLg" class="" href="../main/index.html">Back to game selection</a>
+        <a id="backToLg" class="" href="../../main/index.html">Back to game selection</a>
     </div>
     <!--<div id="ifrWrapper">-->
         <iframe id="ifrRanking" src="">postmessage</iframe>
@@ -475,6 +475,7 @@ if(isset($params['c']) && $params['c'] == "0"){
         <button id="closeRanking">X Close</button>
     <!--<button id="pmessage" style="width:100px; height:20px;"></button>-->
     <!--</div>-->    
+    <!--<script src="gamesheet_short.js"></script>-->
     <script src="gamesheet.js"></script>
     <script src="gameConfig.js"></script>
      <script>
