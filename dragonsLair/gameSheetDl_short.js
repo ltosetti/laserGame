@@ -25,11 +25,11 @@ var data = {
     "checkPoints":[       
         {  
             "id":1,
-            "newStage": 59.7,
+            "newStage": 22,
             "title": "spying enemy basement1",
             "active":false,
-            "startTime":70.2,                                      
-            "endTime":71.01,
+            "startTime":32.25,                                      
+            "endTime":33.25,
             "complete": false,
             "pressed": false,
             "correctMove":"fire",                     
